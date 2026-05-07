@@ -1,0 +1,58 @@
+/**
+ * securebyteguide.org 디자인 토큰
+ * 자동 생성됨 (2026-05-07T11:16:15.421Z)
+ * 출처: design-tokens.json
+ *
+ * 형식: RGB 채널 (예: "168 216 201")
+ * 사용: rgb(var(--color-primary) / 30%) → bg-primary/30 같은 Tailwind alpha 변형 가능
+ */
+
+:root {
+  --color-background: 245 247 250;
+  --color-foreground: 15 27 45;
+
+  --color-primary: 30 58 95;
+  --color-primary-foreground: 255 255 255;
+
+  --color-accent: 95 228 176;
+  --color-accent-foreground: 10 42 31;
+
+  --color-muted: 240 242 245;
+  --color-muted-foreground: 55 67 85;
+
+  --color-card: 245 247 250;
+  --color-card-foreground: 15 27 45;
+
+  --color-border: 95 107 125;
+  --color-input: 90 102 120;
+  --color-ring: 30 58 95;
+
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --radius: 6px;
+
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='dark'] {
+  --color-background: 10 15 26;
+  --color-foreground: 232 237 245;
+
+  --color-primary: 15 37 69;
+  --color-primary-foreground: 255 255 255;
+
+  --color-accent: 95 228 176;
+  --color-accent-foreground: 10 42 31;
+
+  --color-muted: 18 23 34;
+  --color-muted-foreground: 202 207 215;
+
+  --color-card: 15 20 31;
+  --color-card-foreground: 232 237 245;
+
+  --color-border: 172 177 185;
+  --color-input: 167 172 180;
+}
