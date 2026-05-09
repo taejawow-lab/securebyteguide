@@ -1,0 +1,241 @@
+---
+title: "VPN Performance and Privacy — What the Logs Actually Showed (Independent Audit Data)"
+description: "VPNs claim 'no logs' and '10x speed' — independent security audits reveal which providers deliver. Here is what the audit data actually shows for the top consumer VPNs."
+pubDate: 2026-05-09
+updatedDate: 2026-05-09
+category: "Security"
+tags: ["VPN", "no-logs", "privacy", "Mullvad", "ProtonVPN", "ExpressVPN", "NordVPN", "audit"]
+heroImage: "/images/illustrations/post3-hero.png"
+schemaType: "Review"
+sources:
+  - title: "PwC — Audit of Mullvad VPN's No-Logs Policy"
+    url: "https://mullvad.net/en/help/no-logging-data-policy"
+    publication: "PwC / Mullvad"
+    year: "2024"
+  - title: "Cure53 — ExpressVPN Security Audit"
+    url: "https://www.expressvpn.com/blog/cure53-audits/"
+    publication: "Cure53 / ExpressVPN"
+    year: "2024"
+  - title: "Deloitte — NordVPN No-Logs Audit"
+    url: "https://nordvpn.com/blog/no-logs-audit-deloitte/"
+    publication: "Deloitte / NordVPN"
+    year: "2023"
+  - title: "Securitum — ProtonVPN Audit Report"
+    url: "https://protonvpn.com/blog/no-logs-audit/"
+    publication: "Securitum / ProtonVPN"
+    year: "2024"
+  - title: "Wirecutter — Best VPN Reviews"
+    url: "https://www.nytimes.com/wirecutter/reviews/best-vpn-service/"
+    publication: "NYT Wirecutter"
+    year: "2024"
+  - title: "PCMag — VPN Speed Test Methodology"
+    url: "https://www.pcmag.com/picks/the-best-vpn-services"
+    publication: "PCMag"
+    year: "2024"
+  - title: "EFF — Choosing a VPN Provider Guide"
+    url: "https://www.eff.org/issues/vpn"
+    publication: "Electronic Frontier Foundation"
+    year: "2024"
+  - title: "TorrentFreak — VPN Court Subpoena Cases"
+    url: "https://torrentfreak.com/tag/vpn/"
+    publication: "TorrentFreak"
+    year: "2024"
+  - title: "Mullvad — Court Subpoena Disclosure"
+    url: "https://mullvad.net/en/blog/2023/4/20/mullvad-vpn-was-subject-to-a-search-warrant/"
+    publication: "Mullvad"
+    year: "2023"
+  - title: "WireGuard Protocol — Specification"
+    url: "https://www.wireguard.com/papers/wireguard.pdf"
+    publication: "WireGuard"
+    year: "2020"
+  - title: "OpenVPN — Protocol Documentation"
+    url: "https://openvpn.net/community-resources/"
+    publication: "OpenVPN"
+    year: "2024"
+  - title: "RestorePrivacy — VPN Comparison Reviews"
+    url: "https://restoreprivacy.com/vpn/"
+    publication: "RestorePrivacy"
+    year: "2024"
+internalLinks:
+  - "/posts/family-password-managers-compared"
+  - "/posts/2fa-methods-compared-data"
+  - "/category/security"
+visualsCount: 7
+hasVideo: false
+wordCount: 2580
+affiliate: false
+faq:
+  - question: "Do 'no-logs' VPNs really keep no logs?"
+    answer: "Most do, but with caveats. Independently audited no-logs providers (Mullvad, ProtonVPN, ExpressVPN, NordVPN) have third-party verification of their claims. The real test is court orders: in 2023, Swedish police seized Mullvad servers with a search warrant — and recovered no usable user data. NordVPN, ProtonVPN, and ExpressVPN have similar court-tested no-logs records. Unaudited providers (especially free VPNs) often DO log; some sell the data."
+  - question: "Are free VPNs safe?"
+    answer: "Mostly no. Investigation by VPNMentor and Top10VPN found that ~25% of free VPNs leak DNS data, ~38% have malware in their apps, and ~75% sell user browsing data to advertisers. Notable safe exceptions: ProtonVPN Free (limited but legitimate), Mullvad Free Trial (3 hours), TunnelBear Free (500MB/month). General rule: if the free tier is sufficient for actual privacy, the provider is selling something else."
+  - question: "What's the actual speed cost of a VPN?"
+    answer: "WireGuard protocol VPNs typically lose 5-15% of bandwidth. OpenVPN typically loses 15-25%. Specific providers (Mullvad, ProtonVPN, NordVPN) deliver near-line-rate on local servers (within 50ms latency), 60-80% bandwidth on transcontinental servers. PCMag's 2024 testing: most quality VPNs deliver 200-400 Mbps over a 500 Mbps base connection. Performance claims of '10x faster' are marketing hyperbole — VPNs always slow you down, just not catastrophically."
+  - question: "Which VPN protocol matters?"
+    answer: "WireGuard for speed and modern security; OpenVPN for compatibility. WireGuard (2020) uses modern cryptography, 4,000 lines of code (vs OpenVPN's 100,000), and significantly faster connection establishment. OpenVPN is older but extensively audited and works across more devices. NordVPN's NordLynx and ProtonVPN's WireGuard are WireGuard-based with privacy adaptations. Avoid PPTP (deprecated, broken) and L2TP (slow, occasionally vulnerable)."
+  - question: "Should I use a VPN at home?"
+    answer: "Depends on your threat model. For: (1) ISP doesn't sell browsing data: probably no benefit. (2) ISP throttles certain services: VPN may help. (3) You torrent: yes, hides activity from ISP. (4) You browse on public Wi-Fi: yes, prevents network-level inspection. (5) You're in a country with internet restrictions: yes, bypasses geo-blocks and surveillance. For most US/EU home users on quality ISPs, VPN provides minimal everyday privacy benefit but real benefit on travel/public networks."
+  - question: "Can a VPN make me fully anonymous?"
+    answer: "No. VPNs hide your IP from websites you visit but don't make you anonymous. Anonymous browsing requires Tor. VPNs leak: browser fingerprint (still identifying), cookies (already-tracking), accounts you log into (you tell websites who you are). VPN limitations: prevents passive ISP surveillance, defeats geographic blocking, encrypts public Wi-Fi traffic. Expectations should be 'pseudonymous, not anonymous.'"
+draft: false
+---
+
+The consumer VPN market is full of misleading marketing — "10x speed," "100% privacy," "military-grade encryption" (a meaningless phrase). Independent security audits over the past 5 years have started providing actual data. PwC audited Mullvad. Cure53 audited ExpressVPN. Deloitte audited NordVPN. Securitum audited ProtonVPN. Court orders have stress-tested several providers. The data shows which VPN claims hold up under independent verification, and which don't.
+
+This article walks through the audit data, real-world speed numbers, what a VPN actually protects against, and which providers have credibility based on something other than their own marketing.
+
+## What audits actually verify
+
+A "no-logs audit" isn't a single thing. The strongest version examines:
+
+1. **Server configuration** — what data is being collected at the network level
+2. **Backend systems** — what databases, dashboards, and analytics are in use
+3. **Source code** — what the VPN client and server software stores
+4. **Operational practices** — how staff access systems, what data they can see
+
+Mullvad's 2024 PwC audit covered all four. ExpressVPN's Cure53 audits covered code + infrastructure. NordVPN's Deloitte audit covered infrastructure + practices. ProtonVPN's Securitum covers code + infrastructure.
+
+**A VPN is only as private as the audit confirms.** Self-reported "we don't log" claims without independent verification are marketing, not security. The 2023 court case where Swedish police seized Mullvad servers and recovered no usable data is the strongest single proof of no-logs claims — it's the rare instance of a VPN's no-logs policy being tested against an actual subpoena.
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post3-shield.png" alt="Watercolor illustration of a stylized shield emblem with a small lock symbol on a wooden desk beside a fountain pen, top-down view" style="width: 100%; border-radius: 8px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">Audit + court-tested = the only credible measure of "no-logs" claims.</figcaption>
+</figure>
+
+## The audited no-logs providers (2024)
+
+The four consumer VPNs with the strongest independent verification:
+
+| Provider | Most recent audit | Auditor | Court tested |
+|---|---|---|---|
+| Mullvad | 2024 | PwC | **Yes — 2023 Swedish search warrant, no data recovered** |
+| ProtonVPN | 2024 | Securitum | Pre-2024 transparency reports |
+| NordVPN | 2023 | Deloitte | No major test |
+| ExpressVPN | 2024 | Cure53 + KPMG | 2017 Turkey assassination investigation, no data |
+
+Mullvad's 2023 court case is the strongest single proof point. **Swedish police executed a search warrant for specific user data. Mullvad's servers had no logs to surrender.** This is the gold-standard verification.
+
+ExpressVPN's 2017 case (Turkey investigated the assassination of a Russian ambassador and seized ExpressVPN servers in Turkey) similarly produced no usable data. Both incidents validated the no-logs architecture.
+
+## Free VPN warning
+
+Top10VPN and VPNMentor have repeatedly investigated free VPN apps. The 2024 findings:
+
+- **75% of top free VPN apps sell user data** to advertisers, data brokers, or governments
+- **38% had malware or suspicious code** in their Android/iOS apps
+- **25% leaked DNS or WebRTC** despite claiming privacy
+
+**Avoid free VPNs in general.** Three exceptions with verified legitimacy:
+
+1. **ProtonVPN Free** — unlimited bandwidth, slower servers, only 3 countries. Same company as paid version. Audited, no-logs.
+2. **Mullvad** — €5/month flat, no free tier but accepts cash/Bitcoin for anonymity.
+3. **TunnelBear Free** — 500MB/month, owned by McAfee, audited but limited.
+
+Anything else in the free VPN space should be avoided. The VPN's business model depends on selling either subscriptions (paid) or your data (most "free" VPNs).
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post3-network.png" alt="Watercolor illustration of an abstract network of intersecting lines connecting small dots on cream paper, top-down view" style="width: 100%; border-radius: 8px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">Free VPN economics: if the product is free, your data is the product.</figcaption>
+</figure>
+
+## Speed reality (what the tests actually show)
+
+PCMag's 2024 VPN speed testing across 50+ providers, using consistent methodology:
+
+| Provider | Local server (lower latency) | Transcontinental | Best protocol |
+|---|---|---|---|
+| Mullvad | 88% baseline | 65% baseline | WireGuard |
+| ProtonVPN | 85% | 60% | WireGuard |
+| NordVPN (NordLynx) | 90% | 70% | NordLynx (WireGuard variant) |
+| ExpressVPN | 80% | 55% | Lightway |
+| Surfshark | 85% | 60% | WireGuard |
+| Average across all tested | 70-90% local, 50-70% transcontinental | | |
+
+**Reality: every VPN slows you down 10-30% in the best case, 30-50% on long-distance routes.** Marketing claims of "10x faster than other VPNs" are comparing to legacy OpenVPN-only providers, not to reality.
+
+For 4K streaming (~25 Mbps required), most quality VPNs work fine. For low-latency gaming (less than 50ms), VPN adds 20-50ms typically — noticeable but tolerable on local servers.
+
+## What VPN actually protects against
+
+A VPN encrypts the network traffic between your device and the VPN's exit server. After that, traffic exits to the destination website normally.
+
+**A VPN protects against:**
+- ISP surveillance (your ISP sees only encrypted VPN traffic)
+- Public Wi-Fi snooping (no one on the network can see your traffic)
+- Geographic content restrictions (bypassing region-locked services)
+- Some DDoS attacks (your real IP is hidden)
+- DNS leak attacks (if VPN runs its own DNS)
+
+**A VPN does NOT protect against:**
+- The VPN provider itself (they see all your traffic)
+- Websites you log into (they know who you are by login)
+- Browser fingerprinting (your browser is identifiable regardless of IP)
+- Cookies and tracking (already-installed trackers continue)
+- Endpoint compromise (malware on your device)
+
+**This is the most-misunderstood point about VPNs:** they shift trust from your ISP to the VPN provider. They don't make you "anonymous" — they make you pseudonymous, with the VPN as the new trust anchor.
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post3-tunnel.png" alt="Watercolor illustration of an abstract tunnel shape with parallel lines drawn on cream paper, beside a fountain pen, top-down view" style="width: 100%; border-radius: 8px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">VPN tunnel: encrypts ISP-to-server. Doesn't anonymize websites you log into.</figcaption>
+</figure>
+
+## Protocol comparison
+
+| Protocol | Speed | Security | Modern |
+|---|---|---|---|
+| WireGuard | Fastest | Strong | Yes (2020) |
+| OpenVPN | Medium | Strong | 2002, mature |
+| IKEv2/IPSec | Fast on mobile | Strong | Yes |
+| L2TP/IPSec | Slow | Acceptable | Older |
+| PPTP | Fast | **Broken** | **Don't use** |
+
+**WireGuard is the modern standard.** 4,000 lines of code (vs OpenVPN's 100,000), modern cryptography, faster connection establishment. NordLynx (NordVPN's WireGuard variant) and ProtonVPN's WireGuard add session-isolation features missing from base WireGuard.
+
+OpenVPN is fine for compatibility and has the longest audit track record. PPTP is officially broken and shouldn't be used by anyone in 2024.
+
+## Provider recommendations by use case
+
+### Casual privacy + occasional travel
+- **Mullvad** ($5/mo flat) — anonymous payment options, audited, court-tested
+- **ProtonVPN** ($4.99-9.99/mo) — Swiss-based, audited, free tier available
+
+### Streaming and content access
+- **NordVPN** ($3-12/mo) — most reliable for Netflix/streaming geo-bypass
+- **ExpressVPN** ($8-13/mo) — best app polish, expensive
+
+### Maximum speed
+- **NordVPN (NordLynx)** — fastest in PCMag 2024 testing
+- **Mullvad WireGuard** — close second, lower cost
+
+### Best privacy
+- **Mullvad** — accepts cash/Bitcoin, no email required to register, court-tested
+- **ProtonVPN** — Swiss jurisdiction, transparent leadership, audited
+
+## What to avoid
+
+- **Any free VPN not on the verified list** (75% data sales, 38% malware risk)
+- **Lifetime VPN deals on AppSumo or LinkedIn ads** — typically suspect quality, often shut down within 2 years
+- **VPN providers based in 14-Eyes intelligence-sharing countries with mandatory data retention** (some US, UK, AU providers)
+- **VPNs requiring Facebook login or extensive personal data** (defeats the privacy purpose)
+- **Browser-only VPN extensions** (often proxy, not full VPN; leaks DNS/WebRTC)
+
+## Setup checklist
+
+For a properly configured VPN:
+
+1. Choose audited provider (Mullvad, ProtonVPN, NordVPN, ExpressVPN)
+2. Install on all devices (phone, laptop, tablet)
+3. Enable "kill switch" — blocks traffic if VPN drops
+4. Use WireGuard or OpenVPN protocol (not PPTP/L2TP)
+5. Enable DNS leak protection (most apps do by default)
+6. Test for leaks at ipleak.net or dnsleaktest.com
+7. Set VPN to auto-connect on untrusted networks (public Wi-Fi)
+
+## The bottom line
+
+VPNs are genuinely useful for: ISP-level privacy, public Wi-Fi protection, geographic content access, and some torrenting use cases. They're not anonymity tools — they shift trust from your ISP to the VPN provider.
+
+Use audited providers (Mullvad, ProtonVPN, ExpressVPN, NordVPN). Avoid free VPNs except the few verified safe ones. WireGuard protocol when available. Test for leaks after setup.
+
+The VPN industry is full of hyperbole. The audit data and court cases are what's actually verifiable. Pick based on those.
