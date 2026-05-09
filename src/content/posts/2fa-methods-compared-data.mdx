@@ -1,0 +1,268 @@
+---
+title: "2FA Methods Compared — SMS, TOTP, and Hardware Keys (Google's Real Attack Data)"
+description: "Google's 2019 study tracked actual account compromise rates across 2FA methods. SMS prevented 76% of bulk phishing. Hardware keys prevented 100%. Here is the data and what it means for everyday users."
+pubDate: 2026-05-09
+updatedDate: 2026-05-09
+category: "Security"
+tags: ["2FA", "TOTP", "hardware keys", "YubiKey", "Google Authenticator", "Authy", "SIM swap", "phishing"]
+heroImage: "/images/illustrations/post2-hero.png"
+schemaType: "Article"
+sources:
+  - title: "Google Security Research — 2FA Effectiveness Study"
+    url: "https://security.googleblog.com/2019/05/new-research-how-effective-is-basic.html"
+    publication: "Google Security"
+    year: "2019 (cited in 2024 reports)"
+  - title: "NIST SP 800-63 Digital Identity Guidelines"
+    url: "https://pages.nist.gov/800-63-3/"
+    publication: "NIST"
+    year: "2024"
+  - title: "FIDO Alliance — FIDO2 Security Standards"
+    url: "https://fidoalliance.org/"
+    publication: "FIDO Alliance"
+    year: "2024"
+  - title: "CISA — Multi-Factor Authentication Guidance"
+    url: "https://www.cisa.gov/secure-our-world/multi-factor-authentication-mfa"
+    publication: "CISA"
+    year: "2024"
+  - title: "Krebs on Security — SIM Swap Attacks"
+    url: "https://krebsonsecurity.com/category/sim-swapping/"
+    publication: "Brian Krebs"
+    year: "2024"
+  - title: "Yubico — YubiKey Security Documentation"
+    url: "https://www.yubico.com/products/"
+    publication: "Yubico"
+    year: "2024"
+  - title: "Microsoft Security — Authentication Research"
+    url: "https://learn.microsoft.com/en-us/azure/active-directory/authentication/"
+    publication: "Microsoft"
+    year: "2024"
+  - title: "Twilio Authy — TOTP Implementation"
+    url: "https://authy.com/blog/"
+    publication: "Twilio Authy"
+    year: "2024"
+  - title: "Cloudflare — Phishing-Resistant 2FA"
+    url: "https://www.cloudflare.com/learning/access-management/what-is-two-factor-authentication/"
+    publication: "Cloudflare"
+    year: "2024"
+  - title: "FBI Internet Crime Complaint Center"
+    url: "https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf"
+    publication: "FBI IC3"
+    year: "2024"
+  - title: "Krebs — 2FA Bypass Attack Trends"
+    url: "https://krebsonsecurity.com/"
+    publication: "Brian Krebs"
+    year: "2024"
+  - title: "1Password — Authentication Best Practices"
+    url: "https://1password.com/resources/security-best-practices/"
+    publication: "1Password"
+    year: "2024"
+internalLinks:
+  - "/posts/family-password-managers-compared"
+  - "/category/security"
+  - "/about"
+visualsCount: 7
+hasVideo: false
+wordCount: 2620
+affiliate: false
+faq:
+  - question: "What's the actual difference in attack prevention?"
+    answer: "Google's 2019 research (still the most cited dataset) measured account compromise rates across 350,000+ users. Results: SMS-based 2FA blocked 76% of bulk phishing attempts, 100% of automated bot attacks, and 96% of targeted phishing. App-based TOTP blocked 99% of bulk phishing and 90% of targeted phishing. Hardware keys (FIDO U2F/WebAuthn) blocked 100% across all attack categories. The gap between SMS and hardware keys is meaningful — about 4-6% of attacks succeed against SMS, near 0% against hardware."
+  - question: "Is SMS 2FA still better than no 2FA?"
+    answer: "Yes, dramatically. NIST officially deprecated SMS in 2017 due to SS7 protocol weaknesses, but Google's research shows SMS still blocks 96-100% of common attacks. The gap matters mostly against targeted attacks (executives, journalists, crypto holders) where attackers will SIM-swap. For most users, SMS 2FA blocks the bulk of opportunistic attacks. The advice 'no 2FA' is much worse than 'SMS 2FA' in nearly all scenarios."
+  - question: "TOTP apps vs SMS — which to use?"
+    answer: "TOTP (Google Authenticator, Authy, 1Password) beats SMS on every dimension except convenience. TOTP doesn't depend on cellular service, can't be intercepted via SIM swap, and continues working internationally without roaming. The downside: app changes phone require backup recovery. Authy and 1Password sync across devices; Google Authenticator can also sync to your Google account. For most users, TOTP via Authy is the practical 2FA upgrade from SMS."
+  - question: "When are hardware keys worth the cost?"
+    answer: "Hardware keys (YubiKey, $50-65) are worth it for: (1) high-value accounts (financial, email, primary identity), (2) anyone who's been targeted by phishing (one phishing success makes hardware mandatory), (3) work accounts at security-conscious employers. For everyday users with normal accounts, TOTP is sufficient and free. The hardware key gap matters most for targeted attacks; for bulk phishing, TOTP is 99% effective."
+  - question: "What if you lose your phone or hardware key?"
+    answer: "Always set up backup recovery before you need it. Best practice: (1) Two hardware keys (one in pocket, one in safe) — Yubico recommends always having a backup. (2) Backup codes printed and stored offline (most providers offer 10-20 single-use codes). (3) Recovery email with separate password + 2FA. (4) Authy vs Google Authenticator: Authy syncs encrypted across devices, easier recovery. Don't put yourself in a position where lose-phone = lose-account."
+  - question: "What's a SIM swap attack?"
+    answer: "An attacker convinces your cellular carrier to transfer your phone number to their SIM card. Once they have your number, they receive your SMS 2FA codes. Method: social engineering (call carrier as you, provide enough info to authenticate), or insider help. FBI IC3 reported $48M in SIM swap losses in 2023. Targets: crypto holders, tech workers, executives. Prevention: ask carrier for a port-out PIN (separate from account password), avoid linking SMS 2FA to high-value accounts, prefer TOTP or hardware keys."
+draft: false
+---
+
+In 2019, Google published the most comprehensive study of 2FA effectiveness ever done — tracking actual account compromise rates across 350,000+ users facing real attacks. The numbers contradicted some accepted wisdom (SMS works much better than security experts claimed) and confirmed others (hardware keys are essentially unbreakable). Five years later, the FIDO Alliance and NIST have updated guidance, but the core data remains the most cited reference for 2FA decisions.
+
+This article walks through the Google data, what's changed in attacks since 2019, the FIDO2/WebAuthn standard that's becoming the new default, and which 2FA method makes sense for which threat model.
+
+## Google's effectiveness data
+
+Google's 2019 research divided account compromise attempts into three categories:
+
+1. **Automated bots** — credential stuffing using leaked password databases
+2. **Bulk phishing** — generic phishing emails sent to millions
+3. **Targeted phishing** — specific attacks on individuals (executives, high-value)
+
+Their measured prevention rates:
+
+| 2FA Method | Bot attacks | Bulk phishing | Targeted phishing |
+|---|---|---|---|
+| No 2FA | 0% | 0% | 0% |
+| SMS code | 100% | 76% | 96% |
+| App-based (TOTP) | 100% | 99% | 90% |
+| Hardware key (FIDO) | 100% | 100% | 100% |
+
+**The data shows three things:**
+
+1. **Any 2FA blocks 100% of bot attacks.** Credential stuffing is defeated by any second factor. This is the easy win.
+
+2. **SMS underperforms TOTP for bulk phishing.** 76% vs 99%. The reason: SMS codes can be phished — attackers can build a fake login page that prompts for the SMS code and forwards it to the real site in real time. TOTP codes are time-bound and harder to relay.
+
+3. **Hardware keys are uniquely phishing-resistant.** 100% across all categories. Hardware keys verify the actual website domain (via WebAuthn) — they refuse to authenticate against a phishing domain even if the user is fooled.
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post2-keys.png" alt="Watercolor still life of three small physical hardware security keys arranged in a row on a wooden desk, top-down view" style="width: 100%; border-radius: 8px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">Hardware keys: 100% prevention across every attack type Google measured.</figcaption>
+</figure>
+
+## SMS 2FA — the controversial baseline
+
+NIST officially deprecated SMS 2FA in 2017 (SP 800-63B), citing the SS7 protocol's susceptibility to interception. The deprecation was widely interpreted as "SMS 2FA is broken" — but Google's data shows it still blocks 76-96% of attacks.
+
+The reality: **SMS 2FA is "broken" against sophisticated targeted attacks, fine against everything else.**
+
+### When SMS fails
+
+- **SIM swap attacks.** Attacker calls your carrier and convinces them to transfer your number. FBI IC3 reported $48M in SIM swap losses in 2023.
+- **SS7 interception.** Telecom protocol vulnerabilities allow message interception with carrier-level access. Mostly state-level threats.
+- **Real-time phishing relay.** Attacker builds fake login page, prompts for SMS code, forwards to real site within the 30-60 second code validity window.
+
+### When SMS is fine
+
+- Defending against bulk credential stuffing (leaked password reuse)
+- Bulk phishing (generic attacks, not targeted)
+- Most everyday account compromise scenarios
+
+For 95%+ of users, SMS 2FA is a meaningful upgrade over no 2FA. The "SMS is dead" advice is overcalibrated for high-threat-model users (crypto holders, executives, journalists). For your bank account, your Amazon account, your Netflix — SMS 2FA blocks the realistic threats.
+
+## TOTP — the practical default
+
+Time-based One-Time Password (TOTP) apps generate 6-digit codes that change every 30 seconds. The code is computed from a shared secret + current time, with no network communication required.
+
+Major TOTP apps:
+- **Google Authenticator** — basic, free, can sync to Google account (since 2023)
+- **Authy** — multi-device sync, encrypted backup, free
+- **1Password** — included in password manager subscription
+- **Microsoft Authenticator** — for Microsoft ecosystem
+- **Authy / Twilio Authy** — popular general-purpose
+
+Google's 2019 data shows TOTP blocks 99% of bulk phishing — substantially better than SMS's 76%. The improvement comes from two factors:
+
+1. **No interception channel.** TOTP codes don't traverse SMS networks; they're generated locally on your device.
+2. **Phishing-resistant by accident.** A fake login page can prompt for a TOTP code and relay it, but only within the 30-second window. Real-time relay is technically possible but operationally harder than SMS relay.
+
+**The TOTP win case: defends against everything except real-time phishing relay attacks (which require sophisticated adversaries) and fancier targeted methods.**
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post2-phone.png" alt="Watercolor still life of a smartphone displaying an authenticator app with rotating codes beside a small notebook on a wooden desk, top-down view" style="width: 100%; border-radius: 8px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">TOTP apps: free, no SIM swap risk, 99% effective against bulk phishing.</figcaption>
+</figure>
+
+## Hardware keys — the only phishing-immune option
+
+FIDO Alliance's WebAuthn/FIDO2 standard creates the only 2FA method that's truly phishing-resistant. The mechanism:
+
+1. When you register the key with a website, the key generates a unique cryptographic key-pair tied to the website's domain.
+2. When you log in, the browser sends a challenge to the key, which signs it using the domain-bound private key.
+3. **The key refuses to sign for a different domain.** A phishing site at "googIe.com" (with capital I) can't get a signature from a key registered to "google.com".
+
+Even if a user is completely fooled by a phishing page, the hardware key itself won't authenticate. **This is why Google's data shows 100% effectiveness.** The mechanism doesn't depend on user vigilance.
+
+Major hardware keys:
+- **YubiKey 5 series** ($55-65) — supports FIDO2, U2F, OTP, smart card
+- **Google Titan** ($30-50) — supports FIDO2, U2F
+- **Apple's Passkeys** (free, software-based) — FIDO2 in iCloud Keychain
+
+Apple's 2023 introduction of Passkeys made FIDO2 effectively free for Apple users — no hardware key required. Microsoft and Google followed with similar implementations. **Passkeys are FIDO2-class authentication for everyday use, syncing across devices via cloud.** They're as phishing-resistant as hardware keys for most threat models.
+
+## Threat model — picking the right level
+
+Match 2FA to your threat model:
+
+### Level 1: Casual user, average accounts
+
+**Threat:** credential stuffing, bulk phishing, opportunistic attackers.
+**Recommendation:** SMS 2FA on all important accounts.
+**Effort:** Low (already supported by most services).
+**Cost:** Free.
+**Coverage:** 76-100% of attacks.
+
+### Level 2: Aware user, important accounts (banking, email, crypto)
+
+**Threat:** Above + targeted phishing.
+**Recommendation:** TOTP via Authy or 1Password. SMS as fallback.
+**Effort:** Medium (one-time app setup per account).
+**Cost:** Free (or included with password manager).
+**Coverage:** 99-100% of attacks.
+
+### Level 3: High-value target (executive, journalist, crypto holder, public figure)
+
+**Threat:** Above + sophisticated targeted attacks, SIM swap, real-time relay.
+**Recommendation:** Hardware keys (YubiKey 5C NFC, $55) on critical accounts. Two keys minimum. Passkeys for everything else.
+**Effort:** High (requires consistent backup management).
+**Cost:** $100-150 for two keys.
+**Coverage:** 100% of attacks.
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post2-laptop.png" alt="Watercolor illustration of a laptop on a desk with a small hardware security key inserted into a USB port, beside a notebook and coffee cup" style="width: 100%; border-radius: 8px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">Hardware key + WebAuthn: the gold standard for high-value account protection.</figcaption>
+</figure>
+
+## What's changed since 2019
+
+Google's data is from 2019. Several attack patterns have evolved:
+
+### 1. Bot attacks more sophisticated
+
+Credential stuffing now uses real browser automation (puppeteer, playwright) that bypasses simple bot detection. Still defeated by any 2FA method.
+
+### 2. Real-time phishing relay tools commoditized
+
+EvilProxy, Modlishka, and similar phishing-as-a-service kits enable real-time relay attacks against TOTP. **TOTP effectiveness against bulk phishing has likely dropped from 99% in 2019 to 95-97% in 2024.** Hardware keys remain unaffected.
+
+### 3. SIM swap attacks more common
+
+Cellular carriers have improved verification but SIM swap remains a documented threat. FBI IC3 2023 data: $48M in confirmed losses from SIM swaps. Particularly concentrated in crypto holders.
+
+### 4. Passkeys reduce hardware key barrier
+
+Apple's Passkeys (2022), Google Passkeys (2023), and Microsoft's WebAuthn make FIDO2 authentication available to consumers without buying hardware. **For most users, Passkeys provide hardware-key-level security at zero cost.** This is the biggest 2024 development.
+
+## Setup recommendations
+
+For non-technical users:
+
+### Step 1: Enable 2FA on these accounts (priority order)
+
+1. Primary email (Gmail, Outlook, iCloud)
+2. Banking and credit card accounts
+3. Phone carrier account (Verizon, AT&T, T-Mobile portal)
+4. Apple ID / Google Account / Microsoft Account
+5. Password manager (1Password, LastPass, Bitwarden)
+6. Government accounts (IRS, SSA, state DMV)
+7. Social media (especially if used professionally)
+
+### Step 2: Choose your method
+
+- **Easiest:** SMS for all accounts. Better than nothing.
+- **Better:** Authy or 1Password TOTP for accounts that support it.
+- **Best:** Passkeys via your device's biometric (Face ID, Touch ID, Windows Hello) for sites that support it.
+- **Best for high-value:** YubiKey 5 + Passkey backup.
+
+### Step 3: Set up backup recovery
+
+- Print backup codes (most providers offer them).
+- Store in safe or fireproof box.
+- Use Authy or 1Password (multi-device sync) over Google Authenticator (single-device).
+- Enable account recovery email.
+
+### Step 4: Carrier port-out PIN
+
+Call your cellular carrier and request a port-out PIN — a separate password required to transfer your number to a new SIM. This blocks the most common SIM swap attack vector.
+
+## The bottom line
+
+Google's data is unambiguous: any 2FA blocks 96-100% of casual attacks; hardware keys block 100% of all attacks. The gap between SMS and TOTP is real but smaller than security experts often suggest. The gap between TOTP and hardware keys matters mostly for targeted-attack users.
+
+For everyday users, free TOTP apps (Authy, 1Password) are the optimal trade-off. For high-value accounts, add hardware keys. SMS 2FA is "deprecated" but still vastly better than no 2FA.
+
+Don't let perfect be the enemy of good. Turn on whatever 2FA your accounts support today; upgrade the method later.
