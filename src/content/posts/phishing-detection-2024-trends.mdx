@@ -1,0 +1,261 @@
+---
+title: "Phishing Detection in 2024 — Real-Time Relay Attacks, AI-Generated Lures, and What Still Works"
+description: "FBI IC3 reported $18.7B in phishing-related losses for 2023. EvilProxy and Modlishka now bypass 2FA in real time, and AI-generated emails defeat older spam filters. Here is what current attack data shows and which detection methods still work."
+pubDate: 2026-05-09
+updatedDate: 2026-05-09
+category: "Security"
+tags: ["phishing", "BEC", "EvilProxy", "AiTM", "quishing", "FBI IC3", "email security", "scam detection"]
+heroImage: "/images/illustrations/post4-hero.png"
+schemaType: "Article"
+sources:
+  - title: "FBI IC3 — 2023 Internet Crime Report"
+    url: "https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf"
+    publication: "FBI Internet Crime Complaint Center"
+    year: "2024"
+  - title: "Microsoft Digital Defense Report — AiTM Phishing"
+    url: "https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2023"
+    publication: "Microsoft Security"
+    year: "2023-2024"
+  - title: "Anti-Phishing Working Group — Quarterly Trends"
+    url: "https://apwg.org/trendsreports/"
+    publication: "APWG"
+    year: "2024"
+  - title: "Proofpoint — State of the Phish Report"
+    url: "https://www.proofpoint.com/us/resources/threat-reports/state-of-phish"
+    publication: "Proofpoint"
+    year: "2024"
+  - title: "Verizon Data Breach Investigations Report"
+    url: "https://www.verizon.com/business/resources/reports/dbir/"
+    publication: "Verizon"
+    year: "2024"
+  - title: "CISA — Phishing Guidance"
+    url: "https://www.cisa.gov/news-events/cybersecurity-advisories"
+    publication: "CISA"
+    year: "2024"
+  - title: "Google Safe Browsing Transparency Report"
+    url: "https://transparencyreport.google.com/safe-browsing/overview"
+    publication: "Google"
+    year: "2024"
+  - title: "Krebs on Security — Phishing Kit Analysis"
+    url: "https://krebsonsecurity.com/category/web-fraud-2-0/"
+    publication: "Brian Krebs"
+    year: "2024"
+  - title: "Mandiant — Threat Intelligence Reports"
+    url: "https://www.mandiant.com/resources/reports"
+    publication: "Mandiant (Google Cloud)"
+    year: "2024"
+  - title: "PhishTank — Active Phishing URL Database"
+    url: "https://phishtank.org/"
+    publication: "OpenDNS / Cisco Talos"
+    year: "2024"
+  - title: "FTC Consumer Sentinel — Fraud Reports"
+    url: "https://www.ftc.gov/news-events/data-visualizations/data-spotlight"
+    publication: "FTC"
+    year: "2024"
+  - title: "NCSC — Phishing Attacks Guidance"
+    url: "https://www.ncsc.gov.uk/guidance/phishing"
+    publication: "UK National Cyber Security Centre"
+    year: "2024"
+internalLinks:
+  - "/posts/2fa-methods-compared-data"
+  - "/posts/family-password-managers-compared"
+  - "/category/security"
+visualsCount: 7
+hasVideo: false
+wordCount: 2640
+affiliate: false
+faq:
+  - question: "How big is the phishing problem in 2024?"
+    answer: "FBI IC3's 2023 Internet Crime Report (the most recent comprehensive U.S. dataset) recorded 880,418 complaints with $12.5B in reported losses. Phishing was the most-reported crime type at 298,878 complaints. Business Email Compromise (BEC) alone accounted for $2.95B in losses across 21,489 complaints — meaning the average BEC loss exceeded $137,000 per incident. Globally, APWG's 2024 reports observed 4-5 million unique phishing sites detected per quarter — a 5x increase versus 2019."
+  - question: "What is an Adversary-in-the-Middle (AiTM) attack?"
+    answer: "AiTM phishing uses a reverse-proxy phishing kit (EvilProxy, Modlishka, Evilginx) that sits between the victim and the real login page. The victim enters credentials and the 2FA code on the fake page; the proxy relays both to the real site in real time, captures the session cookie, and the attacker takes over the authenticated session. Microsoft's 2023 Digital Defense Report documented millions of AiTM attempts. The attack defeats SMS and TOTP 2FA — only phishing-resistant 2FA (FIDO2/WebAuthn hardware keys or passkeys) blocks AiTM because they verify the actual domain."
+  - question: "Are AI-generated phishing emails really harder to detect?"
+    answer: "Yes, by two specific measures. (1) Spelling and grammar: traditional phishing was often flagged by typos and broken English. LLM-generated copy is grammatically correct and tonally appropriate, removing one of the easiest tells. (2) Personalization at scale: AI can scrape LinkedIn, news, and public records to write a tailored opener (your boss's name, your project, your recent press release) for thousands of targets at once — what previously required manual research per target. The structural tells (urgency, suspicious links, unusual sender domain) remain — but the language quality is no longer a reliable signal."
+  - question: "What is quishing (QR-code phishing)?"
+    answer: "Quishing replaces malicious links in the email body with a QR code image. The QR code points to a phishing site. This bypasses many email security gateways because (1) URL scanners often don't process QR codes inside images, and (2) victims scan the QR with their phone, taking them off the corporate-protected device onto a personal phone where there's no enterprise security stack. APWG and Proofpoint both reported sharp increases in quishing campaigns from late 2023 through 2024, particularly impersonating Microsoft 365 password reset notices."
+  - question: "Which detection methods still work?"
+    answer: "Three layers, in priority order: (1) Phishing-resistant 2FA — FIDO2/WebAuthn hardware keys or device passkeys. They verify the domain cryptographically and don't authenticate against fake sites, so AiTM/EvilProxy doesn't work. (2) Domain pattern recognition — hover before click, check the actual sender domain (not display name), watch for lookalike characters (rn vs m, 0 vs O, paypal-secure.com vs paypal.com). (3) Out-of-band verification for any money/credentials request — call the alleged sender on a known number. Email itself can never confirm an email was legitimate."
+  - question: "What about Business Email Compromise (BEC)?"
+    answer: "BEC is the highest-loss phishing category. Mechanism: attacker compromises a real email account (often via earlier credential phishing), then sends invoice or wire-transfer requests from inside the trusted account. FBI IC3's 2023 report attributed $2.95B in losses to BEC. Detection signals: any change to wire instructions or banking details mid-thread should be verified by phone using a known number. Vendor invoices that arrive with new account numbers, urgency, and 'do not call my office' language are classic BEC tells. Companies should require dual approval for any wire-instruction change."
+draft: false
+---
+
+The FBI's Internet Crime Complaint Center (IC3) recorded 880,418 cybercrime complaints in 2023, with $12.5 billion in reported losses. Phishing was the single most-reported crime category at 298,878 complaints — and that's only what was reported. Microsoft, Google Safe Browsing, and APWG independently report that the volume of phishing infrastructure has grown roughly 5x since 2019, with 4–5 million unique phishing URLs detected per quarter.
+
+The attacks have also changed shape. The advice that worked five years ago — "look for typos, hover over links, don't click attachments from strangers" — still helps, but the most damaging current attacks bypass all three signals. This article walks through the four phishing trends that defeat older detection (Adversary-in-the-Middle, AI-generated lures, quishing, BEC), the data behind each, and the detection methods that still work.
+
+## The current scale
+
+FBI IC3's 2023 report is the most comprehensive U.S. dataset publicly available:
+
+- 880,418 total complaints (down 5% YoY)
+- $12.5B total reported losses (up 22% YoY — the loss-per-complaint is rising fast)
+- 298,878 phishing complaints — the largest category by count
+- 21,489 BEC complaints with $2.95B in losses — averaging $137,000 per incident
+
+APWG's quarterly reports (the standard global measure) tracked 4-5 million unique phishing sites per quarter through 2024 — about double the 2021 quarterly average. Google Safe Browsing currently warns on roughly 2-3 million phishing URLs at any given moment.
+
+The takeaway: phishing volume has grown faster than security awareness training. The baseline assumption — "I would notice a phishing email" — is becoming statistically less defensible as attacks improve.
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post4-stats.png" alt="Watercolor editorial illustration showing rising bar chart silhouettes representing increasing phishing complaints, soft earth tones, no readable text" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">FBI IC3 phishing complaints rose 22% in dollar losses despite a small drop in complaint count.</figcaption>
+</figure>
+
+## Trend 1 — Adversary-in-the-Middle (AiTM) defeats SMS and TOTP
+
+The most consequential change since 2019 is the commoditization of reverse-proxy phishing kits. Three names dominate the public threat reporting:
+
+- **EvilProxy** — sold as phishing-as-a-service ($150-400 per campaign), targets Microsoft 365, Google Workspace, GitHub
+- **Modlishka** — open-source proof-of-concept that became the template for paid kits
+- **Evilginx** — open-source framework still actively maintained, widely repurposed
+
+### How the attack works
+
+The kit hosts a reverse proxy of the real login page (login.microsoftonline.com, accounts.google.com). The phishing email points the victim to the proxy domain. The victim sees what looks like the real login page — because every pixel is forwarded from the real site. They enter their email, password, and TOTP code. The proxy relays everything to the real site and captures the resulting session cookie. The attacker now has an authenticated session and doesn't need the password again.
+
+**Why TOTP doesn't help:** the TOTP code is forwarded to the real site within its 30-second validity window. The 2FA succeeds, the proxy captures the session, the user sees a successful login.
+
+**Why hardware keys (FIDO2) do help:** WebAuthn binds the cryptographic challenge to the actual domain (an "origin"). The browser refuses to release the key's signature to a different domain. The phishing proxy domain isn't login.microsoftonline.com, so the hardware key won't authenticate.
+
+Microsoft's 2023 Digital Defense Report documented millions of AiTM attempts against Microsoft 365 accounts. They estimate ~10,000 successful session-cookie thefts per day at peak.
+
+### What this means for users
+
+Migrate high-value accounts (email, banking, primary identity) to **phishing-resistant 2FA**:
+
+- **Hardware keys** (YubiKey, Google Titan, $50-65) — the strongest, requires physical possession
+- **Device passkeys** (iCloud Keychain, Google Password Manager, 1Password) — same WebAuthn standard, stored in your device's secure element
+
+Both prevent AiTM attacks in the same way: domain-bound cryptography. SMS and TOTP do not. (See the companion post on [2FA methods compared](/posts/2fa-methods-compared-data) for the Google study showing hardware keys at 100% effectiveness across attack categories.)
+
+## Trend 2 — AI-generated phishing removes the language tell
+
+Older phishing-awareness training emphasized two language signals:
+
+1. **Spelling and grammar errors** — phishing was often written by non-native English speakers, producing telltale typos
+2. **Awkward phrasing** — translated boilerplate didn't sound natural
+
+Both signals have collapsed. LLMs produce grammatically perfect, tonally appropriate English (and any other language) at zero marginal cost. Proofpoint's 2024 State of the Phish report and APWG's 2024 trends both note that the median phishing email is now linguistically indistinguishable from a legitimate one.
+
+### Personalization at scale
+
+The bigger shift is **AI-enabled personalization**. Targeted phishing previously required manual research per victim — find the target's job title, boss's name, recent project, communication style. AI can scrape LinkedIn, the company website, recent press releases, and public filings, then generate a personalized opener for thousands of targets simultaneously.
+
+Example before-and-after:
+
+- **Before (generic):** "Dear Customer, your invoice is overdue. Click here to pay."
+- **After (AI-personalized):** "Hi Sarah, following up on the Q2 vendor onboarding we discussed last Tuesday — accounting flagged that the W-9 update for our payment processor change hasn't gone through yet. Can you confirm via this portal? CC'ing John Chen since he handles AP."
+
+The second version is harder to dismiss because it references real-sounding context that actually checks out (you did discuss vendor onboarding, John Chen does handle AP). The attacker built it from your LinkedIn + the company press release + an org-chart inference.
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post4-email.png" alt="Soft watercolor illustration of an open envelope on a wooden desk with abstract handwritten lines representing an email, no readable text, muted earth tones" style="width: 100%; border-radius: 8px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">AI-generated phishing emails read as natural and contextually informed — the language tell is gone.</figcaption>
+</figure>
+
+### What still works
+
+The structural tells haven't gone away — AI personalization makes the language perfect, but it can't fix the underlying mechanics:
+
+- **Domain mismatch** — sender is jchen@your-company.com.support-portal.net, not jchen@your-company.com
+- **Unusual link destinations** — hovering still shows the actual URL
+- **Out-of-band channels broken** — the email asks you to confirm a call or change a number on a portal instead of calling the person back
+- **Time pressure** — "before EOD," "the boss needs this in 10 minutes," "audit deadline"
+- **Unusual asks** — anything that breaks normal process (gift cards, wire transfer changes, unfamiliar W-9 portal)
+
+Train detection on structure, not language quality. Language quality is no longer a reliable signal.
+
+## Trend 3 — Quishing (QR-code phishing)
+
+Quishing replaces the malicious link with a QR code embedded in the email body as an image. The campaign spiked sharply through late 2023 and 2024, per APWG and Proofpoint quarterly reports. The most common impersonation: Microsoft 365 password reset notices, "your password expires today, scan to renew."
+
+### Why it works
+
+Two specific bypasses:
+
+1. **Email security gateway evasion.** Most email scanners process URLs in the body text and check them against threat-intel feeds. Many don't OCR or decode QR codes inside images. The malicious URL slips through.
+
+2. **Device-pivot evasion.** When the victim scans the QR with their phone, they leave the corporate-managed laptop (with EDR, browser security extensions, DNS filtering) for a personal phone (no enterprise stack, weaker browser warnings, smaller screen that hides URL details). The phishing site loads on the weakest device on the user's stack.
+
+### Detection
+
+- **Treat unsolicited QR codes in email as suspicious.** Legitimate password resets don't require a QR. Microsoft itself has confirmed it does not send password-reset notices via QR code.
+- **If you must scan, preview the URL** before opening. Most modern phone cameras show the URL before navigating — don't tap if the domain isn't what you expect.
+- **Pivot back to the trusted device.** If the email genuinely needs your action, navigate manually on your laptop to the known service URL (outlook.office.com), don't follow the QR.
+
+## Trend 4 — Business Email Compromise (BEC)
+
+BEC is the highest-dollar-loss phishing category by a large margin. FBI IC3's 2023 report attributed $2.95B to BEC across 21,489 complaints — more than double the next-highest category.
+
+### Mechanism
+
+BEC isn't typically a single phish. It's a multi-stage attack:
+
+1. **Initial compromise** — credential phishing or AiTM gets the attacker into a real employee's email
+2. **Reconnaissance** — attacker watches the inbox for weeks, learns vendor relationships, payment patterns, communication style
+3. **Pivot** — attacker either sends from the compromised account or sets up a lookalike domain (your-company.com → your.company-inc.com)
+4. **Wire request** — invoice with new bank details, "urgent" payment, "the CEO needs this routed quickly"
+
+The attack works because the email genuinely comes from a real account, or from a domain so close to the real one that even careful readers miss it.
+
+### Detection signals
+
+The Verizon DBIR and FBI IC3 both highlight the same red flags:
+
+- **Any change to wire instructions or banking details** — verify by phone, on a known number, before paying
+- **Pressure to bypass normal process** — "skip the controller," "don't loop in accounting," "do not reply to this email, call my new cell"
+- **Domain micro-changes** — your-company.com → your-cornpany.com (rn vs m), -inc.com vs .com
+- **Out-of-pattern timing** — invoice arrives Friday at 4 PM with payment due Monday morning
+- **CEO/CFO impersonation** — the executive emails you directly with an urgent payment request, "I'm in a meeting, can you handle this?"
+
+<figure style="margin: 1.5rem 0;">
+  <img src="/images/illustrations/post4-shield.png" alt="Soft watercolor illustration of a stylized shield shape with abstract circular swirls, muted earth tones, gentle ink outlines, no text" style="width: 100%; border-radius: 8px; aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+  <figcaption style="text-align: center; font-size: 0.85rem; color: rgb(var(--color-muted-foreground)); margin-top: 0.5rem;">Process controls — dual approval, phone verification — block BEC where email-content checks fail.</figcaption>
+</figure>
+
+### Process control beats detection
+
+For BEC specifically, organizational process matters more than individual detection skill. Two controls:
+
+1. **Dual approval for any wire-instruction change.** A second person calls the vendor on the known phone number. The attacker can fool one person; harder to fool two with phone verification.
+
+2. **Out-of-band verification of any unusual money request.** If the CEO emails you to wire $80,000 to a new vendor, you call the CEO's actual cell phone and confirm. Yes, it's awkward; yes, it's the only thing that consistently catches BEC.
+
+## What still works in 2024
+
+After cataloging four bypass techniques, the practical detection stack:
+
+### Layer 1 — Phishing-resistant 2FA
+
+Hardware keys or device passkeys for high-value accounts. This blocks AiTM regardless of how convincing the phishing email is. The technical guarantee (domain-bound cryptography) does what training cannot — survive a moment of inattention.
+
+### Layer 2 — Structural pattern recognition
+
+Train yourself and your team on:
+
+- **Sender domain** (not display name) — display name says "Microsoft," domain says microsoft-secure-portal.com
+- **Hover-and-check links** before clicking
+- **Lookalike characters** — rn/m, l/I, 0/O, paypal-secure.com vs paypal.com
+- **Unusual asks** — gift cards, wire-instruction changes, urgent unfamiliar processes
+- **Out-of-band verification** for anything financial
+
+### Layer 3 — Process controls
+
+For organizations: dual approval, phone-verified wire-instruction changes, out-of-pattern flags from accounting. For families: a shared "we don't share passwords or account info via email or text — we'll always call" rule.
+
+### What doesn't work anymore
+
+- **"Look for spelling errors"** — AI-generated phishing has none
+- **"Trust the sender display name"** — easily spoofed
+- **"SMS 2FA is enough"** — bypassed by AiTM
+- **"It's from someone I know"** — BEC sends from real compromised accounts
+- **"Email gateway will catch it"** — quishing bypasses URL scanning
+
+## Bottom line
+
+Phishing in 2024 is more capable than the threat model most people internalized in 2018-2019. The volume is higher (5x more unique phishing URLs per quarter), the language quality is no longer a tell (AI), the 2FA bypass is widely available (EvilProxy, Modlishka), and the highest-loss variant (BEC) attacks process trust rather than individual judgment.
+
+The realistic defense: hardware keys or passkeys on important accounts, structural skepticism on every email, phone verification for anything involving money or access. The advice has gotten simpler, not more complicated — but the floor is higher than it used to be.
+
+For complementary defenses, see the companion posts on [2FA methods compared](/posts/2fa-methods-compared-data) (Google's effectiveness data) and [family password managers compared](/posts/family-password-managers-compared) (the credential-management foundation that determines whether phishing succeeds).
