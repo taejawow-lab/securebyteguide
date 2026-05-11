@@ -20,6 +20,10 @@ jobs:
       - run: npm run build
         env:
           PUBLIC_CF_BEACON_TOKEN: 55b1113b57ec4b019793ea7dc73d51cc
+          PUBLIC_AMAZON_TAG_US: taekm33-20
+          PUBLIC_AMAZON_TAG_JP: taekm33-22
+          PUBLIC_AMAZON_TAG_UK: taekm33-21
+          PUBLIC_AMAZON_TAG_CA: taekm330a-20
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
