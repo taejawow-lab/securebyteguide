@@ -63,7 +63,7 @@ internalLinks:
 visualsCount: 7
 hasVideo: false
 wordCount: 2580
-affiliate: false
+affiliate: true
 faq:
   - question: "Do 'no-logs' VPNs really keep no logs?"
     answer: "Most do, but with caveats. Independently audited no-logs providers (Mullvad, ProtonVPN, ExpressVPN, NordVPN) have third-party verification of their claims. The real test is court orders: in 2023, Swedish police seized Mullvad servers with a search warrant — and recovered no usable user data. NordVPN, ProtonVPN, and ExpressVPN have similar court-tested no-logs records. Unaudited providers (especially free VPNs) often DO log; some sell the data."
@@ -79,6 +79,9 @@ faq:
     answer: "No. VPNs hide your IP from websites you visit but don't make you anonymous. Anonymous browsing requires Tor. VPNs leak: browser fingerprint (still identifying), cookies (already-tracking), accounts you log into (you tell websites who you are). VPN limitations: prevents passive ISP surveillance, defeats geographic blocking, encrypts public Wi-Fi traffic. Expectations should be 'pseudonymous, not anonymous.'"
 draft: false
 ---
+
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
 
 The consumer VPN market is full of misleading marketing — "10x speed," "100% privacy," "military-grade encryption" (a meaningless phrase). Independent security audits over the past 5 years have started providing actual data. PwC audited Mullvad. Cure53 audited ExpressVPN. Deloitte audited NordVPN. Securitum audited ProtonVPN. Court orders have stress-tested several providers. The data shows which VPN claims hold up under independent verification, and which don't.
 
@@ -239,3 +242,57 @@ VPNs are genuinely useful for: ISP-level privacy, public Wi-Fi protection, geogr
 Use audited providers (Mullvad, ProtonVPN, ExpressVPN, NordVPN). Avoid free VPNs except the few verified safe ones. WireGuard protocol when available. Test for leaks after setup.
 
 The VPN industry is full of hyperbole. The audit data and court cases are what's actually verifiable. Pick based on those.
+
+## VPN-capable routers worth running
+
+Most "VPN routers" can't keep up with 1 Gbps WAN connections. These three are independently tested to actually deliver line-rate VPN throughput on consumer hardware:
+
+<ProductBox
+  name="ASUS RT-AX86U Pro AX5700 (WireGuard support)"
+  priceHint="$280-340 — fastest consumer VPN router"
+  pros={[
+    "WireGuard support — 900+ Mbps VPN throughput in tests",
+    "AiProtection Pro included (Trend Micro threat scanning)",
+    "Strong open-source firmware community (Merlin)"
+  ]}
+  cons={[
+    "Premium price vs basic AX routers",
+    "OpenVPN throughput much slower than WireGuard — use the latter"
+  ]}
+  href="https://www.amazon.com/s?k=ASUS+RT-AX86U+Pro+VPN+router"
+  region="us"
+/>
+
+<ProductBox
+  name="GL.iNet Slate AX Travel Router (GL-AXT1800)"
+  priceHint="$130-180 — pocket-size VPN router for travel"
+  pros={[
+    "Pre-configured WireGuard + OpenVPN — works out of the box",
+    "Pocket-size — pairs with hotel WiFi for instant VPN tunneling",
+    "USB-powered, OpenWRT-based, transparent open-source firmware"
+  ]}
+  cons={[
+    "Lower throughput than full home routers (~400 Mbps cap)",
+    "Travel-focused — overkill for primary home setup"
+  ]}
+  href="https://www.amazon.com/s?k=GL.iNet+Slate+AX+travel+router"
+  region="us"
+/>
+
+<ProductBox
+  name="Synology RT6600ax Triple-Band WiFi 6"
+  priceHint="$300-380 — security-focused with full VPN suite"
+  pros={[
+    "Three-band WiFi 6 (2.4 / 5 / 5.9 GHz)",
+    "Built-in VPN server + client with WireGuard",
+    "Threat Prevention package included free"
+  ]}
+  cons={[
+    "Premium price; setup complexity for casual users",
+    "VPN throughput slightly lower than ASUS Merlin firmware"
+  ]}
+  href="https://www.amazon.com/s?k=Synology+RT6600ax+triple+band+WiFi+6"
+  region="us"
+/>
+
+For home setups, the ASUS RT-AX86U Pro is the fastest single-router pick. For travelers, the GL.iNet Slate AX in your bag means every hotel network gets the same VPN protection as home.
