@@ -63,7 +63,7 @@ internalLinks:
 visualsCount: 7
 hasVideo: false
 wordCount: 2680
-affiliate: false
+affiliate: true
 faq:
   - question: "How long does this actually take, end to end?"
     answer: "Roughly 90 minutes spread over an evening — about 30 minutes for the password manager initial setup, 20 minutes for 2FA on email and three primary accounts, 15 minutes for device updates and screen-lock review, 15 minutes for router security, 10 minutes for backup verification. The first 30 minutes (password manager + email 2FA) deliver about 80% of the security benefit. If you only have 30 minutes, do those two and finish the rest later. Verizon DBIR consistently shows that stolen credentials and weak credentials account for the majority of non-targeted breaches — fixing those two issues moves you out of the high-risk default."
@@ -79,6 +79,9 @@ faq:
     answer: "Two distinct layers. (1) Account-level: kids under 13 should use Family Sharing (Apple) or Family Link (Google) — these are the only legal frameworks that handle COPPA properly. They give parents control over app installs, screen time, and purchase approvals. (2) Network-level: a router or DNS-level filter (Cleanbrowsing, NextDNS, Pi-hole) blocks malware-distribution and adult-content domains across all devices on the home network, including guest devices. Don't try to block at the device level alone — kids will find devices that aren't enrolled. The network-level filter is the durable defense."
 draft: false
 ---
+
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
 
 The Verizon Data Breach Investigations Report 2024 found that the human element — phishing, stolen credentials, error — featured in roughly 68% of breaches. Among non-targeted attacks (the kind ordinary households face), the failure modes are dull and repetitive: a password reused across sites that got leaked five years ago, no 2FA on the email account that controls every other account's reset link, an unpatched router with default admin credentials, and a backup that turns out not to exist.
 
@@ -286,3 +289,57 @@ The 90 minutes break down roughly:
 Verizon DBIR consistently shows that fixing the credential side of the equation is the highest-leverage move available. After 90 minutes, your family's exposure to opportunistic compromise drops by an order of magnitude. The polish work — better hardware keys, more rigorous backups, kids' device controls — can be added month by month.
 
 For deeper dives on each layer, see [family password managers compared](/posts/family-password-managers-compared), [2FA methods compared](/posts/2fa-methods-compared-data), and [phishing detection in 2024](/posts/phishing-detection-2024-trends).
+
+## Family security hardware that closes the most common gaps
+
+Three hardware categories return outsized risk-reduction for typical households: a secure mesh router, hardware security keys, and a clean network printer (the most-overlooked attack vector in 2024).
+
+<ProductBox
+  name="Synology RT2600ac WiFi Router (security-first)"
+  priceHint="$200-280 — built-in security features"
+  pros={[
+    "Built-in threat intelligence — flags malicious connections automatically",
+    "VPN server + client, ad-blocking DNS via Synology Threat Prevention",
+    "Frequent firmware updates (5+ years post-release)"
+  ]}
+  cons={[
+    "Setup more complex than consumer routers",
+    "Premium pricing vs basic WiFi 6 alternatives"
+  ]}
+  href="https://www.amazon.com/s?k=Synology+RT2600ac+WiFi+router"
+  region="us"
+/>
+
+<ProductBox
+  name="YubiKey 5C NFC (Family Pack)"
+  priceHint="$120-160 — buy as family bundle"
+  pros={[
+    "Family-pack discount when ordering 3-4 keys at once",
+    "FIDO2 / WebAuthn — works with Gmail, Microsoft, Apple, banking",
+    "One key per family member; one backup in safe deposit"
+  ]}
+  cons={[
+    "Setup requires per-account 2FA enrollment",
+    "Lost key recovery needs the backup key — not an account-reset shortcut"
+  ]}
+  href="https://www.amazon.com/s?k=YubiKey+5C+NFC+multi+pack"
+  region="us"
+/>
+
+<ProductBox
+  name="Eero Pro 6E Mesh WiFi 6E System (3-Pack)"
+  priceHint="$350-500 — simple mesh with auto-updates"
+  pros={[
+    "Auto-updates patch security holes without manual intervention",
+    "TrueMesh routing reduces handoff issues for family-sized devices",
+    "Amazon-owned — long-term support more likely than indie brands"
+  ]}
+  cons={[
+    "Amazon ecosystem — privacy-conscious users may prefer Synology",
+    "eero Secure (advanced filtering) requires monthly subscription"
+  ]}
+  href="https://www.amazon.com/s?k=Eero+Pro+6E+mesh+WiFi+3+pack"
+  region="us"
+/>
+
+For privacy-first families, Synology + YubiKeys is the strongest pairing. For households that prioritize ease-of-use over fine-grained control, Eero Pro 6E + YubiKeys is the smoother alternative.
