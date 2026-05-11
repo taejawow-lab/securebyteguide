@@ -63,7 +63,7 @@ internalLinks:
 visualsCount: 7
 hasVideo: false
 wordCount: 2620
-affiliate: false
+affiliate: true
 faq:
   - question: "What's the actual difference in attack prevention?"
     answer: "Google's 2019 research (still the most cited dataset) measured account compromise rates across 350,000+ users. Results: SMS-based 2FA blocked 76% of bulk phishing attempts, 100% of automated bot attacks, and 96% of targeted phishing. App-based TOTP blocked 99% of bulk phishing and 90% of targeted phishing. Hardware keys (FIDO U2F/WebAuthn) blocked 100% across all attack categories. The gap between SMS and hardware keys is meaningful — about 4-6% of attacks succeed against SMS, near 0% against hardware."
@@ -79,6 +79,9 @@ faq:
     answer: "An attacker convinces your cellular carrier to transfer your phone number to their SIM card. Once they have your number, they receive your SMS 2FA codes. Method: social engineering (call carrier as you, provide enough info to authenticate), or insider help. FBI IC3 reported $48M in SIM swap losses in 2023. Targets: crypto holders, tech workers, executives. Prevention: ask carrier for a port-out PIN (separate from account password), avoid linking SMS 2FA to high-value accounts, prefer TOTP or hardware keys."
 draft: false
 ---
+
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
 
 In 2019, Google published the most comprehensive study of 2FA effectiveness ever done — tracking actual account compromise rates across 350,000+ users facing real attacks. The numbers contradicted some accepted wisdom (SMS works much better than security experts claimed) and confirmed others (hardware keys are essentially unbreakable). Five years later, the FIDO Alliance and NIST have updated guidance, but the core data remains the most cited reference for 2FA decisions.
 
@@ -266,3 +269,57 @@ Google's data is unambiguous: any 2FA blocks 96-100% of casual attacks; hardware
 For everyday users, free TOTP apps (Authy, 1Password) are the optimal trade-off. For high-value accounts, add hardware keys. SMS 2FA is "deprecated" but still vastly better than no 2FA.
 
 Don't let perfect be the enemy of good. Turn on whatever 2FA your accounts support today; upgrade the method later.
+
+## Hardware security keys worth pairing with 2FA
+
+Phishing-resistant FIDO2 hardware keys are the only 2FA factor that survives credential-phishing attacks. Three keys cover ~95% of users: a USB-C universal pick, an NFC mobile-friendly variant, and a Google ecosystem option.
+
+<ProductBox
+  name="YubiKey 5C NFC (USB-C + NFC)"
+  priceHint="$55-65 — most-recommended hardware key"
+  pros={[
+    "FIDO2 + WebAuthn + OTP + Smart Card — handles every modern 2FA standard",
+    "NFC works with iPhone and Android — no cable needed for mobile",
+    "5-year battery-free lifespan (no battery to fail)"
+  ]}
+  cons={[
+    "Premium pricing vs no-name alternatives",
+    "USB-C only — pair with adapter for older USB-A hosts"
+  ]}
+  href="https://www.amazon.com/s?k=YubiKey+5C+NFC"
+  region="us"
+/>
+
+<ProductBox
+  name="YubiKey 5 NFC (USB-A + NFC)"
+  priceHint="$50-60 — USB-A version for desktops"
+  pros={[
+    "Same FIDO2 / WebAuthn / OTP support as 5C variant",
+    "USB-A fits older desktop and laptop ports without adapter",
+    "Pair one USB-A + one USB-C for full coverage across devices"
+  ]}
+  cons={[
+    "USB-A is being phased out on modern laptops",
+    "No USB-C support — separate purchase needed for newer machines"
+  ]}
+  href="https://www.amazon.com/s?k=YubiKey+5+NFC+USB-A"
+  region="us"
+/>
+
+<ProductBox
+  name="Google Titan Security Key (USB-C + NFC)"
+  priceHint="$35-45 — Google's FIDO2 key"
+  pros={[
+    "Google-branded — most polished setup for Google Account 2FA",
+    "FIDO2 + U2F — works across most major platforms",
+    "Lower price than YubiKey 5C for same core feature set"
+  ]}
+  cons={[
+    "Less OTP / Smart Card support vs YubiKey",
+    "Tied to Google's hardware supply — periodic stock issues"
+  ]}
+  href="https://www.amazon.com/s?k=Google+Titan+Security+Key+USB-C+NFC"
+  region="us"
+/>
+
+Buy two keys minimum — one primary, one backup. The YubiKey 5C NFC + 5 NFC (USB-A) pair covers every device you'll plausibly use over the next 5 years.
