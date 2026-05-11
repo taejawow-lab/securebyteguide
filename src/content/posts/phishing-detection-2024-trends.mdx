@@ -63,7 +63,7 @@ internalLinks:
 visualsCount: 7
 hasVideo: false
 wordCount: 2640
-affiliate: false
+affiliate: true
 faq:
   - question: "How big is the phishing problem in 2024?"
     answer: "FBI IC3's 2023 Internet Crime Report (the most recent comprehensive U.S. dataset) recorded 880,418 complaints with $12.5B in reported losses. Phishing was the most-reported crime type at 298,878 complaints. Business Email Compromise (BEC) alone accounted for $2.95B in losses across 21,489 complaints — meaning the average BEC loss exceeded $137,000 per incident. Globally, APWG's 2024 reports observed 4-5 million unique phishing sites detected per quarter — a 5x increase versus 2019."
@@ -79,6 +79,9 @@ faq:
     answer: "BEC is the highest-loss phishing category. Mechanism: attacker compromises a real email account (often via earlier credential phishing), then sends invoice or wire-transfer requests from inside the trusted account. FBI IC3's 2023 report attributed $2.95B in losses to BEC. Detection signals: any change to wire instructions or banking details mid-thread should be verified by phone using a known number. Vendor invoices that arrive with new account numbers, urgency, and 'do not call my office' language are classic BEC tells. Companies should require dual approval for any wire-instruction change."
 draft: false
 ---
+
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
 
 The FBI's Internet Crime Complaint Center (IC3) recorded 880,418 cybercrime complaints in 2023, with $12.5 billion in reported losses. Phishing was the single most-reported crime category at 298,878 complaints — and that's only what was reported. Microsoft, Google Safe Browsing, and APWG independently report that the volume of phishing infrastructure has grown roughly 5x since 2019, with 4–5 million unique phishing URLs detected per quarter.
 
@@ -259,3 +262,57 @@ Phishing in 2024 is more capable than the threat model most people internalized 
 The realistic defense: hardware keys or passkeys on important accounts, structural skepticism on every email, phone verification for anything involving money or access. The advice has gotten simpler, not more complicated — but the floor is higher than it used to be.
 
 For complementary defenses, see the companion posts on [2FA methods compared](/posts/2fa-methods-compared-data) (Google's effectiveness data) and [family password managers compared](/posts/family-password-managers-compared) (the credential-management foundation that determines whether phishing succeeds).
+
+## Books that teach you to think like a phishing target
+
+Most phishing-defense training is rote checklist work. These three books explain the psychology — far more durable than learning specific phish patterns:
+
+<ProductBox
+  name="Social Engineering (Christopher Hadnagy, 2nd Edition)"
+  priceHint="$30-45 — definitive social engineering reference"
+  pros={[
+    "Updated 2nd edition covers modern phishing, vishing, and smishing",
+    "Author runs annual DEF CON SE Capture-the-Flag competitions",
+    "Frameworks transfer to interview prep and negotiation too"
+  ]}
+  cons={[
+    "Dense — 600+ pages, plan reading over 2-3 months",
+    "Some examples skew toward red-team operators vs blue-team users"
+  ]}
+  href="https://www.amazon.com/s?k=Social+Engineering+Hadnagy+2nd+edition"
+  region="us"
+/>
+
+<ProductBox
+  name="The Art of Deception (Kevin Mitnick)"
+  priceHint="$15-22 — foundational social engineering text"
+  pros={[
+    "Mitnick's first-hand insights from his pre-arrest hacking era",
+    "Story-driven — easier intro than Hadnagy for new readers",
+    "Companion 'Art of Intrusion' covers technical follow-throughs"
+  ]}
+  cons={[
+    "Some pre-2010 examples feel dated technologically",
+    "Anecdotal more than systematic — pair with Hadnagy for full coverage"
+  ]}
+  href="https://www.amazon.com/s?k=Art+of+Deception+Kevin+Mitnick"
+  region="us"
+/>
+
+<ProductBox
+  name="Phishing Dark Waters (Christopher Hadnagy and Michele Fincher)"
+  priceHint="$20-30 — phishing-specific deep dive"
+  pros={[
+    "Phishing-specific narrowing of Hadnagy's broader SE work",
+    "Includes specific email red flags + URL deception patterns",
+    "Companion materials for corporate phishing awareness training"
+  ]}
+  cons={[
+    "Some overlap with Social Engineering book — read one or the other",
+    "Less updated than Hadnagy 2nd edition for 2024 phishing variants"
+  ]}
+  href="https://www.amazon.com/s?k=Phishing+Dark+Waters+Hadnagy"
+  region="us"
+/>
+
+Start with Mitnick's Art of Deception for the story-driven introduction, then read Hadnagy's Social Engineering 2nd edition for systematic frameworks. Save Phishing Dark Waters as a phishing-specific reference vs full read.
