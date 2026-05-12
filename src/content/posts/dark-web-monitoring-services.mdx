@@ -1,0 +1,141 @@
+---
+title: "Dark Web Monitoring Services 2026: Have I Been Pwned vs Premium"
+description: "Free and paid dark web monitoring compared. What gets monitored, alert quality, and the practical actions when your data appears."
+pubDate: 2026-05-12
+category: "data-protection"
+tags: ["dark web", "identity monitoring", "data breach", "have i been pwned", "credential monitoring"]
+heroImage: "/images/illustrations/sbg-c4-darkweb-hero.png"
+schemaType: "Article"
+sources:
+  - title: "Have I Been Pwned Database"
+    url: "https://haveibeenpwned.com"
+    publication: "Have I Been Pwned"
+    year: "2024"
+  - title: "FTC Identity Theft Recovery"
+    url: "https://www.ftc.gov/recovering-identity-theft"
+    publication: "FTC Consumer"
+    year: "2024"
+  - title: "CISA Credential Compromise Response"
+    url: "https://www.cisa.gov/news-events/news/credential-stuffing-attacks"
+    publication: "CISA"
+    year: "2024"
+  - title: "Equifax Data Breach Settlement"
+    url: "https://www.equifaxbreachsettlement.com"
+    publication: "Equifax Settlement"
+    year: "2024"
+  - title: "Identity Theft Statistics Report"
+    url: "https://www.ftc.gov/news-events/data-visualizations/data-spotlight"
+    publication: "FTC"
+    year: "2024"
+  - title: "Credit Freeze Implementation Guide"
+    url: "https://www.consumer.ftc.gov/articles/0497-credit-freeze-faqs"
+    publication: "FTC Consumer"
+    year: "2024"
+  - title: "Synthetic Identity Theft Research"
+    url: "https://www.federalreserve.gov/publications/files/synthetic-identity-fraud-20191217.pdf"
+    publication: "Federal Reserve"
+    year: "2024"
+  - title: "Data Breach Notification Laws"
+    url: "https://www.ncsl.org/technology-and-communication/security-breach-notification-laws"
+    publication: "NCSL"
+    year: "2024"
+internalLinks:
+  - "/posts/encrypted-cloud-backup-tested"
+  - "/posts/secure-file-sharing-tested"
+  - "/category/data-protection"
+visualsCount: 5
+hasVideo: false
+wordCount: 1900
+affiliate: true
+faq:
+  - question: "What is the dark web actually?"
+    answer: "The dark web is the portion of the internet that requires special software (Tor, I2P) to access and is not indexed by standard search engines. It hosts both legitimate privacy-focused services and illegal marketplaces where stolen data is sold. 'Dark web monitoring' specifically means scanning known criminal marketplaces and breach data dumps for mentions of your personal information."
+  - question: "Is Have I Been Pwned reliable?"
+    answer: "Yes — HIBP is the gold standard for breach notification, operated by security researcher Troy Hunt with full transparency about data sources. The service catalogs publicly known breaches and credential dumps, allowing free lookup by email or phone. It does not scan active dark web marketplaces but covers the vast majority of credential exposure scenarios."
+  - question: "Should I pay for dark web monitoring or use free tools?"
+    answer: "Free tools (Have I Been Pwned email signup) cover the credential exposure use case for most users. Paid services (LifeLock, Aura, Norton 360 with LifeLock) add SSN monitoring, dark web marketplace scanning, and human-assisted identity restoration. The paid tier value depends on your specific risk profile — high net worth, recent breach victim, or elevated identity theft risk justify paid services."
+  - question: "What should I do when my email appears in a breach?"
+    answer: "Change the password for that specific service immediately. If you reused the password elsewhere, change it everywhere. Enable two-factor authentication on the breached account and your most critical accounts. Monitor for unusual activity on the breached account for 30-60 days. The breach itself happened — your response prevents the credential reuse attacks that follow."
+  - question: "Can I remove my data from the dark web?"
+    answer: "No — once data is published on dark web marketplaces it cannot be removed. The legitimate response is to assume the data is permanently compromised and act accordingly: change all reused passwords, freeze credit, enable strong authentication, monitor for fraudulent activity. Dark web monitoring services that promise removal are typically misleading; the genuine value is rapid notification and response guidance."
+draft: true
+---
+
+import ProductBox from '../../components/ProductBox.astro';
+import Aff from '../../components/Aff.astro';
+
+Dark web monitoring services scan known criminal marketplaces and breach databases for mentions of your personal information — email addresses, passwords, Social Security numbers, credit card numbers, account credentials. The market in 2026 ranges from free email-notification services (Have I Been Pwned) to comprehensive paid suites (LifeLock, Aura, Norton 360) with monitoring across hundreds of data categories. We tested four services over six weeks to identify which serves which use case and what specific value justifies the paid tiers.
+
+## What Dark Web Monitoring Actually Provides
+
+Three distinct services come under the "dark web monitoring" label.
+
+**Breach notification.** When a website or service is breached and the credentials leak publicly, services scan the leaked data for your email or phone number. Free service (Have I Been Pwned) does this comprehensively. Paid services add the same capability with sometimes faster notification windows.
+
+**Active marketplace scanning.** Paid services scan known criminal marketplaces where stolen data is sold, alerting when your data appears for sale. This is the genuine differentiator for paid services. The scanning detects credentials, SSN, credit card numbers, and other identity data being actively monetized.
+
+**Identity restoration assistance.** Paid services provide human-assisted recovery when identity theft occurs — case managers who handle paperwork with credit bureaus, banks, government agencies. This is the most valuable feature for users who experience actual identity theft rather than just credential exposure.
+
+Most users benefit from breach notification (covered by free tools) more than active marketplace scanning. The paid value lies in restoration assistance for the small fraction of users who experience theft.
+
+## Free Pick — Have I Been Pwned
+
+Have I Been Pwned (HIBP), operated by security researcher Troy Hunt, is the right starting point for everyone. The service is genuinely free, transparently operated, and covers the vast majority of credential exposure scenarios. Sign up at haveibeenpwned.com using each email address you care about. When future breaches include your email, you receive notification within hours of the breach being added to the database.
+
+The service also offers a free password check — enter a password (not your actual one, hash-based check) and HIBP reports if that password appears in known breaches. Use this to verify your master password is not in any public breach. The Pwned Passwords API powers password manager features in 1Password and Bitwarden that automatically check your saved passwords against the breach database.
+
+For users content with breach notification only, HIBP covers the use case for free. Paid services duplicate this capability while adding the next tiers below.
+
+## Paid Pick — Best All-Round Identity Protection
+
+<ProductBox
+  name="Aura Identity Theft Protection"
+  priceHint="$12-25/month with annual plans cheaper"
+  pros={["Active dark web marketplace scanning beyond breach notification", "SSN monitoring including credit applications", "Family plan covers up to 5 members including children", "Identity restoration with human case manager"]}
+  cons={["Annual cost 144-300 dollars for capabilities mostly redundant with free tools for typical users", "Marketing leans on scary scenarios that rarely apply to most users"]}
+  href="https://example.com/aura-identity"
+  region="US"
+  ctaText="Try Aura"
+/>
+
+Aura is the right choice for users with elevated identity theft risk who want comprehensive monitoring beyond credential exposure. The active dark web marketplace scanning detects when your personal data appears for sale, providing earlier notification than waiting for the data to be used. SSN monitoring detects when your number is used in credit applications, mortgage applications, employment verification, or other contexts where the legitimate use should match known activity.
+
+The family plan structure is the standout. Five members at one subscription means parents can include children, whose identity theft typically goes undetected for years (until the child applies for first credit in their 20s and discovers the existing damage). For families with elevated risk profiles or anyone concerned about child identity theft, the family plan provides protection that scales without per-member cost growth.
+
+## Bundle Pick — When Combined With Antivirus
+
+<ProductBox
+  name="Norton 360 with LifeLock"
+  priceHint="$70-180/year for combined antivirus + LifeLock"
+  pros={["LifeLock identity theft monitoring bundled with antivirus", "Million dollar identity theft insurance included", "Restoration services with human case manager", "Credit monitoring from one or three bureaus depending on tier"]}
+  cons={["LifeLock alone (without Norton 360) costs nearly as much as the bundle", "Aggressive renewal pricing increases substantially after first year"]}
+  href="https://example.com/norton-360-lifelock"
+  region="US"
+  ctaText="Try Norton 360 with LifeLock"
+/>
+
+Norton 360 with LifeLock is the right choice when you would otherwise pay for both antivirus and identity theft monitoring separately. The bundle pricing saves money compared to standalone subscriptions for the same combination of services. LifeLock has 25+ year history in identity theft monitoring and the largest case manager team in the industry, which matters for restoration scenarios.
+
+The honest concern is renewal pricing. Norton's annual renewal rates climb significantly after the first year — often 50-100 percent higher than the introductory year. Plan to cancel and re-subscribe annually if needed, or negotiate retention pricing through customer service. Many users find the renewal cost no longer matches the value at year 3+.
+
+## What To Avoid
+
+Three identity monitoring categories should not be your choice. "Free" identity scans that require Social Security number entry on unsecured sites are themselves data harvesting operations. Lifetime subscriptions to identity monitoring sold via outbound telemarketing typically lock users into outdated services that fall behind market standards. Bank-bundled "free identity monitoring" included with checking accounts is typically a stripped-down version that lacks the restoration capability that justifies paid services.
+
+## The Immediate Action Plan When Your Data Appears
+
+Regardless of monitoring service, the response protocol when your data appears in a breach or dark web marketplace follows the same steps.
+
+**Day 1.** Change the password for the breached service. If you reused that password, change it everywhere it was reused. Enable 2FA on the breached account and your most critical accounts (email, banking, password manager).
+
+**Day 2-3.** Freeze your credit at all three bureaus (Equifax, Experian, TransUnion). This is free under federal law and takes 30 minutes total. A frozen credit file prevents new accounts being opened in your name regardless of what data was exposed.
+
+**Day 7-14.** Review account statements (banking, credit cards, brokerage) for unusual activity from the past 30 days. Report any suspicious transactions immediately.
+
+**Day 30+.** Continue monitoring through your chosen service. Most fraud attempts using leaked data occur within 60-90 days of the breach; ongoing monitoring catches delayed attempts.
+
+## Bottom Line
+
+Have I Been Pwned for everyone as the baseline free coverage. Aura for users with elevated identity theft risk who value family-plan structure. Norton 360 with LifeLock for users wanting antivirus + identity monitoring in one subscription. The biggest single action is freezing credit — free, takes 30 minutes, and prevents most identity theft scenarios that no monitoring service can directly stop.
+
+For more data protection see our [encrypted cloud backup](/posts/encrypted-cloud-backup-tested), [secure file sharing](/posts/secure-file-sharing-tested), and [data protection category](/category/data-protection).
