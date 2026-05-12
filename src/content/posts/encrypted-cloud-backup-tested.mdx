@@ -58,7 +58,7 @@ faq:
     answer: "Major providers (Backblaze, IDrive, pCloud) maintain SOC 2 Type 2 certifications and store data across multiple data centers with redundancy. Documented uptime exceeds 99.9 percent and verified file durability matches enterprise standards. The real risk is not loss — it's the provider going out of business or being acquired by someone with different policies. Diversification across two providers for critical data adds resilience."
   - question: "How do cloud backup services handle ransomware attacks?"
     answer: "Quality services maintain versioning that keeps multiple copies of files for 30-365 days depending on plan. If ransomware encrypts your files and the encrypted versions sync to the cloud, you can restore from a previous unencrypted version. This is the primary practical value of cloud backup in 2026 — the ransomware threat. Verify the versioning retention period matches your tolerance for detection delay."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -68,11 +68,21 @@ Cloud backup is the most practical defense against ransomware, hard drive failur
 
 ## What Cloud Backup Actually Solves
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-backup-dashboard.png" alt="Cloud backup service dashboard showing files synced and encrypted on multiple devices" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 Three failure modes are realistically addressed by cloud backup. First, hardware failure — hard drives fail at predictable rates per Backblaze's published reliability statistics, and the failure typically happens with little warning. Cloud backup separates data from the drive that fails. Second, ransomware encryption of local files — quality cloud backup maintains versioned copies that allow restoration to pre-attack state. Third, disaster destroying local hardware — fire, flood, theft, or other physical loss is recoverable when an off-site copy exists.
 
 The 3-2-1 backup strategy (3 copies, 2 different media, 1 offsite) is the CISA-recommended structure. Most users implement this as primary device storage + external hard drive backup + cloud backup. Cloud backup alone is insufficient for routine restores (slow download speeds for large recovery) but essential for disaster scenarios where local copies are unavailable.
 
 ## Top Pick — Best Value Unlimited Backup
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-backup-zk.png" alt="Zero-knowledge encryption concept with locked vault and key kept by user only" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Backblaze Personal Backup"
@@ -90,6 +100,11 @@ The encryption model deserves attention. Backblaze's default uses provider-manag
 
 ## Multi-Device Pick — Best For Households With Multiple Computers
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-backup-321.png" alt="3-2-1 backup strategy diagram showing local external cloud copies" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 <ProductBox
   name="IDrive Personal"
   priceHint="$80/year for 5TB or $100/year for 10TB"
@@ -105,6 +120,11 @@ IDrive is the right choice for households with multiple computers and phones to 
 The 5TB or 10TB storage cap is generous enough for typical households (photos, videos, documents combined). Initial backup via shipped physical disk (IDrive Express service) eliminates the days-long upload time for first-time setup. The true archive feature preserves deleted files indefinitely — a useful protection against the "I deleted that file last year and now need it" scenario that Backblaze's 30-day retention does not cover. The honest limitation is interface polish; IDrive's apps work but feel dated compared to Backblaze.
 
 ## Privacy Pick — Strongest Zero-Knowledge Encryption
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-backup-restore.png" alt="File restoration progress on laptop after ransomware recovery scenario" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="pCloud Crypto + Family Plan"
