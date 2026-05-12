@@ -58,7 +58,7 @@ faq:
     answer: "Most consumer VPNs do not support IPv6 properly. If your home network has IPv6 enabled and your VPN does not, IPv6 traffic bypasses the VPN entirely while IPv4 traffic is correctly routed. The fix is either disabling IPv6 on your computer, choosing a VPN that handles IPv6, or using a VPN client with IPv6 leak blocking. Most quality VPNs (NordVPN, ProtonVPN, Mullvad) block IPv6 by default to prevent this leak."
   - question: "Does a VPN kill switch actually work?"
     answer: "Yes when properly implemented. A kill switch blocks all internet traffic if the VPN connection drops, preventing the brief window of unprotected traffic during reconnection. The implementation varies — software kill switches in the VPN client can fail during system suspend/resume; firewall-rule-based kill switches (configured at OS level) are more reliable. Quality VPN clients include built-in kill switches that work well for most users."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -68,6 +68,11 @@ VPN leaks defeat the entire purpose of using a VPN. Your IP is hidden 99 percent
 
 ## The Five Leak Types You Must Check
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-leak-dns.png" alt="DNS leak detection result page on laptop screen" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 VPN traffic should be uniformly routed through the encrypted tunnel. Five common situations break this assumption.
 
 DNS leaks occur when your DNS queries (looking up domain names) go to your ISP's DNS servers instead of the VPN's DNS. The traffic itself goes through the VPN, but the ISP sees what domains you visited. WebRTC leaks happen via the browser API that exposes your real IP regardless of VPN status. IPv6 leaks occur when your network has IPv6 enabled but the VPN only handles IPv4 — IPv6 traffic bypasses the tunnel entirely. Kill switch failures expose traffic during the brief window between VPN disconnection and reconnection. Split tunneling misconfigurations route some traffic outside the VPN by design but reveal more than the user expects.
@@ -75,6 +80,11 @@ DNS leaks occur when your DNS queries (looking up domain names) go to your ISP's
 Each leak type has specific detection methods and fixes. The default VPN configuration in most clients addresses some but not all of these; explicit verification is required.
 
 ## Step 1 — Run The Standard Leak Tests
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-leak-killswitch.png" alt="VPN kill switch activated automatically when connection drops" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 Start with the verification tools that take 5 minutes total. Connect your VPN and visit three sites in sequence.
 
@@ -86,6 +96,11 @@ DNSLeakTest.com runs an extended DNS test that detects subtle leaks the quick te
 
 ## Step 2 — Fix DNS Leaks
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-leak-webrtc.png" alt="WebRTC settings being disabled in browser to prevent IP leaks" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 If DNS leaks appear, the most common cause is the VPN not overriding system DNS settings. Three fixes apply depending on your situation.
 
 In the VPN client settings, enable "Use VPN DNS" or "Block DNS leaks" — most quality VPNs have this option. If your VPN does not offer it, manually configure system DNS to a privacy-respecting resolver (Cloudflare 1.1.1.1 or Quad9 9.9.9.9) that does not log queries. This does not protect against the VPN provider seeing your queries but eliminates ISP visibility.
@@ -93,6 +108,11 @@ In the VPN client settings, enable "Use VPN DNS" or "Block DNS leaks" — most q
 On Windows specifically, the Smart Multi-Homed Name Resolution feature can route DNS queries through multiple interfaces simultaneously, leaking through the non-VPN interface. Disable this via Group Policy or registry edit (group policy: Computer Configuration → Administrative Templates → Network → DNS Client → "Turn off smart multi-homed name resolution" set to Enabled).
 
 ## Step 3 — Block WebRTC In Browsers
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-leak-firewall.png" alt="Firewall rules diagram blocking traffic outside VPN tunnel" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 WebRTC is the largest leak source for users who have addressed DNS but missed this. The fix differs by browser.
 
