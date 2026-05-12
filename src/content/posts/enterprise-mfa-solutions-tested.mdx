@@ -58,7 +58,7 @@ faq:
     answer: "Regular MFA requires the same authentication factors regardless of context. Adaptive authentication varies authentication requirements based on risk signals: known-device + known-location + work-hours might require only password, while new-device + new-country + 3am might require password + hardware key + manager approval. This reduces friction for routine access while strengthening protection against suspicious access patterns."
   - question: "What is the minimum MFA implementation for compliance?"
     answer: "SOC 2 Type 2, HIPAA, PCI-DSS, and most compliance frameworks require MFA for administrative access to sensitive systems. Auditors typically accept TOTP authenticator apps as adequate; some require FIDO2 hardware keys for highest-risk roles. Document your MFA policies and enforcement, log all authentication attempts, and review the logs quarterly. The minimum varies by framework but the principles are consistent."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -68,6 +68,11 @@ Enterprise MFA platforms consolidate authentication across all your business app
 
 ## What Enterprise MFA Adds Over Per-App 2FA
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c1-mfa-push.png" alt="Multi-factor authentication push notification on smartphone with approve and deny buttons" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 Three structural capabilities justify the enterprise MFA cost over relying on individual application 2FA settings. First, centralized policy enforcement — administrators define authentication requirements once, applied consistently across all integrated applications. When a new employee joins, MFA enrolls automatically as part of identity provisioning. When an employee leaves, MFA deprovisioning revokes access immediately across all applications. Without centralized MFA, each application requires manual configuration and offboarding.
 
 Second, adaptive authentication based on context signals. A user signing in from their assigned laptop, known location, during work hours might bypass MFA after initial authentication. The same user signing in from a new device, foreign country, at 3am triggers additional authentication factors and may notify security teams. This context awareness reduces friction for legitimate access while strengthening protection against compromise scenarios.
@@ -75,6 +80,11 @@ Second, adaptive authentication based on context signals. A user signing in from
 Third, audit logs spanning all integrated applications. Every authentication attempt across hundreds of applications appears in one searchable log, with risk scoring and analytics that surface patterns invisible to per-app logs. For compliance frameworks (SOC 2, HIPAA, PCI-DSS), the consolidated audit trail eliminates substantial manual effort during audits.
 
 ## Top Pick — Best All-Round Enterprise MFA
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c1-mfa-adaptive.png" alt="Adaptive risk-based authentication system analyzing login context behavior" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Okta Workforce Identity"
@@ -92,6 +102,11 @@ The lifecycle management automation is the structural feature that pays for the 
 
 ## Microsoft Stack Pick — When Already On Microsoft 365
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c1-mfa-sso.png" alt="Single sign-on identity provider connecting multiple SaaS applications" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 <ProductBox
   name="Microsoft Entra ID P1/P2"
   priceHint="$6/user/month (P1) or $9/user/month (P2)"
@@ -107,6 +122,11 @@ Microsoft Entra ID is the right choice for organizations already standardized on
 The Microsoft-centric design becomes a limitation for organizations with significant non-Microsoft applications. Integrating Slack, Atlassian products, Salesforce, AWS, or other major SaaS requires more configuration work and ongoing maintenance than Okta's native connections. For mixed environments, the choice between Entra and Okta comes down to which ecosystem dominates — at 60+ percent Microsoft applications, Entra makes sense; below that, Okta's broader integration catalog usually wins.
 
 ## Simple Pick — Best Deployment Experience For Small Teams
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c1-mfa-audit.png" alt="Audit log of authentication events with timestamps and user actions" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Duo Security (Cisco) Essentials"
