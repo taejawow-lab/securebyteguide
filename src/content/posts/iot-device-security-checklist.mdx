@@ -58,7 +58,7 @@ faq:
     answer: "Industry average is 3-5 years from product launch for major brands. Some devices stop receiving updates much sooner (cheap unbranded products often get zero updates after sale). When buying, check the manufacturer's published support timeline. Devices in service longer than their support window become security liabilities and should be replaced or moved to isolated networks where compromise impact is limited."
   - question: "What is the Matter standard and does it help with security?"
     answer: "Matter is a cross-platform smart home interoperability standard that requires participating devices to support strong authentication, encryption, and over-the-air update mechanisms. Matter-certified devices have better baseline security than non-Matter devices. The Matter logo on packaging indicates the device meets the security minimum. Adoption is growing but not all devices support Matter as of 2026."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -67,6 +67,11 @@ import Aff from '../../components/Aff.astro';
 Smart home devices have spread into every category of home life — cameras, doorbells, thermostats, lights, speakers, locks, sensors, appliances. Each connected device adds to your home's attack surface, and the cheapest devices often ship with the worst security. We audited 25 common IoT devices across categories and developed the 10-point checklist below. Following the checklist for each new IoT device addition takes 10-15 minutes and meaningfully reduces the smart home attack surface that growing IoT adoption creates.
 
 ## The 10-Point IoT Security Checklist
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c3-iot-devices.png" alt="Smart camera doorbell thermostat lightbulb devices with security checklist" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 For every new IoT device joining your home network, work through these ten steps. The total time investment is 10-15 minutes per device.
 
@@ -92,6 +97,11 @@ For every new IoT device joining your home network, work through these ten steps
 
 ## Network Isolation In Detail
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c3-iot-update.png" alt="IoT firmware update notifications on smartphone for various devices" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 Network isolation is the single highest-impact security control for IoT devices. Two implementation paths work for most home networks.
 
 **Path 1 — Guest network with isolation enabled.** Available on virtually every modern router. Enable the guest WiFi network, configure with a different SSID and strong password, and crucially enable "AP Isolation" or "Guest Network Isolation" which prevents devices on the guest network from communicating with each other or the main network. Connect all IoT devices to this guest network. Connect your computers, phones, and tablets to the main network.
@@ -101,6 +111,11 @@ Network isolation is the single highest-impact security control for IoT devices.
 The simple guest-network path solves 90 percent of the problem with 10 percent of the effort. VLAN segmentation suits enthusiasts and households with 30+ connected devices.
 
 ## Top Pick — Smart Home Hub With Strong Security
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c3-iot-password.png" alt="Default password change interface for new smart home device setup" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Apple HomePod / Home Hub via Matter"
@@ -117,6 +132,11 @@ For privacy-conscious users adopting smart home, Apple's HomePod or Home Hub fun
 The honest trade is ecosystem lock-in. Some advanced features require Apple devices throughout. For households already in the Apple ecosystem, HomePod is the right hub. For households mixed across Apple, Android, and Windows, a Matter-only hub like Aqara M3 may better serve the cross-platform needs.
 
 ## What To Avoid
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c3-iot-monitor.png" alt="Network traffic monitoring dashboard showing IoT device communication patterns" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 Three IoT categories create the largest risk for typical home users. Cheap unbranded smart cameras (under 30 dollars from Amazon Marketplace) routinely ship with hardcoded credentials, no update mechanism, and known vulnerabilities — they are the consistent source of home network compromises. Generic smart bulbs from no-name brands often have weak security and short support lifespans. Used or refurbished IoT devices from secondary markets may be infected with malware from previous owners.
 
