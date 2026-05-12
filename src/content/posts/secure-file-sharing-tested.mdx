@@ -58,7 +58,7 @@ faq:
     answer: "Default to expiring links for everything except files that need long-term access. Most file sharing is one-time delivery — expiring links eliminate the risk of forgotten links being discovered later. Set expiration appropriate to the use case — 24 hours for one-time delivery, 7-30 days for collaboration scenarios."
   - question: "Are free secure file sharing services trustworthy?"
     answer: "Reputable free tiers from Proton, Tresorit, and similar privacy-focused companies use the same encryption as their paid tiers. The free tier limits are typically capacity (1-2GB) or features (no team management). For occasional secure sharing, free tiers work fine. For business use with compliance requirements, paid tiers add audit logs and admin controls that justify the cost."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -67,6 +67,11 @@ import Aff from '../../components/Aff.astro';
 Standard file sharing through Google Drive, Dropbox, or email attachments works for casual use but fails when content is sensitive — medical records, financial documents, legal materials, personal photos. We tested seven secure file sharing services across home and business scenarios to identify which serves which use case. The differences are real: encryption depth, link controls, file size limits, and compliance certifications vary substantially between services that all market themselves as "secure."
 
 ## Three Distinct Use Cases
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-share-e2e.png" alt="End-to-end encrypted file transfer between two users with locked envelope icons" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 The right secure file sharing tool depends on the scenario. Three distinct use cases dominate.
 
@@ -79,6 +84,11 @@ The right secure file sharing tool depends on the scenario. Three distinct use c
 Each category has different optimization. Mixing them or trying to use one tool for all use cases produces friction or compromised security.
 
 ## Top Pick — One-Time Secure Delivery
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-share-expire.png" alt="Expiring download link timer countdown for secure document sharing" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Tresorit Send"
@@ -96,6 +106,11 @@ The Swiss data protection regime is a structural advantage. Files stored briefly
 
 ## Collaboration Pick — Encrypted Shared Folders
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-share-large.png" alt="Large file transfer over secure protocol with progress bar and encryption indicator" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 <ProductBox
   name="Proton Drive Family Plan"
   priceHint="$20/month for 1TB shared across 6 users"
@@ -111,6 +126,11 @@ Proton Drive is the right choice for ongoing collaboration where multiple people
 The integration with Proton Mail and Proton Calendar creates a coherent privacy suite. For users replacing the Google Workspace ecosystem with privacy-focused alternatives, Proton's full suite costs less than enterprise Google Workspace while providing zero-knowledge encryption across all components. Files shared via Proton Drive notify recipients through Proton Mail with no metadata leakage to Google or Microsoft.
 
 ## Large File Pick — Peer-To-Peer Transfer
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-share-revoke.png" alt="Revoke access feature for shared file with timestamp and recipient list" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Magic Wormhole (Free Open Source)"
