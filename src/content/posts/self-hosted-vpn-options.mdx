@@ -58,7 +58,7 @@ faq:
     answer: "No effectively. Netflix and other streaming services blacklist residential IPs that show VPN-like usage patterns. Your home IP through which the VPN routes traffic will likely show your normal regional content, which defeats the bypass purpose. For region-shift use cases, commercial VPNs with rotating IP pools work better. Self-hosted VPNs serve home-resource access and privacy, not streaming geo-shifts."
   - question: "What is the difference between Tailscale and traditional WireGuard?"
     answer: "Tailscale uses WireGuard but adds automatic NAT traversal, key management, ACL policies, and a coordination server that handles peer discovery. Traditional WireGuard requires you to configure each peer manually with public keys and IPs. Tailscale makes the setup nearly zero-config; traditional WireGuard gives you full control. Both produce equivalent encrypted tunnels — Tailscale just makes the management easier at the cost of trusting their coordination server."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -68,11 +68,21 @@ Self-hosted VPN solves two problems commercial VPNs cannot. First, secure access
 
 ## Three Approaches To Self-Hosted VPN
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-selfhosted-pi.png" alt="Raspberry Pi running PiVPN with ethernet cable attached to home router" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 The three options span a spectrum from highest control to easiest setup. Manual WireGuard configuration gives maximum control and minimum dependencies but requires understanding key management and network configuration. PiVPN wraps WireGuard or OpenVPN setup behind a script that handles most configuration automatically. Tailscale adds a coordination server that makes setup nearly zero-config but introduces a dependency on Tailscale's service for peer discovery.
 
 The right choice depends on your technical comfort and what you optimize for. Manual WireGuard suits users comfortable with Linux command line and willing to invest 1-2 hours in initial setup. PiVPN suits users who want WireGuard but prefer a guided installation. Tailscale suits users who want minimal setup and accept the small dependency on Tailscale's coordination service.
 
 ## Top Pick — Tailscale For Most Users
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-selfhosted-script.png" alt="VPN setup script running on terminal screen with progress indicators" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Tailscale (Free for Personal Use)"
@@ -90,6 +100,11 @@ The coordination server dependency is the one tradeoff to understand. Tailscale 
 
 ## Privacy Pick — PiVPN For Self-Hosted Coordination
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-selfhosted-remote.png" alt="Remote access concept showing user connecting from cafe to home network" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 <ProductBox
   name="PiVPN (Free, Open Source)"
   priceHint="Free — only hardware costs"
@@ -105,6 +120,11 @@ PiVPN is the right choice for users wanting fully self-hosted VPN without extern
 The dependencies you do need are dynamic DNS service (DuckDNS, no-IP, or similar free services that map your changing home IP to a stable domain name) and router port forwarding (open the chosen UDP port to your Raspberry Pi's local IP). These are standard home network configurations but require basic understanding to set up correctly. Once configured, the system is maintenance-light — automatic security updates handle most ongoing concerns, and adding new family members or devices takes 30 seconds per device.
 
 ## Manual Pick — Pure WireGuard For Full Control
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-selfhosted-ddns.png" alt="Dynamic DNS service connecting home IP to friendly domain name" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="WireGuard Direct (Free, Open Source)"
