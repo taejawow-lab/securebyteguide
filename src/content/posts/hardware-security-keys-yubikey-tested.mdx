@@ -58,7 +58,7 @@ faq:
     answer: "Premium keys (YubiKey 5 series, Google Titan) are rated for water resistance and physical impact. We have left keys in pants pockets through washing machine cycles with no functional damage. The plastic shell can crack under direct compression (sitting on it in a back pocket), but the internal components remain protected. Lower-end keys may not survive the same treatment; check the manufacturer's IP rating before relying on durability."
   - question: "Can someone use my hardware key if they steal it?"
     answer: "Not without your account information. Hardware keys are 'something you have' — to use them, the attacker also needs your username and ideally your master password or biometric. Properly configured accounts treat the hardware key as the second factor, with the first factor being your password or passkey. A thief who steals only the hardware key cannot do anything with it without also obtaining your other authentication factors."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -68,11 +68,21 @@ Hardware security keys provide the strongest practical authentication available 
 
 ## What Hardware Keys Actually Protect Against
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c1-key-nfc.png" alt="Person tapping NFC security key against smartphone for mobile authentication" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 Three attack categories defeat password and authenticator-app authentication that hardware keys block entirely. First, phishing attacks that fool the user into entering credentials on a fake site — the hardware key refuses to authenticate to a domain different from where it was registered, regardless of how convincing the phishing site looks. Second, malware on the user's device that intercepts authentication codes — the hardware key requires physical touch confirmation and does not expose secrets to the host computer. Third, real-time SIM swap attacks that intercept SMS codes — hardware keys do not use SMS and are immune to telephone-network attacks.
 
 These attack categories represent the substantial majority of credential-based account compromises according to CISA, Verizon DBIR, and Google's Advanced Protection Program data. The Google APP, which requires hardware keys for all enrolled users, has never had a confirmed phishing-based account compromise since launch — a stark contrast to non-APP Google accounts where hundreds of thousands of phishing successes occur annually.
 
 ## Top Pick — Best All-Round Hardware Key
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c1-key-backup.png" alt="Two security keys for backup primary and backup stored separately" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="YubiKey 5C NFC"
@@ -90,6 +100,11 @@ The multi-protocol support is the structural feature that separates YubiKey from
 
 ## Budget Pick — Solid FIDO2 At Lower Cost
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c1-key-touch.png" alt="Touch confirmation on hardware key during sensitive transaction approval" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 <ProductBox
   name="Google Titan Security Key (USB-C/NFC)"
   priceHint="$30-35"
@@ -105,6 +120,11 @@ Google Titan is the right choice for users who only need FIDO2 and U2F web authe
 The Google brand provides a different value proposition than Yubico. Google's supply chain validation and Pixel-tier hardware testing apply to Titan production. The firmware is single-purpose (FIDO authentication only), which slightly reduces the attack surface compared to YubiKey's multi-protocol firmware. The honest tradeoff is the limited feature set — if you might use PIV smart card or PGP keys in the future, Titan cannot grow into those use cases. For pure web authentication needs, Titan delivers equivalent security at lower cost.
 
 ## Compact Pick — Always-In-Port Convenience
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c1-key-multi.png" alt="Hardware security key registration to multiple accounts Gmail GitHub bank" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="YubiKey 5 Nano (USB-A or USB-C)"
