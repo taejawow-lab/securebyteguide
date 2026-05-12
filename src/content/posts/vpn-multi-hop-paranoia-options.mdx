@@ -58,7 +58,7 @@ faq:
     answer: "Tor over VPN: your traffic goes Computer → VPN → Tor → Internet. VPN sees you connecting to Tor but not your final destination. Most common configuration. VPN over Tor: traffic goes Computer → Tor → VPN → Internet. The VPN sees the final destination but not your IP. Less common, harder to set up, slightly different threat model. Most users wanting both should use Tor over VPN."
   - question: "Can I use Tor for everyday browsing?"
     answer: "Technically yes via Tor Browser, but the slowness and CAPTCHA challenges make it impractical for everyday use. Many sites either block Tor exit nodes entirely or require constant CAPTCHA-solving. Reserve Tor for specific privacy-critical tasks (reading sensitive news, accessing whistleblower sites, posting anonymously) and use a VPN for everyday browsing. The mixed approach matches the use case to the tool."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -68,6 +68,11 @@ Multi-hop VPN, Tor over VPN, and similar privacy stacks address threat models wh
 
 ## Threat Models That Justify Multi-Hop
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-multihop-tor.png" alt="Tor over VPN configuration with onion routing layers visualized" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 Single-hop VPN protects against three threats well: ISP traffic monitoring, public WiFi snooping, and basic geolocation tracking. It fails against three threats: VPN provider logging or compromise, state-level traffic correlation, and active adversary controlling network infrastructure. Multi-hop and Tor address the latter category by ensuring no single entity in the network path sees both your real IP and your destination traffic.
 
 The threat models where this matters are concentrated in specific user populations. Investigative journalists protecting sources from state-level investigation. Dissidents in countries where political speech draws legal punishment. Security researchers studying ransomware infrastructure, who need to access malicious networks without revealing institutional IPs. Domestic abuse survivors hiding from technically capable abusers. For these users, the performance cost of multi-hop is acceptable and the privacy improvement is real.
@@ -75,6 +80,11 @@ The threat models where this matters are concentrated in specific user populatio
 For typical privacy-conscious users (avoiding ISP tracking, blocking advertiser fingerprinting, accessing geo-restricted content), single VPN is sufficient and multi-hop adds complexity without proportionate benefit.
 
 ## Top Pick — Double VPN For Strong Privacy Stack
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-multihop-country.png" alt="Country location selection map for VPN server choice with privacy ratings" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="NordVPN Double VPN"
@@ -92,6 +102,11 @@ The structural limitation is that both VPN servers belong to NordVPN. A compromi
 
 ## Anonymity Pick — Tor Over VPN For Maximum Privacy
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-multihop-journalist.png" alt="Journalist using anonymous internet access with multiple privacy layers stacked" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 <ProductBox
   name="ProtonVPN with Tor over VPN servers"
   priceHint="Included in Plus tier ($5-10/month)"
@@ -107,6 +122,11 @@ Tor over VPN provides the strongest anonymity available through commercial servi
 The honest cost is real performance impact and compatibility issues. Pages load 5-15 seconds slower than direct connection. Many sites either block Tor exit nodes outright or require CAPTCHA solving. Banking, payment, and most account-based services typically refuse Tor connections. The tool is suited for reading news, research, and accessing specific privacy-sensitive sites — not general web use. ProtonVPN's Tor servers handle the Tor connection at the VPN exit, eliminating the need to configure Tor Browser separately.
 
 ## Tails OS Pick — Operating System Level Privacy
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-multihop-stack.png" alt="Metadata reduction through privacy stack with arrows showing data shrinking" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Tails OS (Free Live USB)"
