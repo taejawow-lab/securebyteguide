@@ -58,7 +58,7 @@ faq:
     answer: "Functionally no — all three protocols carry the same internet traffic. The difference is performance and connection stability. WireGuard's higher throughput matters for HD video streaming, large file uploads, and gaming. OpenVPN's TCP option works through restrictive firewalls (some hotels, corporate networks) where UDP-based WireGuard might be blocked. IKEv2 wins on mobile network transitions."
   - question: "Can I tell what VPN protocol my provider is using?"
     answer: "Yes. The VPN client app typically shows protocol options in settings. NordVPN's NordLynx is WireGuard-based. ProtonVPN's Stealth protocol is WireGuard with obfuscation. ExpressVPN's Lightway is their proprietary WireGuard alternative. Most clients default to the fastest protocol your network supports, but you can force a specific protocol if needed."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -68,6 +68,11 @@ VPN protocol choice affects throughput, latency, battery life, and connection st
 
 ## How VPN Protocols Differ Technically
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-protocol-tunnel.png" alt="Encrypted tunnel connecting user device to VPN server with shield" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 Three structural factors separate modern VPN protocols. First, the cryptographic primitives. WireGuard uses ChaCha20-Poly1305 for encryption and Curve25519 for key exchange — both modern and fast. OpenVPN supports many cipher choices but most deployments use AES-256-GCM. IKEv2 uses AES-256-GCM. Modern AES implementations leverage hardware acceleration (AES-NI on x86) and run nearly as fast as ChaCha20. ChaCha20 wins on hardware without AES acceleration, particularly mobile ARM chips.
 
 Second, the protocol overhead per packet. WireGuard's minimal overhead and kernel-level implementation deliver near-native performance — typically 95+ percent of raw connection throughput. OpenVPN runs in userspace with TLS-based control channel, adding per-packet overhead that limits throughput to 60-80 percent of raw connection on typical hardware. IKEv2 falls in between.
@@ -75,6 +80,11 @@ Second, the protocol overhead per packet. WireGuard's minimal overhead and kerne
 Third, the connection management model. IKEv2 with MOBIKE extension handles network transitions gracefully — when your phone moves from WiFi to cellular, the IKEv2 tunnel persists. WireGuard does not natively support this; tunnel re-establishment on network change typically takes 1-3 seconds. OpenVPN supports network change but with similar reconnection delay.
 
 ## Top Pick — WireGuard For Modern Connections
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-protocol-speed.png" alt="VPN speed test results dashboard showing throughput latency for different protocols" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="NordVPN NordLynx (WireGuard-based)"
@@ -92,6 +102,11 @@ The battery impact difference on mobile is the second factor that matters. Our t
 
 ## Compatibility Pick — OpenVPN For Restrictive Networks
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-protocol-config.png" alt="WireGuard configuration file on laptop with QR code for mobile setup" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 <ProductBox
   name="ProtonVPN OpenVPN/Stealth"
   priceHint="Free tier or $5-10/month paid"
@@ -107,6 +122,11 @@ OpenVPN remains the right choice when your network blocks WireGuard or you need 
 The performance cost is real. OpenVPN over TCP adds protocol overhead that further reduces throughput by 10-20 percent versus OpenVPN over UDP. For typical web browsing the difference is invisible, but file uploads and video streaming feel slower. ProtonVPN's Stealth protocol is WireGuard with obfuscation that achieves similar firewall traversal at WireGuard performance levels; if your VPN provider supports it, Stealth is the best of both worlds for restrictive networks.
 
 ## Mobile Pick — IKEv2 For Network-Switching Devices
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c2-protocol-mobile.png" alt="Mobile VPN app interface showing protocol selection options" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="ExpressVPN IKEv2 / Lightway"
