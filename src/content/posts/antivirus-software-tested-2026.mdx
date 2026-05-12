@@ -58,7 +58,7 @@ faq:
     answer: "Free antivirus from established vendors (Avast Free, AVG Free, Bitdefender Free) provides genuine protection but often monetizes through aggressive upselling and limited data collection for product improvement. Free standalone tools (Malwarebytes Free, MBAM) collect minimal data. Windows Defender included with Windows is the cleanest free option for privacy-conscious users since Microsoft already has your OS data."
   - question: "Should I run multiple antivirus products simultaneously?"
     answer: "No, generally not. Multiple real-time scanners cause performance problems and false positives as they detect each other's protected files. The exception: running Windows Defender plus Malwarebytes on-demand scanner works because Malwarebytes is designed for compatibility and operates in scheduled-scan mode by default. Beyond that combination, stick to one real-time antivirus."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -68,11 +68,21 @@ Antivirus software in 2026 is a more nuanced choice than the marketing implies. 
 
 ## What Modern Antivirus Actually Protects Against
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c3-antivirus-quarantine.png" alt="Malware quarantine list with isolated suspicious files on computer screen" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 The threat landscape shifted substantially over the past five years. Traditional file-based viruses are rare in 2026. The current high-impact threats are ransomware (encrypts your files until you pay), credential theft via phishing or info-stealer malware (captures saved passwords from browsers), and supply-chain attacks (legitimate software with malicious updates). These threats require different defenses than the signature-based scanning that antivirus traditionally provided.
 
 Modern security suites address these threats through three layers. Signature scanning still catches known malware reliably. Behavioral monitoring watches for suspicious patterns (process spawning, file encryption sequences, unusual network connections) that indicate novel attacks. Cloud-based threat intelligence flags newly-seen URLs and files before signatures are written. Quality suites combine all three layers; cheaper options often rely too heavily on signatures and miss novel attacks.
 
 ## Top Pick — Best All-Round Paid Antivirus
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c3-antivirus-firewall.png" alt="Firewall settings interface blocking suspicious incoming connections" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Bitdefender Total Security"
@@ -90,6 +100,11 @@ The bundled features add real value when configured well. The included password 
 
 ## Bundle Pick — Best For Identity Theft Concern Users
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c3-antivirus-ransomware.png" alt="Ransomware protection shield concept defending personal files folders" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 <ProductBox
   name="Norton 360 Deluxe with LifeLock"
   priceHint="$50-150/year for 5 devices"
@@ -105,6 +120,11 @@ Norton 360 is the right choice for users wanting bundled identity theft protecti
 The Cloud Backup feature included with Norton 360 Deluxe provides 250GB of encrypted cloud storage, which functions as ransomware insurance — if local files get encrypted, you can restore from cloud backup. This duplicates standalone backup tools (Backblaze, IDrive) at the volume Norton provides, with the advantage of being integrated into the security suite. For users who would not otherwise set up backup, the integrated approach increases the chance the backup actually gets configured. The honest tradeoff is system impact — Norton runs heavier than Bitdefender in our PassMark testing (8-12 percent impact vs Bitdefender's 4-6 percent).
 
 ## Behavior Pick — Best Combined With Windows Defender
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c3-antivirus-scan.png" alt="Automated scheduled antivirus scan running in background while user works" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Malwarebytes Premium"
