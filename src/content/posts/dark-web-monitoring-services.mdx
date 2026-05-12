@@ -58,7 +58,7 @@ faq:
     answer: "Change the password for that specific service immediately. If you reused the password elsewhere, change it everywhere. Enable two-factor authentication on the breached account and your most critical accounts. Monitor for unusual activity on the breached account for 30-60 days. The breach itself happened — your response prevents the credential reuse attacks that follow."
   - question: "Can I remove my data from the dark web?"
     answer: "No — once data is published on dark web marketplaces it cannot be removed. The legitimate response is to assume the data is permanently compromised and act accordingly: change all reused passwords, freeze credit, enable strong authentication, monitor for fraudulent activity. Dark web monitoring services that promise removal are typically misleading; the genuine value is rapid notification and response guidance."
-draft: true
+draft: false
 ---
 
 import ProductBox from '../../components/ProductBox.astro';
@@ -67,6 +67,11 @@ import Aff from '../../components/Aff.astro';
 Dark web monitoring services scan known criminal marketplaces and breach databases for mentions of your personal information — email addresses, passwords, Social Security numbers, credit card numbers, account credentials. The market in 2026 ranges from free email-notification services (Have I Been Pwned) to comprehensive paid suites (LifeLock, Aura, Norton 360) with monitoring across hundreds of data categories. We tested four services over six weeks to identify which serves which use case and what specific value justifies the paid tiers.
 
 ## What Dark Web Monitoring Actually Provides
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-darkweb-exposure.png" alt="Personal data exposure report with email password and account information findings" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 Three distinct services come under the "dark web monitoring" label.
 
@@ -80,6 +85,11 @@ Most users benefit from breach notification (covered by free tools) more than ac
 
 ## Free Pick — Have I Been Pwned
 
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-darkweb-workflow.png" alt="Identity theft response workflow with action steps freeze report restore" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
+
 Have I Been Pwned (HIBP), operated by security researcher Troy Hunt, is the right starting point for everyone. The service is genuinely free, transparently operated, and covers the vast majority of credential exposure scenarios. Sign up at haveibeenpwned.com using each email address you care about. When future breaches include your email, you receive notification within hours of the breach being added to the database.
 
 The service also offers a free password check — enter a password (not your actual one, hash-based check) and HIBP reports if that password appears in known breaches. Use this to verify your master password is not in any public breach. The Pwned Passwords API powers password manager features in 1Password and Bitwarden that automatically check your saved passwords against the breach database.
@@ -87,6 +97,11 @@ The service also offers a free password check — enter a password (not your act
 For users content with breach notification only, HIBP covers the use case for free. Paid services duplicate this capability while adding the next tiers below.
 
 ## Paid Pick — Best All-Round Identity Protection
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-darkweb-freeze.png" alt="Credit freeze process at three credit bureaus with shield protection icons" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Aura Identity Theft Protection"
@@ -103,6 +118,11 @@ Aura is the right choice for users with elevated identity theft risk who want co
 The family plan structure is the standout. Five members at one subscription means parents can include children, whose identity theft typically goes undetected for years (until the child applies for first credit in their 20s and discovers the existing damage). For families with elevated risk profiles or anyone concerned about child identity theft, the family plan provides protection that scales without per-member cost growth.
 
 ## Bundle Pick — When Combined With Antivirus
+
+
+<figure style="margin: 1.5rem 0;">
+<img src="/images/illustrations/sbg-c4-darkweb-breach.png" alt="Password breach notification with recommended action update credentials" style="width: 100%; border-radius: 8px; aspect-ratio: 16/9; object-fit: cover;" loading="lazy" decoding="async" />
+</figure>
 
 <ProductBox
   name="Norton 360 with LifeLock"
