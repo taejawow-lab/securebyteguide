@@ -231,16 +231,6 @@ For households managing accounts across family members or businesses rolling out
 
 **Backup and disaster recovery.** Enterprises must plan for the scenario where an employee's primary device is destroyed. Best practice: each user enrolls two devices (laptop + phone) plus one hardware key stored securely. Recovery flows that depend on a single device represent unacceptable risk for business-critical accounts.
 
-## FAQ
-
-<FAQ items={[
-  { question: "Can I use a passkey on a computer that's not mine?", answer: "Yes. The site shows a QR code; scan it with your phone. Your phone signs the challenge (using its passkey) and sends the signature back via Bluetooth. The work computer never sees your private key. This is the standard cross-device flow." },
-  { question: "Are passkeys safer than my password manager?", answer: "Yes, in three ways: (1) phishing-immune (your password manager can fill phishing sites if you click a malicious link), (2) no master password to remember or be stolen, (3) requires biometric at every login. Password manager + 2FA is good; passkeys are better." },
-  { question: "What if a site I use doesn't support passkeys yet?", answer: "Keep using a strong password + authenticator-app 2FA (Authy, 1Password, Bitwarden). Most major sites added passkey support in 2024-2025. For laggards, check passkeys.directory monthly — coverage is expanding rapidly." },
-  { question: "Should I delete my password after enabling passkey?", answer: "Not immediately. Most sites still require password as backup. Wait 30-60 days, confirm passkey flow works on all your devices, then delete the password if the site allows. Some accounts (banks, gov) keep password required permanently as fallback." },
-  { question: "Do passkeys protect against malware on my phone?", answer: "Partially. Passkeys are stored in the device's secure enclave, which malware running in the OS cannot directly access. However, malware that can intercept your biometric or steal device unlock could potentially trigger passkey signing. Keep phone OS updated and avoid sideloaded apps." }
-]} />
-
 ## References
 
 - FIDO Alliance. *Passkey Adoption Report*. 2025.
