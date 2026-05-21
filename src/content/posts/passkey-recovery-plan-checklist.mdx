@@ -1,0 +1,108 @@
+---
+title: "Passkey Recovery Plan: Avoid Lockout While Moving Beyond Passwords"
+description: "A security-focused passkey recovery checklist covering device loss, backup methods, phishing-resistant MFA, account recovery, and family or team rules."
+pubDate: 2026-05-21
+updatedDate: 2026-05-21
+category: "Password Security"
+tags: ["passkeys", "account recovery", "phishing resistant MFA", "password managers", "security checklist"]
+heroImage: "/images/illustrations/sbg-passkey-recovery-hero.png"
+schemaType: "HowTo"
+sources:
+  - title: "Digital Identity Guidelines"
+    url: "https://pages.nist.gov/800-63-4/"
+    publication: "National Institute of Standards and Technology"
+    year: "2025"
+  - title: "Phishing-Resistant Authenticator Playbook"
+    url: "https://www.idmanagement.gov/playbooks/altauthn/"
+    publication: "IDManagement.gov"
+    year: "2024"
+  - title: "CISA Secure by Demand: Passkeys by Default"
+    url: "https://fidoalliance.org/cisa-secure-by-demand-guide-phishing-resistant-authentication-passkeys-by-default/"
+    publication: "CISA / FIDO Alliance"
+    year: "2024"
+  - title: "FIDO Alliance Passkeys"
+    url: "https://fidoalliance.org/passkeys/"
+    publication: "FIDO Alliance"
+    year: "2026"
+  - title: "Google Passkeys Help"
+    url: "https://support.google.com/accounts/answer/13548313"
+    publication: "Google Account Help"
+    year: "2026"
+  - title: "Apple Passkeys Overview"
+    url: "https://support.apple.com/guide/iphone/sign-in-with-passkeys-iphf538ea8d0/ios"
+    publication: "Apple Support"
+    year: "2026"
+  - title: "Microsoft Passkeys Support"
+    url: "https://support.microsoft.com/account-billing/sign-in-with-a-passkey-09a49a86-ca47-406c-8acc-ed0e3c852c6d"
+    publication: "Microsoft Support"
+    year: "2026"
+  - title: "OWASP Authentication Cheat Sheet"
+    url: "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+    publication: "OWASP Cheat Sheet Series"
+    year: "2025"
+internalLinks:
+  - "/posts/passkeys-vs-2fa-2026"
+  - "/posts/family-password-managers-compared"
+  - "/category/password-security"
+visualsCount: 5
+hasVideo: false
+wordCount: 1860
+affiliate: false
+aiDisclosed: true
+faq:
+  - question: "Are passkeys safer than passwords?"
+    answer: "For phishing resistance, yes. Properly implemented passkeys use public-key cryptography and are bound to the legitimate service, which makes credential phishing much harder than with reusable passwords."
+  - question: "What is the biggest passkey risk for normal users?"
+    answer: "The biggest practical risk is lockout after device loss, platform confusion, or poorly planned recovery. Security improves only if recovery is designed before the emergency."
+  - question: "Should I delete all passwords after adding passkeys?"
+    answer: "Not immediately. Keep recovery paths documented, verify passkeys on at least two trusted devices or an approved external security key, then remove weaker methods only where the account supports safe recovery."
+draft: false
+---
+
+Passkeys are one of the best consumer security upgrades in years, but they introduce a new operational question: how do you avoid locking yourself out when your phone is lost, your laptop dies, or a family member needs emergency access? A passkey recovery plan is the missing bridge between stronger authentication and real life. The goal is not to weaken passkeys with sloppy backup methods. The goal is to decide, in advance, which devices, recovery contacts, hardware keys, password managers, and account settings are trusted enough to keep access resilient.
+
+![Passkey Recovery Plan](/images/illustrations/sbg-passkey-recovery-hero.png)
+
+## Map where each passkey actually lives
+
+The first mistake is saying "I have passkeys" without knowing whether they are synced through Apple, Google, Microsoft, a password manager, or stored on a hardware security key. Synced passkeys are convenient because a new device in the same trusted ecosystem may regain access after account recovery. Device-bound passkeys and hardware keys can be stronger against some compromise paths, but they require deliberate backups. Write down the storage model for your most important accounts: email, password manager, bank, brokerage, cloud storage, domain registrar, work identity, and phone carrier.
+
+Do not store this map as a plain note titled "all my security." Keep it in a secure password manager note, a printed emergency sheet in a safe, or a team-controlled secure vault. The map should identify the account, passkey location, backup method, recovery email or phone, and who is allowed to help. It should not expose secrets unnecessarily.
+
+![Inventory of passkey locations across devices](/images/illustrations/sbg-passkey-recovery-01.png)
+
+## Create two independent recovery paths
+
+A resilient plan has at least two independent paths back into critical accounts. Independence matters. If both paths depend on the same phone, losing the phone is still catastrophic. A common home setup is a synced passkey on the primary phone and laptop, plus a hardware security key stored safely. A small business might use managed identity policies, two registered security keys per administrator, break-glass accounts, and documented approval steps. The right design depends on threat model, but single-device access is rarely enough.
+
+For each critical account, test recovery before you need it. Can you sign in from a clean browser on another trusted device? Can you use the backup hardware key? Is the recovery email itself protected by passkeys or phishing-resistant MFA? Is the phone number protected against SIM-swap risk through carrier account locks where available? A recovery chain is only as strong as its weakest account.
+
+![Two independent recovery paths for critical accounts](/images/illustrations/sbg-passkey-recovery-02.png)
+
+## Separate phishing resistance from account recovery
+
+Passkeys are phishing-resistant during sign-in because the cryptographic challenge is tied to the legitimate service. Recovery is different. Many services still fall back to email links, SMS, customer support workflows, backup codes, or identity checks. Attackers know this and often target recovery instead of the main login. Review every recovery method and remove weak options where the service allows it. If SMS remains mandatory, strengthen the carrier account and do not reuse that phone number as the only recovery path for everything.
+
+Backup codes deserve special care. They are useful, but they are bearer secrets: anyone who has them can often get in. Store them offline or in a password manager vault with strong protection. Do not leave screenshots in a photo library or downloads folder. Rotate codes after any suspected exposure.
+
+![Recovery chain showing weak SMS fallback risk](/images/illustrations/sbg-passkey-recovery-03.png)
+
+## Use hardware keys where lockout would be expensive
+
+Hardware security keys are especially valuable for accounts where compromise or lockout would be costly: primary email, password manager, work admin, cloud hosting, domain registrar, financial accounts that support them, and creator accounts with monetized audiences. Register at least two keys when possible. Keep one on your keychain or in your work bag and one in a secure location. Label keys discreetly enough that you know their purpose but a stranger does not.
+
+Before buying keys, check service support. Some accounts support passkeys but not external security keys in the way you expect. Some support keys only as second factors, not full passkeys. Some consumer financial institutions lag behind technology platforms. Document the actual behavior you tested, not the marketing phrase you read.
+
+![Hardware security keys as backup for passkeys](/images/illustrations/sbg-passkey-recovery-04.png)
+
+## Family and small-team rules
+
+Families need recovery rules that do not depend on one technical person being available. Decide where emergency instructions live, which accounts matter, and who can act. For a household, the list might include primary email, phone account, cloud photos, financial dashboards, medical portals, and password manager emergency access. For a small business, include identity provider administrators, domain registrar, cloud console, billing, payroll, and social media accounts. Use role-based access rather than sharing one login.
+
+Emergency access should be tested respectfully. A spouse, partner, executor, or second administrator should know how to find instructions without being handed daily access to everything. Password manager emergency access features can help, but only if both sides understand waiting periods and device requirements.
+
+## Migration checklist
+
+Move in phases. First, secure the primary email and password manager because they control recovery for everything else. Second, add passkeys to cloud and device ecosystem accounts. Third, add passkeys or hardware keys to financial, domain, and work accounts that support them. Fourth, remove weak fallback methods only after you have verified backups. Fifth, update the emergency sheet.
+
+Keep a small test ritual: twice a year, confirm that backup devices still work, recovery emails are current, hardware keys are not missing, and emergency contacts understand their role. Passkeys can dramatically reduce phishing risk, but only a planned recovery system makes them durable.
