@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">OAuth app review checklist</title><desc id="desc">A checklist for reviewing app publisher, scopes, owner, data access, and expiration.</desc>
+<rect width="1200" height="720" fill="#f1f5f9"/>
+<rect x="145" y="80" width="910" height="560" rx="34" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+<text x="205" y="145" font-family="Arial" font-size="34" font-weight="700" fill="#0f172a">Five-question consent checklist</text>
+<g font-family="Arial" font-size="24" fill="#334155">
+ <g transform="translate(210 205)"><rect width="44" height="44" rx="10" fill="#14b8a6"/><path d="M12 23 l8 9 l15 -20" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="70" y="31">Is the publisher verified and expected?</text></g>
+ <g transform="translate(210 285)"><rect width="44" height="44" rx="10" fill="#14b8a6"/><path d="M12 23 l8 9 l15 -20" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="70" y="31">Are requested scopes limited to the job?</text></g>
+ <g transform="translate(210 365)"><rect width="44" height="44" rx="10" fill="#14b8a6"/><path d="M12 23 l8 9 l15 -20" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="70" y="31">Who owns the app and renewal decision?</text></g>
+ <g transform="translate(210 445)"><rect width="44" height="44" rx="10" fill="#14b8a6"/><path d="M12 23 l8 9 l15 -20" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="70" y="31">What data can leave the tenant or workspace?</text></g>
+ <g transform="translate(210 525)"><rect width="44" height="44" rx="10" fill="#14b8a6"/><path d="M12 23 l8 9 l15 -20" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="70" y="31">How will access be removed during offboarding?</text></g>
+</g>
+<text x="205" y="605" font-family="Arial" font-size="21" fill="#64748b">If nobody can answer, do not grant broad consent yet.</text>
+</svg>

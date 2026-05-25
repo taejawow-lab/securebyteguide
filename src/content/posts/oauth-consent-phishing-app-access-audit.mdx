@@ -1,0 +1,175 @@
+---
+title: "OAuth Consent Phishing: Audit and Lock Down Third-Party App Access"
+description: "A practical guide to finding risky OAuth app grants, responding to consent phishing, and setting safer approval rules for Microsoft 365 and Google Workspace."
+pubDate: 2026-05-25
+updatedDate: 2026-05-25
+category: "Identity Security"
+tags: ["OAuth", "consent phishing", "Microsoft 365", "Google Workspace", "identity security", "SaaS security"]
+heroImage: "/images/illustrations/sbg-oauth-consent-phishing-hero.svg"
+schemaType: "HowTo"
+sources:
+  - title: "Protect against consent phishing"
+    url: "https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/protect-against-consent-phishing"
+    publication: "Microsoft Learn"
+    year: "2026"
+  - title: "Investigate and remediate risky OAuth apps"
+    url: "https://learn.microsoft.com/en-us/defender-cloud-apps/investigate-risky-oauth"
+    publication: "Microsoft Defender for Cloud Apps"
+    year: "2026"
+  - title: "Control which third-party and internal apps access Google Workspace data"
+    url: "https://support.google.com/a/answer/7281227"
+    publication: "Google Workspace Admin Help"
+    year: "2026"
+  - title: "Manage third-party app access to Google Workspace data"
+    url: "https://support.google.com/a/answer/7281227?hl=en"
+    publication: "Google Workspace Admin Help"
+    year: "2026"
+  - title: "Cybersecurity Performance Goals"
+    url: "https://www.cisa.gov/cross-sector-cybersecurity-performance-goals"
+    publication: "Cybersecurity and Infrastructure Security Agency"
+    year: "2025"
+  - title: "Phishing Guidance: Stopping the Attack Cycle at Phase One"
+    url: "https://www.cisa.gov/resources-tools/resources/phishing-guidance-stopping-attack-cycle-phase-one"
+    publication: "Cybersecurity and Infrastructure Security Agency"
+    year: "2025"
+  - title: "Digital Identity Guidelines"
+    url: "https://pages.nist.gov/800-63-4/"
+    publication: "National Institute of Standards and Technology"
+    year: "2025"
+  - title: "Computer Security Incident Handling Guide"
+    url: "https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final"
+    publication: "National Institute of Standards and Technology"
+    year: "2012"
+  - title: "2024 Internet Crime Report"
+    url: "https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf"
+    publication: "FBI Internet Crime Complaint Center"
+    year: "2025"
+internalLinks:
+  - "/posts/mfa-rollout-small-business-no-lockouts"
+  - "/posts/passkey-recovery-plan-checklist"
+  - "/posts/phishing-detection-2024-trends"
+  - "/category/identity-security"
+visualsCount: 5
+hasVideo: false
+wordCount: 1840
+affiliate: false
+aiDisclosed: true
+faq:
+  - question: "Is OAuth consent phishing the same as password phishing?"
+    answer: "No. Password phishing steals a reusable secret. OAuth consent phishing tricks a user or admin into authorizing an app, which may keep access through tokens and app grants even after a password change."
+  - question: "Should small businesses block all third-party OAuth apps?"
+    answer: "Usually no. The safer default is to require admin approval for high-risk scopes, allow verified low-risk apps with an owner and renewal date, and revoke apps nobody can justify."
+  - question: "What is the fastest first step after a malicious consent grant?"
+    answer: "Disable or remove the app grant, revoke refresh tokens or sessions for affected users, preserve logs, and then hunt for mailbox rules, file access, forwarding, and unusual sign-ins."
+draft: false
+---
+
+OAuth consent phishing is a cloud-era trick that can look less dramatic than a stolen password but still expose mail, files, contacts, calendars, and identity data. Instead of asking a victim to type credentials into a fake page, the attacker asks the victim to approve a malicious or misleading application. If the user clicks **Allow**, the app may receive tokens and permissions to read data through Microsoft Graph, Google APIs, or another identity platform. That is why a normal password reset is not a complete fix: the risky app grant can remain until it is revoked.
+
+![OAuth consent phishing defense overview](/images/illustrations/sbg-oauth-consent-phishing-hero.svg)
+
+*Updated 2026-05-25. This guide references current Microsoft Entra, Google Workspace, CISA, NIST, and FBI resources listed at the end of the article.*
+
+## Why OAuth consent phishing deserves its own playbook
+
+Multi-factor authentication helps against many password attacks, but OAuth consent phishing abuses a different decision point: the authorization prompt. A real sign-in page may appear, the domain may belong to Microsoft or Google, and the user may already be authenticated. The dangerous part is the requested access: `Mail.Read`, `offline_access`, `Files.Read.All`, directory profile access, or administrator consent for many users.
+
+That distinction changes the response. Resetting the password may be necessary if the account is also compromised, but it does not automatically answer these questions: Which app was approved? Which scopes were granted? Did the app receive refresh tokens? Did it read mail, create forwarding rules, download files, or use contacts for more phishing? A useful playbook treats the event as an identity and SaaS data access incident, not only as an endpoint cleanup task.
+
+![Five step OAuth consent attack flow](/images/illustrations/sbg-oauth-consent-phishing-flow.svg)
+
+## What to inventory before an incident
+
+Start with a tenant-wide list of enterprise applications, app registrations, service principals, and third-party app grants. In Microsoft 365, review enterprise applications and OAuth app governance signals in Entra ID and Microsoft Defender for Cloud Apps if licensed. In Google Workspace, review API controls and third-party app access settings in the Admin console. The exact menu names change, but the questions stay stable: who approved the app, what scopes were granted, which users are affected, when was it last used, and whether the publisher is verified.
+
+A spreadsheet is acceptable for a small business if it is kept current and protected. Record the app name, publisher, platform, data scopes, business owner, approval date, renewal date, affected users, and removal procedure. Mark apps that can read mail, read or write files, maintain offline access, manage users, or access all users' data. These are not automatically malicious, but they deserve stronger justification.
+
+| App attribute | Low-risk example | Higher-risk signal | Action |
+|---|---|---|---|
+| Publisher | Verified vendor already under contract | Unknown publisher or lookalike name | Hold for review |
+| Scope | Sign in and read basic profile | Mail, files, directory, or offline access | Require owner approval |
+| User base | One pilot user | Many users or admin-wide consent | Review logs and data need |
+| Business owner | Named employee and renewal date | Nobody remembers installing it | Revoke or quarantine |
+| Data path | Data stays in approved SaaS | Exports to unknown storage | Security and legal review |
+
+## Set a safer default consent policy
+
+The goal is not to make work impossible. The goal is to stop a single distracted click from granting broad access to business data. For most small organizations, a reasonable baseline is:
+
+1. Users may request apps, but broad or sensitive scopes require admin approval.
+2. Admin approval requires a business owner, verified publisher, scope review, and renewal date.
+3. High-risk permissions such as mail read/write, file read/write across users, directory access, and offline access are treated as sensitive.
+4. Old apps are reviewed at least quarterly, and unused apps are removed.
+5. Break-glass administrator accounts are not used for routine app consent.
+
+Microsoft and Google both provide controls to restrict or review third-party app access. The exact setting should be tested with a small group before a hard rollout, because blocking every unknown app at once can interrupt legitimate workflows such as scheduling tools, help desk integrations, CRM sync, or backup products. Announce the rule, provide a request path, and explain that the purpose is data protection rather than bureaucracy.
+
+![OAuth app risk triage matrix](/images/illustrations/sbg-oauth-consent-phishing-matrix.svg)
+
+## The five-question review that catches most mistakes
+
+A consent prompt should not be approved because the logo looks familiar. Use a short checklist that non-specialists can understand:
+
+- **Is the publisher verified and expected?** Attackers often use names that resemble internal projects or well-known brands.
+- **Are the scopes limited to the job?** A calendar scheduling tool should not need broad mailbox, file, or directory rights without a clear reason.
+- **Who owns the app?** Every approved app needs a business owner who can answer why it exists.
+- **What data can leave the tenant?** OAuth is often a bridge from your identity provider to another service.
+- **How will access be removed?** Offboarding must cover app grants, not only passwords and laptops.
+
+If nobody can answer these questions, deny the request for now. That does not mean the app is bad; it means the organization does not yet understand the access it is granting.
+
+![Five-question OAuth consent checklist](/images/illustrations/sbg-oauth-consent-phishing-checklist.svg)
+
+## Response steps when a user approved a suspicious app
+
+Treat the first hour as containment and evidence preservation. Capture the app name, application ID, publisher, redirect URI, granted scopes, approving user, timestamp, affected users, source IPs, and available audit log entries. Then disable or remove the app grant and revoke refresh tokens or sessions for affected users. If the app had mailbox permissions, check for inbox rules, forwarding, delegated access, suspicious searches, mass downloads, and sent phishing messages. If file permissions were granted, review shared links, external downloads, and unusual access to sensitive folders.
+
+Do not run a destructive cleanup script before preserving enough evidence to scope the incident. The organization may need logs for insurance, customer notification, legal counsel, or law enforcement. NIST incident handling guidance is older than many SaaS consoles, but its core phases still apply: prepare, detect and analyze, contain, eradicate, recover, and learn.
+
+![Incident response timeline for malicious OAuth consent](/images/illustrations/sbg-oauth-consent-phishing-timeline.svg)
+
+## What to hunt after revocation
+
+Revoking the app is only the beginning. Look for secondary activity that the token enabled:
+
+- Mailbox forwarding rules, hidden inbox rules, and suspicious delegated mailbox access.
+- New external sharing links, bulk file downloads, or access to finance, HR, legal, and customer folders.
+- Sign-ins from unfamiliar locations, especially shortly before the consent event.
+- New service principals, app registrations, or admin consent events.
+- Contact harvesting followed by lookalike phishing from personal or newly created accounts.
+- Password resets or MFA changes near the same time window.
+
+For a small business without a security operations center, pick a practical lookback window such as 7 to 30 days around the approval time, then extend it if you find suspicious activity. Export the relevant logs before retention limits erase them. If regulated data may have been accessed, involve legal or privacy counsel early.
+
+## Training users without blaming them
+
+OAuth consent phishing often succeeds because the prompt is hosted on a legitimate identity provider page. Telling users to "check the URL" is not enough. Better training shows real examples of permission prompts and explains risky words: read all mail, maintain access, read and write files, act as you, access organization data, or request administrator approval. Users should know where to report a suspicious app request and should not feel punished for asking.
+
+Make the safe path easier than the risky path. A short app request form can ask for the vendor link, business purpose, data needed, team owner, and urgency. Security or IT can then approve, deny, or suggest a safer alternative. Over time, publish an internal list of approved apps so employees do not repeatedly request the same tools.
+
+## Practical baseline for Microsoft 365 and Google Workspace
+
+For Microsoft 365, review user consent settings, admin consent workflow, verified publisher requirements, risky OAuth app detections where available, and audit logging retention. Pay special attention to applications with offline access or broad Microsoft Graph permissions. For Google Workspace, use API controls to classify third-party apps as trusted, limited, or blocked, and review which apps can access Gmail, Drive, Calendar, and Admin APIs.
+
+The most important operational habit is recurring review. A one-time cleanup helps, but SaaS access changes constantly as employees test tools, vendors change integrations, and projects end. Put OAuth app review on the same calendar as user access review and backup restore testing. Quarterly is a reasonable starting point for many small teams; monthly may be better for organizations with sensitive data or frequent vendor changes.
+
+## A minimal policy you can adopt this week
+
+Use this lightweight policy if you do not have one yet:
+
+> Third-party applications that access company identity, email, calendar, files, contacts, directory, finance, HR, customer, or administrative data require approval before use. Approval must document the app owner, publisher, requested permissions, business purpose, affected users, data handling, and review date. Apps with broad, offline, or administrative access require security review. Unused or ownerless apps will be removed.
+
+This language is intentionally plain. The value comes from enforcing it consistently and giving employees a fast request path. The best policy is not the longest policy; it is the one that changes approval behavior before an attacker does.
+
+## Sources and latest review
+
+Latest review date: **2026-05-25**.
+
+- Microsoft Learn, [Protect against consent phishing](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/protect-against-consent-phishing)
+- Microsoft Defender for Cloud Apps, [Investigate and remediate risky OAuth apps](https://learn.microsoft.com/en-us/defender-cloud-apps/investigate-risky-oauth)
+- Google Workspace Admin Help, [Control which third-party and internal apps access Google Workspace data](https://support.google.com/a/answer/7281227)
+- CISA, [Cybersecurity Performance Goals](https://www.cisa.gov/cross-sector-cybersecurity-performance-goals)
+- CISA, [Phishing Guidance: Stopping the Attack Cycle at Phase One](https://www.cisa.gov/resources-tools/resources/phishing-guidance-stopping-attack-cycle-phase-one)
+- NIST, [Digital Identity Guidelines](https://pages.nist.gov/800-63-4/)
+- NIST, [Computer Security Incident Handling Guide](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)
+- FBI IC3, [2024 Internet Crime Report](https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf)
