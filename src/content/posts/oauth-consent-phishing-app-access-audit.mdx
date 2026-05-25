@@ -5,7 +5,7 @@ pubDate: 2026-05-25
 updatedDate: 2026-05-25
 category: "Identity Security"
 tags: ["OAuth", "consent phishing", "Microsoft 365", "Google Workspace", "identity security", "SaaS security"]
-heroImage: "/images/illustrations/sbg-oauth-consent-phishing-hero.svg"
+heroImage: "/images/illustrations/sbg-oauth-consent-phishing-hero.png"
 schemaType: "HowTo"
 sources:
   - title: "Protect against consent phishing"
@@ -66,7 +66,7 @@ draft: false
 
 OAuth consent phishing is a cloud-era trick that can look less dramatic than a stolen password but still expose mail, files, contacts, calendars, and identity data. Instead of asking a victim to type credentials into a fake page, the attacker asks the victim to approve a malicious or misleading application. If the user clicks **Allow**, the app may receive tokens and permissions to read data through Microsoft Graph, Google APIs, or another identity platform. That is why a normal password reset is not a complete fix: the risky app grant can remain until it is revoked.
 
-![OAuth consent phishing defense overview](/images/illustrations/sbg-oauth-consent-phishing-hero.svg)
+![OAuth consent phishing defense overview](/images/illustrations/sbg-oauth-consent-phishing-hero.png)
 
 *Updated 2026-05-25. This guide references current Microsoft Entra, Google Workspace, CISA, NIST, and FBI resources listed at the end of the article.*
 
@@ -76,7 +76,7 @@ Multi-factor authentication helps against many password attacks, but OAuth conse
 
 That distinction changes the response. Resetting the password may be necessary if the account is also compromised, but it does not automatically answer these questions: Which app was approved? Which scopes were granted? Did the app receive refresh tokens? Did it read mail, create forwarding rules, download files, or use contacts for more phishing? A useful playbook treats the event as an identity and SaaS data access incident, not only as an endpoint cleanup task.
 
-![Five step OAuth consent attack flow](/images/illustrations/sbg-oauth-consent-phishing-flow.svg)
+![Five step OAuth consent attack flow](/images/illustrations/sbg-oauth-consent-phishing-flow.png)
 
 ## What to inventory before an incident
 
@@ -104,7 +104,7 @@ The goal is not to make work impossible. The goal is to stop a single distracted
 
 Microsoft and Google both provide controls to restrict or review third-party app access. The exact setting should be tested with a small group before a hard rollout, because blocking every unknown app at once can interrupt legitimate workflows such as scheduling tools, help desk integrations, CRM sync, or backup products. Announce the rule, provide a request path, and explain that the purpose is data protection rather than bureaucracy.
 
-![OAuth app risk triage matrix](/images/illustrations/sbg-oauth-consent-phishing-matrix.svg)
+![OAuth app risk triage matrix](/images/illustrations/sbg-oauth-consent-phishing-matrix.png)
 
 ## The five-question review that catches most mistakes
 
@@ -118,7 +118,7 @@ A consent prompt should not be approved because the logo looks familiar. Use a s
 
 If nobody can answer these questions, deny the request for now. That does not mean the app is bad; it means the organization does not yet understand the access it is granting.
 
-![Five-question OAuth consent checklist](/images/illustrations/sbg-oauth-consent-phishing-checklist.svg)
+![Five-question OAuth consent checklist](/images/illustrations/sbg-oauth-consent-phishing-checklist.png)
 
 ## Response steps when a user approved a suspicious app
 
@@ -126,7 +126,7 @@ Treat the first hour as containment and evidence preservation. Capture the app n
 
 Do not run a destructive cleanup script before preserving enough evidence to scope the incident. The organization may need logs for insurance, customer notification, legal counsel, or law enforcement. NIST incident handling guidance is older than many SaaS consoles, but its core phases still apply: prepare, detect and analyze, contain, eradicate, recover, and learn.
 
-![Incident response timeline for malicious OAuth consent](/images/illustrations/sbg-oauth-consent-phishing-timeline.svg)
+![Incident response timeline for malicious OAuth consent](/images/illustrations/sbg-oauth-consent-phishing-timeline.png)
 
 ## What to hunt after revocation
 

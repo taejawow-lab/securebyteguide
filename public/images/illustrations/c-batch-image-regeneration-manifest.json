@@ -1,0 +1,90 @@
+{
+  "generated_at_utc": "2026-05-25T08:04:38Z",
+  "method": "PIL deterministic editorial PNG fallback; GTI13/ComfyUI unavailable",
+  "size": [
+    1600,
+    900
+  ],
+  "assets": [
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-safety-hero.png",
+      "bytes": 51693
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-risk-ladder.png",
+      "bytes": 51207
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-car-safety.png",
+      "bytes": 52124
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-pavement-paw-check.png",
+      "bytes": 42950
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-first-aid-flow.png",
+      "bytes": 51236
+    },
+    {
+      "site": "petwellhub",
+      "path": "public/images/illustrations/heat-walk-checklist.png",
+      "bytes": 52755
+    },
+    {
+      "site": "remoteworkgeek",
+      "path": "public/images/illustrations/rwg-acoustic-calls-hero.png",
+      "bytes": 49417
+    },
+    {
+      "site": "remoteworkgeek",
+      "path": "public/images/illustrations/rwg-acoustic-calls-chain.png",
+      "bytes": 44940
+    },
+    {
+      "site": "remoteworkgeek",
+      "path": "public/images/illustrations/rwg-acoustic-calls-measure.png",
+      "bytes": 43179
+    },
+    {
+      "site": "remoteworkgeek",
+      "path": "public/images/illustrations/rwg-acoustic-calls-mic-matrix.png",
+      "bytes": 46465
+    },
+    {
+      "site": "remoteworkgeek",
+      "path": "public/images/illustrations/rwg-acoustic-calls-flow.png",
+      "bytes": 51293
+    },
+    {
+      "site": "securebyteguide",
+      "path": "public/images/illustrations/sbg-oauth-consent-phishing-hero.png",
+      "bytes": 59810
+    },
+    {
+      "site": "securebyteguide",
+      "path": "public/images/illustrations/sbg-oauth-consent-phishing-flow.png",
+      "bytes": 39228
+    },
+    {
+      "site": "securebyteguide",
+      "path": "public/images/illustrations/sbg-oauth-consent-phishing-matrix.png",
+      "bytes": 45566
+    },
+    {
+      "site": "securebyteguide",
+      "path": "public/images/illustrations/sbg-oauth-consent-phishing-checklist.png",
+      "bytes": 56705
+    },
+    {
+      "site": "securebyteguide",
+      "path": "public/images/illustrations/sbg-oauth-consent-phishing-timeline.png",
+      "bytes": 48384
+    }
+  ]
+}
