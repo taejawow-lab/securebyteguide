@@ -1,0 +1,184 @@
+{
+  "date": "2026-06-02",
+  "batch": "C",
+  "site": "securebyteguide",
+  "host": "gti13-direct",
+  "endpoint": "http://192.168.50.29:8188",
+  "gate": {
+    "available": true,
+    "reason": "sentinel_unreachable_but_direct_comfyui_ok",
+    "sentinel_url": "http://192.168.50.30:9199/status",
+    "comfy_url": "http://192.168.50.29:8188",
+    "services": {
+      "comfyui_8188": true,
+      "sentinel_9199": false
+    },
+    "manual_pause": false,
+    "direct_fallback": true,
+    "comfyui_version": "0.20.1",
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17098519522,
+        "torch_vram_total": 6979321856,
+        "torch_vram_free": 31896546
+      }
+    ],
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    }
+  },
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.6,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, fake app interface, QR code, barcode, distorted hands, bad anatomy, extra fingers, unsafe animal handling, financial screen, medical procedure, fake warning label, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image"
+  },
+  "site_manifest": {
+    "slug": "passkey-recovery-home-accounts-checklist-2026",
+    "title": "Passkey and Account Recovery Checklist for Home Users",
+    "article": "src/content/posts/passkey-recovery-home-accounts-checklist-2026.mdx",
+    "source_validation": [
+      {
+        "url": "https://www.cisa.gov/secure-our-world",
+        "ok": false,
+        "error": "<HTTPError 403: 'Forbidden'>"
+      },
+      {
+        "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+        "ok": false,
+        "error": "<HTTPError 403: 'Forbidden'>"
+      },
+      {
+        "url": "https://fidoalliance.org/passkeys/",
+        "ok": true,
+        "status": 200,
+        "final": "https://fidoalliance.org/passkeys/"
+      },
+      {
+        "url": "https://support.google.com/accounts/answer/13548313",
+        "ok": true,
+        "status": 200,
+        "final": "https://support.google.com/accounts/answer/13548313"
+      },
+      {
+        "url": "https://support.microsoft.com/en-us/account-billing/sign-in-with-a-passkey-09a49a86-ca47-406c-8acc-ed0e3c852c6d",
+        "ok": false,
+        "error": "<HTTPError 403: 'Forbidden'>"
+      },
+      {
+        "url": "https://support.apple.com/guide/iphone/sign-in-with-passkeys-iphf538ea8d0/ios",
+        "ok": true,
+        "status": 200,
+        "final": "https://support.apple.com/guide/iphone/use-passkeys-to-sign-in-to-websites-and-apps-iphf538ea8d0/ios"
+      },
+      {
+        "url": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication",
+        "ok": true,
+        "status": 200,
+        "final": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/multi-factor-authentication"
+      },
+      {
+        "url": "https://www.identitytheft.gov/",
+        "ok": true,
+        "status": 200,
+        "final": "https://www.identitytheft.gov/"
+      }
+    ],
+    "assets": [
+      {
+        "file": "public/images/illustrations/sbg-passkey-recovery-accounts-2026-hero.png",
+        "filename": "sbg-passkey-recovery-accounts-2026-hero.png",
+        "suffix": "hero",
+        "seed": 202606020313,
+        "prompt": "realistic home account security desk with hardware key, phone blank screen, laptop closed, no text no logos",
+        "prompt_id": "fcd2d31f-4e44-4af3-8136-8f91ed8587a5",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_securebyteguide_hero_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1299901
+      },
+      {
+        "file": "public/images/illustrations/sbg-passkey-recovery-accounts-2026-01.png",
+        "filename": "sbg-passkey-recovery-accounts-2026-01.png",
+        "suffix": "01",
+        "seed": 202606020314,
+        "prompt": "realistic passkey setup concept with blank smartphone and hardware key on tidy desk, no readable UI",
+        "prompt_id": "1386f6eb-9352-4fef-9d00-69852595158e",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_securebyteguide_01_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1489204
+      },
+      {
+        "file": "public/images/illustrations/sbg-passkey-recovery-accounts-2026-02.png",
+        "filename": "sbg-passkey-recovery-accounts-2026-02.png",
+        "suffix": "02",
+        "seed": 202606020315,
+        "prompt": "realistic household recovery envelope in safe drawer with blank card, hardware key, no writing",
+        "prompt_id": "78696418-4d5a-4f09-a4e9-bd0de5348aea",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_securebyteguide_02_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1736838
+      },
+      {
+        "file": "public/images/illustrations/sbg-passkey-recovery-accounts-2026-04.png",
+        "filename": "sbg-passkey-recovery-accounts-2026-04.png",
+        "suffix": "04",
+        "seed": 202606020317,
+        "prompt": "realistic lost phone account recovery drill with spare device blank screen and charger, no text",
+        "prompt_id": "215eb854-a132-407e-be3a-e6d991813c38",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_securebyteguide_04_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 2333129
+      },
+      {
+        "file": "public/images/illustrations/sbg-passkey-recovery-accounts-2026-05.png",
+        "filename": "sbg-passkey-recovery-accounts-2026-05.png",
+        "suffix": "05",
+        "seed": 202606020318,
+        "prompt": "realistic family digital safety planning table with blank cards, no numbers no writing no logos",
+        "prompt_id": "bee28b8d-e64b-487d-9fc4-c5b8feda93a7",
+        "raw_output": {
+          "filename": "hermes_batchc_20260602_securebyteguide_05_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "width": 1536,
+        "height": 864,
+        "bytes": 1563496
+      }
+    ],
+    "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260602-securebyteguide-contact-sheet.jpg",
+    "visual_qa": "Final contact sheet regenerated after QA replacements; pending final vision inspection.",
+    "contact_sheet_final": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260602-securebyteguide-contact-sheet-final.jpg",
+    "published_asset_count": 5
+  },
+  "qa_note": "Final MDX excludes QA-rejected assets; only assets listed here are referenced for publication."
+}
