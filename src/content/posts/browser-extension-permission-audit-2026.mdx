@@ -1,0 +1,208 @@
+---
+title: "Browser Extension Permission Audit for Safer Home and Work Browsing"
+description: "A 2026 checklist for reviewing browser extensions, permissions, update risk, managed policy options, and cleanup steps without breaking daily workflows."
+pubDate: 2026-06-03
+updatedDate: 2026-06-03
+category: "Browser Security"
+tags: ["browser extensions", "permissions", "phishing prevention", "small business security", "Chrome", "Firefox", "Edge"]
+heroImage: "/images/illustrations/sbg-browser-extension-permission-audit-2026-hero.png"
+schemaType: "HowTo"
+sources:
+  - title: "Secure Our World"
+    url: "https://www.cisa.gov/secure-our-world"
+    publication: "CISA"
+    year: "2026 accessed"
+  - title: "How to Recognize and Avoid Phishing Scams"
+    url: "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+    publication: "FTC"
+    year: "2026 accessed"
+  - title: "Change site access permissions for extensions"
+    url: "https://support.google.com/chrome_webstore/answer/2664769"
+    publication: "Google Chrome Web Store Help"
+    year: "2026 accessed"
+  - title: "Remove unwanted ads, pop-ups & malware"
+    url: "https://support.google.com/chrome/answer/3296214"
+    publication: "Google Chrome Help"
+    year: "2026 accessed"
+  - title: "Chrome Enterprise extension management settings"
+    url: "https://support.google.com/chrome/a/answer/9296680"
+    publication: "Google Chrome Enterprise Help"
+    year: "2026 accessed"
+  - title: "Tips for assessing the safety of an extension"
+    url: "https://support.mozilla.org/en-US/kb/tips-assessing-safety-extension"
+    publication: "Mozilla Support"
+    year: "2026 accessed"
+  - title: "Add, turn off, or remove extensions in Microsoft Edge"
+    url: "https://support.microsoft.com/en-us/microsoft-edge/add-turn-off-or-remove-extensions-in-microsoft-edge-9c0ec68c-2fbc-2f2c-9ff0-bdc76f46b026"
+    publication: "Microsoft Support"
+    year: "2026 accessed"
+  - title: "Declare permissions"
+    url: "https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions"
+    publication: "Chrome for Developers"
+    year: "2026 accessed"
+  - title: "Browser Extension Vulnerabilities Cheat Sheet"
+    url: "https://cheatsheetseries.owasp.org/cheatsheets/Browser_Extension_Vulnerabilities_Cheat_Sheet.html"
+    publication: "OWASP Cheat Sheet Series"
+    year: "2026 accessed"
+  - title: "Browser Extensions"
+    url: "https://attack.mitre.org/techniques/T1176/"
+    publication: "MITRE ATT&CK"
+    year: "2026 accessed"
+internalLinks:
+  - "/posts/oauth-consent-phishing-app-access-audit"
+  - "/posts/password-manager-emergency-kit-recovery-plan"
+  - "/posts/home-network-segmentation-guide-2026"
+visualsCount: 5
+hasVideo: false
+wordCount: 1850
+affiliate: false
+aiDisclosed: true
+faq:
+  - question: "How often should I audit browser extensions?"
+    answer: "Quarterly is a practical default, with an immediate review after browser profile sync changes, a new work device, a suspicious pop-up, or any extension that asks for broader site access."
+  - question: "Is every extension with broad permissions malicious?"
+    answer: "No. Some password managers, accessibility tools, and security products need broad access to work. The point is to verify the reason, reduce access where possible, and remove anything unused or poorly justified."
+  - question: "Does uninstalling an extension fix every risk?"
+    answer: "It removes that add-on from the browser, but you should still review saved passwords, connected apps, account sessions, downloads, and device malware checks if you suspect abuse."
+draft: false
+---
+
+Updated June 3, 2026. Browser extensions sit in the same place you read email, approve payments, copy passwords, join work dashboards, and follow links from messages. That makes them useful, but it also makes stale or over-permissioned add-ons a quiet security risk. A good extension audit is not panic-uninstalling everything. It is a repeatable process: identify what is installed, understand what each extension can reach, narrow access, remove dead weight, and document the few add-ons that deserve trust.
+
+![Browser extension permission audit desk](/images/illustrations/sbg-browser-extension-permission-audit-2026-hero.png)
+
+## Quick triage: keep, restrict, remove
+
+Use this first pass before diving into individual settings.
+
+| Extension condition | Default action | Why it matters |
+|---|---|---|
+| You use it weekly and understand the publisher | Keep, then review permissions | Frequent use can justify risk, but not unlimited access |
+| It asks for access to all sites | Restrict if the browser allows it | Broad access can observe or alter many pages |
+| You installed it for a one-time task | Remove | Dormant extensions still update and can be forgotten |
+| Publisher, ownership, or purpose is unclear | Remove or replace | Trust depends on a known maintainer and narrow purpose |
+| It changes search, new tabs, coupons, downloads, or ads | Investigate carefully | These categories often touch sensitive browsing flows |
+
+## Step 1: inventory every browser profile
+
+Start with the browser profiles people actually use: personal Chrome, work Chrome, Edge on Windows, Firefox, and any secondary browser used for banking or testing. Do not assume that profile sync means each device has the same extension set. Laptop, home desktop, and shared family computer profiles often drift.
+
+Record the extension name, publisher, install source, what it does, and whether it is signed in to a separate service. Also note whether the browser is managed by an employer or school. Managed policies can force-install or block add-ons, and you should not remove required work controls without IT approval.
+
+![Inventory browser extensions before changing permissions](/images/illustrations/sbg-browser-extension-permission-audit-2026-01.png)
+
+## Step 2: read the permission in plain English
+
+Browsers and extension stores expose permissions differently, but the risk question is consistent: what can this add-on see or change? Chrome's extension model uses declared permissions, host permissions, and optional permissions so an extension can request capabilities and site access. For a home user, the practical translation is easier:
+
+- **All sites access** means the extension may interact with many pages you visit. A password manager may need this; a simple screenshot tool may not.
+- **Site-specific access** is safer when the extension only supports one service or one workflow.
+- **On-click access** is often best for occasional tools because the extension runs only when you ask.
+- **Clipboard, downloads, proxy, tabs, history, or native messaging permissions** deserve extra scrutiny because they touch browsing behavior beyond one page.
+- **Password, MFA, or payment-related pages** should have the smallest extension footprint you can tolerate.
+
+Do not treat a permission name as a full security verdict. A reputable extension can need powerful permissions, and a harmful extension can request something that sounds harmless. The decision should combine permission scope, publisher trust, update history, usefulness, and alternatives.
+
+## Step 3: reduce access before removing useful tools
+
+For extensions you want to keep, look for site access controls. In Chrome-based browsers, many extensions can be changed from broad access to "on click" or selected sites. Firefox and Edge expose similar review and removal workflows, though labels differ. Test the narrower setting on one important workflow before applying it everywhere.
+
+Good candidates for restriction include coupon tools, design utilities, social-media helpers, one-off downloaders, meeting helpers, and screenshot tools. Let them run only on the sites where you actually need them. If an extension breaks after narrowing access, ask whether the convenience is worth broad visibility into email, banking, health portals, cloud files, or admin dashboards.
+
+## Step 4: remove stale and unclear extensions
+
+Removal is the right answer when an extension is unused, duplicated, abandoned, or hard to explain. If the add-on changed your search engine, homepage, new tab page, ads, or download behavior, remove it and then review browser settings separately. Google documents cleanup paths for unwanted ads, pop-ups, and malware-like browser behavior; use the browser's own cleanup and reset tools rather than downloading random "fixer" utilities.
+
+![Remove stale or unclear browser add-ons](/images/illustrations/sbg-browser-extension-permission-audit-2026-02.png)
+
+After uninstalling, restart the browser and confirm the extension did not leave a companion app, profile policy, or login connection behind. On shared devices, repeat this for each profile. If the same add-on reappears, check browser sync, enterprise management, device management, or other software that may be reinstalling it.
+
+## Step 5: watch for extension takeover signals
+
+MITRE tracks browser extensions as a technique because malicious or compromised add-ons can collect browsing data, manipulate pages, redirect traffic, or persist inside the browser environment. You do not need to be an incident responder to notice early warning signs:
+
+- New search provider, homepage, or new-tab behavior you did not choose.
+- Unexpected pop-ups, injected shopping offers, or page overlays.
+- Extension suddenly asks for more access after an update.
+- Browser becomes slow only on sensitive sites such as email, cloud storage, or banking.
+- Password manager, MFA, or SSO pages look different from a clean browser profile.
+- Coworkers or family members report the same strange behavior after using a shared extension.
+
+When these show up, compare behavior in a clean browser profile with no third-party extensions. If the problem disappears, re-enable extensions one at a time only if you need to identify the cause. For high-risk accounts, change passwords from a clean device and review active sessions.
+
+## Step 6: protect password managers and passkeys
+
+Password managers and passkey helpers are special. They may need deep browser integration, but they also protect your most important secrets. Keep only one primary password manager extension active in a profile unless you have a specific migration reason. Confirm the publisher directly from the vendor's official site. Avoid lookalike extensions and never install a password tool from a link in an email or support chat.
+
+If you recently removed a suspicious extension, review your password manager emergency plan, active sessions, and MFA settings. Our [password manager emergency kit](/posts/password-manager-emergency-kit-recovery-plan) explains how to keep recovery codes and backup access usable without leaving them exposed.
+
+## Step 7: use policy for small teams
+
+Small businesses should not rely on every employee making perfect extension choices. Chrome Enterprise and similar management controls can allowlist required extensions, block risky categories, pin settings, and prevent users from installing unknown add-ons. Even a lightweight policy is better than a shared instruction that says "be careful."
+
+![Small team extension governance without exposing UI](/images/illustrations/sbg-browser-extension-permission-audit-2026-03.png)
+
+A practical starter policy:
+
+1. Allowlist the password manager, security agent, accessibility tools, and workflow extensions that are genuinely required.
+2. Block extensions that change search, proxy settings, downloads, or page content unless approved.
+3. Require approval for anything requesting all-sites access.
+4. Review the list during onboarding, offboarding, and quarterly security checks.
+5. Keep a clean browser profile available for finance, payroll, domain registrar, and admin-console tasks.
+
+This is not only an IT control. It is also a workflow improvement. Employees no longer need to guess which add-on is safe when they receive a helpful-looking link from a vendor or coworker.
+
+## Step 8: include extensions in phishing defense
+
+Phishing guidance usually focuses on links, urgent messages, and fake login pages. Extensions deserve a place in the same checklist because they can observe or alter the page where a user decides whether to trust a prompt. CISA's broad consumer guidance emphasizes strong authentication, updates, and phishing awareness; extension hygiene supports all three.
+
+Pair this audit with our [OAuth consent phishing app access audit](/posts/oauth-consent-phishing-app-access-audit). OAuth apps and browser extensions are different mechanisms, but the household decision is similar: which third-party tools can see account data, act in a session, or remain connected after you forget about them?
+
+## Step 9: patch, update, and verify from trusted paths
+
+Keep the browser itself updated and install extensions only from official browser stores or a documented enterprise source. Avoid sideloaded extension files unless you manage the code and understand the update path. If an extension is critical to work, subscribe to the publisher's security notices or at least document where release notes live.
+
+![Extension update and response planning](/images/illustrations/sbg-browser-extension-permission-audit-2026-04.png)
+
+Verification should be boring:
+
+- Search for the extension from inside the official store, not from an ad.
+- Confirm publisher name, website, and privacy information.
+- Check whether reviews mention hijacking, sudden ads, or unexplained permission changes.
+- Prefer extensions with a narrow purpose and a clear support channel.
+- Remove extensions that are no longer maintained or no longer needed.
+
+## Step 10: run a clean-profile test for sensitive work
+
+For banking, payroll, domain registrar changes, crypto custody, tax filing, medical portals, and account recovery, consider using a dedicated browser profile with no nonessential extensions. This does not need to be your daily browser. The point is to create a known-clean environment for rare, high-impact tasks.
+
+A clean profile also helps troubleshooting. If a site works in the clean profile but not in your daily profile, the culprit is often an extension, cached data, or a setting. That beats blindly disabling security tools or entering credentials into a broken-looking page.
+
+## Quarterly browser extension audit checklist
+
+- Inventory extensions in every active browser profile and device.
+- Remove add-ons you have not used in the last quarter.
+- Restrict broad site access to selected sites or on-click access where practical.
+- Verify password manager and security-tool publishers from official sources.
+- Investigate extensions that affect search, ads, downloads, proxy, clipboard, or page content.
+- Test sensitive accounts in a clean profile with minimal extensions.
+- For teams, maintain an allowlist and approval process for all-sites access.
+- Document exceptions with owner, reason, and next review date.
+
+## FAQ
+
+### How often should I audit browser extensions?
+
+Quarterly is a practical default. Audit immediately after browser sync changes, a new device setup, a suspicious pop-up, an unexplained homepage/search change, or an extension update that asks for broader access.
+
+### Is every extension with broad permissions malicious?
+
+No. Password managers, accessibility tools, developer tools, and security products may need broad permissions. The safer approach is to verify the publisher, document the reason, reduce site access where possible, and remove anything that no longer earns that trust.
+
+### What should I do if I suspect an extension stole data?
+
+Remove or disable the extension, test in a clean profile, change important passwords from a clean device, revoke active account sessions, review connected OAuth apps, and enable or reset MFA. If work accounts are involved, notify IT or the account owner quickly.
+
+## AdSense readiness note
+
+This article avoids scareware claims, product pushing, fake screenshots, and brand impersonation. The improvement added today is a practical quarterly audit workflow with current official sources, internal links, original GTI13 raster visuals, and clear next actions. The next content gap is a shorter printable extension-audit worksheet for households and small teams.

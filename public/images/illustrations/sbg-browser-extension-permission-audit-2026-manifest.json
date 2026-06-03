@@ -1,0 +1,133 @@
+{
+  "site": "securebyteguide",
+  "slug": "sbg-browser-extension-permission-audit-2026",
+  "generated_at": "2026-06-03T04:14:33Z",
+  "route": "GTI13 direct ComfyUI",
+  "endpoint": "http://192.168.50.29:8188",
+  "host": "gti13",
+  "assets": [
+    {
+      "endpoint": "http://192.168.50.29:8188",
+      "host": "gti13",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "prompt_id": "75ecc6e3-a3ee-49db-b753-28b25ef7b25b",
+      "suffix": "hero",
+      "filename": "sbg-browser-extension-permission-audit-2026-hero.png",
+      "file": "public/images/illustrations/sbg-browser-extension-permission-audit-2026-hero.png",
+      "prompt": "realistic cybersecurity editorial photograph of a home office desk, closed laptop with matte blank screen reflection, small abstract browser extension puzzle pieces beside a metal shield symbol and padlock, no interface visible, no writing, no logos",
+      "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, app screen, website, URL, address bar, QR code, barcode, credentials, forms, documents with writing, keyboard brand, fake interface, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image, distorted hands, bad anatomy, faces",
+      "seed": 202606031300,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.2,
+      "steps": 26,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1425511,
+      "raw_output": {
+        "filename": "hermes_securebyteguide_20260603_hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "endpoint": "http://192.168.50.29:8188",
+      "host": "gti13",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "prompt_id": "d87d4551-8806-4008-bf06-66e474abd647",
+      "suffix": "01",
+      "filename": "sbg-browser-extension-permission-audit-2026-01.png",
+      "file": "public/images/illustrations/sbg-browser-extension-permission-audit-2026-01.png",
+      "prompt": "realistic browser extension permission audit concept, tidy desk with blank laptop screen turned slightly away, magnifying glass over simple unlabeled puzzle-piece tokens, metal lock, no readable text, no brand marks",
+      "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, app screen, website, URL, address bar, QR code, barcode, credentials, forms, documents with writing, keyboard brand, fake interface, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image, distorted hands, bad anatomy, faces",
+      "seed": 202606031301,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.2,
+      "steps": 26,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1675207,
+      "raw_output": {
+        "filename": "hermes_securebyteguide_20260603_01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "endpoint": "http://192.168.50.29:8188",
+      "host": "gti13",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "prompt_id": "7c319897-ee11-4b28-a9eb-bfce62d5f203",
+      "suffix": "02",
+      "filename": "sbg-browser-extension-permission-audit-2026-02.png",
+      "file": "public/images/illustrations/sbg-browser-extension-permission-audit-2026-02.png",
+      "prompt": "realistic removal and cleanup concept for risky browser add-ons, plain blank cards being sorted into keep and remove piles without labels, closed notebook, laptop lid half closed, padlock, no words or logos",
+      "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, app screen, website, URL, address bar, QR code, barcode, credentials, forms, documents with writing, keyboard brand, fake interface, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image, distorted hands, bad anatomy, faces",
+      "seed": 202606031302,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.2,
+      "steps": 26,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1548238,
+      "raw_output": {
+        "filename": "hermes_securebyteguide_20260603_02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "endpoint": "http://192.168.50.29:8188",
+      "host": "gti13",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "prompt_id": "283a8a9e-4668-4fb7-a5fa-24f895663dd1",
+      "suffix": "03",
+      "filename": "sbg-browser-extension-permission-audit-2026-03.png",
+      "file": "public/images/illustrations/sbg-browser-extension-permission-audit-2026-03.png",
+      "prompt": "realistic small business browser extension governance concept shown without any computer displays, overhead view of a conference table with two closed plain laptops only, hardware security key, simple abstract puzzle piece tokens, metal shield object, neat cables, no open screens, no monitors, no UI, no visible websites, no text or logos, no people",
+      "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, app screen, website, URL, address bar, QR code, barcode, credentials, forms, documents with writing, keyboard brand, fake interface, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image, distorted hands, bad anatomy, faces, operating system taskbar, browser tabs, browser toolbar, icons on screen",
+      "seed": 202606031503,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.2,
+      "steps": 26,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1944906,
+      "raw_output": {
+        "filename": "hermes_securebyteguide_20260603_03_regen_00002_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "qa_replacement": true
+    },
+    {
+      "endpoint": "http://192.168.50.29:8188",
+      "host": "gti13",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "prompt_id": "3924691f-4894-48aa-b790-df60e39bff7f",
+      "suffix": "04",
+      "filename": "sbg-browser-extension-permission-audit-2026-04.png",
+      "file": "public/images/illustrations/sbg-browser-extension-permission-audit-2026-04.png",
+      "prompt": "realistic extension update and incident response concept, secure desk setup with router, blank monitor, sealed envelope with no writing, puzzle piece silhouettes and soft blue security lighting, no interface, no text, no logos",
+      "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, app screen, website, URL, address bar, QR code, barcode, credentials, forms, documents with writing, keyboard brand, fake interface, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image, distorted hands, bad anatomy, faces",
+      "seed": 202606031304,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.2,
+      "steps": 26,
+      "width": 1536,
+      "height": 864,
+      "bytes": 1360080,
+      "raw_output": {
+        "filename": "hermes_securebyteguide_20260603_04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "visual_qa": "PASS after contact-sheet inspection on 2026-06-03: no readable text, URLs, QR codes, credentials, logos/brand marks, people/faces/hands, or obvious defects; regenerated image 03 twice to remove screen UI/taskbar-like artifacts. Image 04 uses an abstract world map on a monitor with no text or UI controls and was accepted as a threat-monitoring metaphor.",
+  "contact_sheet": "reports/sbg-browser-extension-permission-audit-2026-contact-sheet.jpg"
+}
