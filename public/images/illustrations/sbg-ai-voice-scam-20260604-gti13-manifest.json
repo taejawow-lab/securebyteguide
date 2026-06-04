@@ -1,0 +1,203 @@
+{
+  "site": "securebyteguide",
+  "generated_at": "2026-06-04T04:13:52Z",
+  "date": "2026-06-04",
+  "batch": "C",
+  "endpoint": "http://192.168.50.29:8188",
+  "host": "gti13-direct",
+  "gate": {
+    "available": true,
+    "reason": "sentinel_unreachable_but_direct_comfyui_ok",
+    "sentinel_url": "http://192.168.50.30:9199/status",
+    "comfy_url": "http://192.168.50.29:8188",
+    "services": {
+      "comfyui_8188": true,
+      "sentinel_9199": false
+    },
+    "manual_pause": false,
+    "direct_fallback": true,
+    "comfyui_version": "0.20.1",
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17098519522,
+        "torch_vram_total": 6979321856,
+        "torch_vram_free": 31896546
+      }
+    ],
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    }
+  },
+  "system_stats_ok": true,
+  "queue_before": {
+    "queue_running": [],
+    "queue_pending": []
+  },
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.6,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, fake app interface, QR code, barcode, distorted hands, bad anatomy, extra fingers, unsafe handling, financial screen, medical procedure, fake warning label, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image"
+  },
+  "sites": {
+    "securebyteguide": {
+      "slug": "ai-voice-clone-scam-family-verification-plan-2026",
+      "title": "AI Voice Clone Scam Family Verification Plan",
+      "article": "src/content/posts/ai-voice-clone-scam-family-verification-plan-2026.mdx",
+      "source_validation": [
+        {
+          "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes",
+          "ok": false,
+          "error": "<HTTPError 403: 'Forbidden'>"
+        },
+        {
+          "url": "https://consumer.ftc.gov/articles/how-avoid-imposter-scams",
+          "ok": false,
+          "error": "<HTTPError 403: 'Forbidden'>"
+        },
+        {
+          "url": "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts",
+          "ok": false,
+          "error": "TimeoutError('The read operation timed out')"
+        },
+        {
+          "url": "https://www.fcc.gov/spoofing",
+          "ok": false,
+          "error": "TimeoutError('The read operation timed out')"
+        },
+        {
+          "url": "https://www.cisa.gov/secure-our-world",
+          "ok": false,
+          "error": "<HTTPError 403: 'Forbidden'>"
+        },
+        {
+          "url": "https://www.identitytheft.gov/",
+          "ok": true,
+          "status": 200,
+          "final": "https://www.identitytheft.gov/"
+        },
+        {
+          "url": "https://reportfraud.ftc.gov/",
+          "ok": true,
+          "status": 200,
+          "final": "https://reportfraud.ftc.gov/"
+        },
+        {
+          "url": "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-frauds-and-scams/elder-fraud",
+          "ok": false,
+          "error": "<HTTPError 403: 'Forbidden'>"
+        }
+      ],
+      "assets": [
+        {
+          "file": "public/images/illustrations/sbg-ai-voice-scam-20260604-hero.png",
+          "filename": "sbg-ai-voice-scam-20260604-hero.png",
+          "suffix": "hero",
+          "seed": 202606040313,
+          "prompt": "realistic family phone-scam verification scene with blank smartphone screen, calm kitchen table, no text no logos",
+          "prompt_id": "ba218b47-7a29-4790-8b6c-a1781601f958",
+          "raw_output": {
+            "filename": "hermes_batchc_20260604_securebyteguide_hero_00001_.png",
+            "subfolder": "",
+            "type": "output"
+          },
+          "width": 1536,
+          "height": 864,
+          "bytes": 1579023
+        },
+        {
+          "file": "public/images/illustrations/sbg-ai-voice-scam-20260604-01.png",
+          "filename": "sbg-ai-voice-scam-20260604-01.png",
+          "suffix": "01",
+          "seed": 202606040314,
+          "prompt": "realistic household security planning table with blank contact cards and phone dark screen, no writing",
+          "prompt_id": "e5e083c3-147f-478e-a05c-7f9c46951c05",
+          "raw_output": {
+            "filename": "hermes_batchc_20260604_securebyteguide_01_00001_.png",
+            "subfolder": "",
+            "type": "output"
+          },
+          "width": 1536,
+          "height": 864,
+          "bytes": 1395186
+        },
+        {
+          "file": "public/images/illustrations/sbg-ai-voice-scam-20260604-02.png",
+          "filename": "sbg-ai-voice-scam-20260604-02.png",
+          "suffix": "02",
+          "seed": 202606040315,
+          "prompt": "realistic older adult receiving suspicious call with phone screen turned away blank, family member nearby, no text",
+          "prompt_id": "85d16f3f-2f2f-476a-a14d-2412525e8094",
+          "raw_output": {
+            "filename": "hermes_batchc_20260604_securebyteguide_02_00001_.png",
+            "subfolder": "",
+            "type": "output"
+          },
+          "width": 1536,
+          "height": 864,
+          "bytes": 1705611
+        },
+        {
+          "file": "public/images/illustrations/sbg-ai-voice-scam-20260604-03.png",
+          "filename": "sbg-ai-voice-scam-20260604-03.png",
+          "suffix": "03",
+          "seed": 202606040316,
+          "prompt": "realistic emergency scam pause scene with hand near phone, notebook closed, no readable writing",
+          "prompt_id": "e2fe7559-be22-439f-aeb4-08ffd93c9a8b",
+          "raw_output": {
+            "filename": "hermes_batchc_20260604_securebyteguide_03_00001_.png",
+            "subfolder": "",
+            "type": "output"
+          },
+          "width": 1536,
+          "height": 864,
+          "bytes": 1576677
+        },
+        {
+          "file": "public/images/illustrations/sbg-ai-voice-scam-20260604-04.png",
+          "filename": "sbg-ai-voice-scam-20260604-04.png",
+          "suffix": "04",
+          "seed": 202606040317,
+          "prompt": "realistic fraud reporting preparation desk with blank laptop screen and phone, no logos no text",
+          "prompt_id": "310deed0-b7d9-4f2a-a258-d57cdfcff954",
+          "raw_output": {
+            "filename": "hermes_batchc_20260604_securebyteguide_04_00001_.png",
+            "subfolder": "",
+            "type": "output"
+          },
+          "width": 1536,
+          "height": 864,
+          "bytes": 1119736
+        },
+        {
+          "file": "public/images/illustrations/sbg-ai-voice-scam-20260604-05.png",
+          "filename": "sbg-ai-voice-scam-20260604-05.png",
+          "suffix": "05",
+          "seed": 202606049002,
+          "prompt": "realistic family anti-scam verification concept: plain colored cards face-down with absolutely no writing, blank smartphone dark screen, warm table, no symbols, no letters, no numbers",
+          "prompt_id": "85406357-f61d-43b0-b319-19867e2cdc86",
+          "raw_output": {
+            "filename": "hermes_batchc_20260604_regen_securebyteguide_05_00001_.png",
+            "subfolder": "",
+            "type": "output"
+          },
+          "width": 1536,
+          "height": 864,
+          "bytes": 1757838,
+          "qa_regenerated": true
+        }
+      ],
+      "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260604-securebyteguide-contact-sheet.jpg",
+      "visual_qa": "final QA regeneration applied; final contact sheet recreated."
+    }
+  }
+}
