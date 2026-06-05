@@ -1,0 +1,121 @@
+{
+  "site": "securebyteguide",
+  "slug": "sim-swap-phone-number-account-recovery-plan-2026",
+  "generated_at": null,
+  "updated_at": "2026-06-05T04:18:41Z",
+  "endpoint": "http://192.168.50.29:8188",
+  "host": "gti13",
+  "dimensions": null,
+  "workflow": "SDXL RealVisXL minimal ComfyUI txt2img workflow",
+  "assets": [
+    {
+      "site": "securebyteguide",
+      "slug": "sim-swap-phone-number-account-recovery-plan-2026",
+      "filename": "sbg-sim-swap-recovery-20260605-01.png",
+      "file": "public/images/illustrations/sbg-sim-swap-recovery-20260605-01.png",
+      "alt": "Mobile carrier account lock review without exposing data",
+      "prompt": "realistic close desk scene with phone blank screen, plain SIM tray tool, sealed envelope, no numbers, no readable text, no logos",
+      "seed": 202606050312,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "11164bfa-e7f1-4080-8d77-81091326df96",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00012_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1559015
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "sim-swap-phone-number-account-recovery-plan-2026",
+      "filename": "sbg-sim-swap-recovery-20260605-02.png",
+      "file": "public/images/illustrations/sbg-sim-swap-recovery-20260605-02.png",
+      "alt": "Account recovery map using safe physical props",
+      "prompt": "realistic tabletop with blank index cards face down, simple colored tokens, phone face down, hardware security key, no wires, no handwriting, no labels, no readable text, no logos",
+      "seed": 202606050403,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "replacement": true,
+      "prompt_id": "1dacecbc-9b48-4e67-be3f-d42799116b59",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00023_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1775135
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "sim-swap-phone-number-account-recovery-plan-2026",
+      "filename": "sbg-sim-swap-recovery-20260605-03.png",
+      "file": "public/images/illustrations/sbg-sim-swap-recovery-20260605-03.png",
+      "alt": "Two-device verification setup for sensitive accounts",
+      "prompt": "realistic secure desk setup with laptop completely closed, smartphone face down, hardware security key, tidy cable, neutral lamp, no visible screens, no UI, no text, no numbers, no logos, no QR code",
+      "seed": 202606050406,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "replacement": true,
+      "status": "ok",
+      "bytes": 1367837,
+      "prompt_id": "73d80d2f-693f-4cc2-93bf-fbcd58b97ee6",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00026_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "sim-swap-phone-number-account-recovery-plan-2026",
+      "filename": "sbg-sim-swap-recovery-20260605-04.png",
+      "file": "public/images/illustrations/sbg-sim-swap-recovery-20260605-04.png",
+      "alt": "Post-incident evidence folder and device check",
+      "prompt": "realistic office desk with plain folder, blank phone screen, security key, no account details, no readable text, no logos",
+      "seed": 202606050315,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "b5c7bbe9-f972-4127-acd0-d3e1fffdd4f2",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00015_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1425257
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "sim-swap-phone-number-account-recovery-plan-2026",
+      "filename": "sbg-sim-swap-recovery-20260605-hero.png",
+      "file": "public/images/illustrations/sbg-sim-swap-recovery-20260605-hero.png",
+      "alt": "SIM swap prevention setup with phone and security key",
+      "prompt": "premium realistic editorial photo of smartphone with blank dark screen, hardware security key, notebook closed, neutral desk, shield-like decor, no readable text, no logos, no QR codes",
+      "seed": 202606050311,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "55981b4f-69ff-4059-8fd0-c2db2e3148b7",
+      "comfy_output": {
+        "filename": "hermes_batch_c_20260605_00011_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "status": "ok",
+      "bytes": 1741360
+    }
+  ],
+  "visual_qa": "Final contact sheet regenerated after replacing rejected logo/screen/wire/finance clutter images and an extra security screen image; all 20 published PNGs retained at 1536x864 with no readable text-heavy content.",
+  "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260605-gti13-contact-sheet-final.jpg"
+}
