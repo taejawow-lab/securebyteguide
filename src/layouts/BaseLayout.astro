@@ -27,8 +27,8 @@ const {
   noindex = false,
 } = Astro.props;
 
-const siteName = import.meta.env.PUBLIC_SITE_NAME || 'yookahplus';
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://yookahplus.org';
+const siteName = import.meta.env.PUBLIC_SITE_NAME || 'SecureByte Guide';
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://securebyteguide.org';
 const fullImageUrl = new URL(image, siteUrl).href;
 
 // Default schema — 사이트 자체 NewsMediaOrganization
@@ -127,11 +127,21 @@ const finalSchema = schema || defaultSchema;
     <!-- taekm33 first-party analytics (privacy-preserving JSONL dashboard) -->
     <script defer src="https://taekm33.org/assets/taekm33-analytics-v4.js"></script>
 
+    <script is:inline>
+      (function(){
+        const key='sbg-bookmarks';
+        const read=()=>{try{return JSON.parse(localStorage.getItem(key)||'[]')}catch{return []}};
+        const write=(items)=>localStorage.setItem(key,JSON.stringify(items.slice(0,60)));
+        const update=()=>{const items=read();document.querySelectorAll('[data-bookmark]').forEach(btn=>{const u=btn.getAttribute('data-url');const s=items.some(i=>i.url===u);btn.textContent=s?'★':'☆';btn.setAttribute('data-saved',s?'true':'false');});};
+        document.addEventListener('click',e=>{const btn=e.target?.closest?.('[data-bookmark]');if(btn){e.preventDefault();const url=btn.getAttribute('data-url');const title=btn.getAttribute('data-title')||document.title;const items=read();const i=items.findIndex(x=>x.url===url);if(i>=0)items.splice(i,1);else items.unshift({url,title,savedAt:new Date().toISOString()});write(items);update();}});
+        document.addEventListener('DOMContentLoaded',update);update();
+      })();
+    </script>
 
     <!-- Theme toggle script (FOUC 방지) -->
     <script is:inline>
       (function () {
-        const theme = localStorage.getItem('theme') ||
+        const theme = localStorage.getItem('sbg-theme') || localStorage.getItem('theme') ||
                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', theme);
         document.documentElement.classList.toggle('dark', theme === 'dark');

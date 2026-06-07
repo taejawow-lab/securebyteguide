@@ -1,35 +1,13 @@
-/* securebyteguide.org design tokens — auto-generated 2026-05-08T03:43:15.093Z */
-:root {
-  --color-background: 245 247 250;
-  --color-foreground: 15 27 45;
-  --color-primary: 30 58 95;
-  --color-primary-foreground: 255 255 255;
-  --color-accent: 95 228 176;
-  --color-accent-foreground: 10 42 31;
-  --color-muted: 240 242 245;
-  --color-muted-foreground: 55 67 85;
-  --color-card: 245 247 250;
-  --color-card-foreground: 15 27 45;
-  --color-border: 95 107 125;
-  --color-input: 90 102 120;
-  --color-ring: 30 58 95;
-  --font-heading: "Inter", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-display: "Fraunces", serif;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
-  --radius: 6px;
+/* SecureByteGuide institutional security design tokens */
+:root{
+  --color-background:246 248 250; --color-foreground:11 41 66; --color-primary:14 159 110; --color-primary-foreground:255 255 255; --color-accent:14 159 110; --color-accent-foreground:255 255 255; --color-muted:238 243 247; --color-muted-foreground:107 129 151; --color-card:255 255 255; --color-card-foreground:11 41 66; --color-border:227 234 240; --color-input:227 234 240; --color-ring:14 159 110;
+  --bg:#F6F8FA; --bg-tint:#EEF3F7; --surface:#FFFFFF; --surface-2:#F9FBFC; --ink:#0B2942; --ink-2:#3B5468; --ink-3:#6B8197; --line:#E3EAF0; --line-strong:#CBD8E2; --accent:#0E9F6E; --accent-strong:#0B7E58; --accent-soft:#E4F7EF; --accent-ink:#075E42; --warn:#C2410C; --warn-soft:#FCEDE3; --danger:#B42318; --danger-soft:#FCE9E7; --gold:#B7791F; --on-navy:#EAF2F8; --on-navy-2:#A8C2D6; --on-navy-line:rgba(255,255,255,.12);
+  --font-display:'Space Grotesk', system-ui, sans-serif; --font-body:'Public Sans', system-ui, sans-serif; --font-mono:'JetBrains Mono', ui-monospace, monospace; --font-heading:var(--font-display);
+  --maxw:1200px; --maxw-prose:720px; --nav-h:68px; --r-xs:6px; --r-sm:9px; --r-md:13px; --r-lg:20px; --r-xl:28px; --r-pill:999px;
+  --sh-sm:0 1px 2px rgba(7,26,43,.05),0 1px 1px rgba(7,26,43,.04); --sh-md:0 10px 28px rgba(7,26,43,.08),0 2px 6px rgba(7,26,43,.05); --sh-lg:0 28px 80px rgba(7,26,43,.15),0 6px 18px rgba(7,26,43,.08); --sh-mint:0 18px 48px rgba(14,159,110,.18);
 }
-[data-theme='dark'] {
-  --color-background: 10 15 26;
-  --color-foreground: 232 237 245;
-  --color-primary: 15 37 69;
-  --color-primary-foreground: 255 255 255;
-  --color-accent: 95 228 176;
-  --color-accent-foreground: 10 42 31;
-  --color-muted: 18 23 34;
-  --color-muted-foreground: 202 207 215;
-  --color-card: 15 20 31;
-  --color-card-foreground: 232 237 245;
-  --color-border: 172 177 185;
-  --color-input: 167 172 180;
+[data-theme='dark']{
+  --color-background:6 21 33; --color-foreground:233 241 248; --color-primary:61 220 151; --color-primary-foreground:6 21 33; --color-accent:61 220 151; --color-accent-foreground:6 21 33; --color-muted:10 32 49; --color-muted-foreground:169 194 213; --color-card:12 32 49; --color-card-foreground:233 241 248; --color-border:28 57 84; --color-input:28 57 84; --color-ring:61 220 151;
+  --bg:#061521; --bg-tint:#0A2031; --surface:#0C2031; --surface-2:#0F2839; --ink:#E9F1F8; --ink-2:#A9C2D5; --ink-3:#7793A8; --line:#1C3954; --line-strong:#294D6C; --accent:#3DDC97; --accent-strong:#5DE7AC; --accent-soft:rgba(61,220,151,.12); --accent-ink:#8CF0C5; --warn:#F0915A; --danger:#F87A6E; --gold:#E0B564; --on-navy:#EAF2F8; --on-navy-2:#A8C2D6; --on-navy-line:rgba(255,255,255,.12);
+  --sh-sm:0 1px 2px rgba(0,0,0,.35); --sh-md:0 12px 30px rgba(0,0,0,.42); --sh-lg:0 30px 80px rgba(0,0,0,.58); --sh-mint:0 18px 48px rgba(61,220,151,.12);
 }
