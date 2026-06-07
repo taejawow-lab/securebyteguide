@@ -1,0 +1,141 @@
+{
+  "date": "2026-06-07",
+  "batch": "C",
+  "host": "gti13-direct",
+  "endpoint": "http://192.168.50.29:8188",
+  "gate": {
+    "available": true,
+    "reason": "sentinel_unreachable_but_direct_comfyui_ok",
+    "sentinel_url": "http://192.168.50.30:9199/status",
+    "comfy_url": "http://192.168.50.29:8188",
+    "services": {
+      "comfyui_8188": true,
+      "sentinel_9199": false
+    },
+    "manual_pause": false,
+    "direct_fallback": true,
+    "comfyui_version": "0.20.1",
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17098519522,
+        "torch_vram_total": 6979321856,
+        "torch_vram_free": 31896546
+      }
+    ],
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    }
+  },
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.6,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "final_contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260607-final2-contact-sheet.jpg",
+  "visual_qa": "Initial contact sheet rejected 6 images for UI/text/topic mismatch; those files were regenerated and final contact sheet written.",
+  "site": "securebyteguide",
+  "assets": [
+    {
+      "site": "securebyteguide",
+      "slug": "browser-extension-permission-review-household-plan-2026",
+      "file": "public/images/illustrations/sbg-extension-permission-20260607-hero.png",
+      "filename": "sbg-extension-permission-20260607-hero.png",
+      "alt": "Household browser extension safety review",
+      "prompt": "realistic household browser safety scene with laptop blank screen and family desk no UI no text",
+      "seed": 202606070711,
+      "prompt_id": "d7ccf066-686c-4aab-b47f-be4490446561",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1379246,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_00011_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "browser-extension-permission-review-household-plan-2026",
+      "file": "public/images/illustrations/sbg-extension-permission-20260607-01.png",
+      "filename": "sbg-extension-permission-20260607-01.png",
+      "alt": "Extension review with blank notes",
+      "prompt": "browser extension review represented by blank colored cards on a desk, laptop fully dark blank screen, no software interface, no sticky note writing",
+      "seed": 202606071002,
+      "prompt_id": "45fc4215-cd84-4726-804c-8e1d5b02349f",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1285390,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_regen_00002_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "regen_reason": "visual QA rejected prior image for UI/readable text/topic mismatch"
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "browser-extension-permission-review-household-plan-2026",
+      "file": "public/images/illustrations/sbg-extension-permission-20260607-02.png",
+      "filename": "sbg-extension-permission-20260607-02.png",
+      "alt": "Parent and teen discussing laptop safety",
+      "prompt": "realistic parent and teen discussing laptop safety with screen turned blank no readable text",
+      "seed": 202606070713,
+      "prompt_id": "d7a3cb87-cbc9-4df4-b6df-2d4003f43f69",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1713328,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_00013_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "browser-extension-permission-review-household-plan-2026",
+      "file": "public/images/illustrations/sbg-extension-permission-20260607-03.png",
+      "filename": "sbg-extension-permission-20260607-03.png",
+      "alt": "Privacy cleanup desk",
+      "prompt": "privacy cleanup desk with closed laptop, hardware security key, plain router, blank phone screen, no graphs, no charts, no UI, no text",
+      "seed": 202606071003,
+      "prompt_id": "dc1d16c7-1c5a-46d2-a300-47868a77a2cc",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1367183,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_regen_00003_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "regen_reason": "visual QA rejected prior image for UI/readable text/topic mismatch"
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "browser-extension-permission-review-household-plan-2026",
+      "file": "public/images/illustrations/sbg-extension-permission-20260607-04.png",
+      "filename": "sbg-extension-permission-20260607-04.png",
+      "alt": "Recovery scene with blank devices",
+      "prompt": "calm recovery setup with plain router and laptop fully blank dark screen, sealed envelope, no labels, no logos, no charts, no text",
+      "seed": 202606071004,
+      "prompt_id": "f90ee05f-13cf-4bb6-9d04-77d6e8331907",
+      "width": 1536,
+      "height": 864,
+      "bytes": 1367522,
+      "raw_output": {
+        "filename": "hermes_batch_c_20260607_regen_00004_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "regen_reason": "visual QA rejected prior image for UI/readable text/topic mismatch"
+    }
+  ]
+}
