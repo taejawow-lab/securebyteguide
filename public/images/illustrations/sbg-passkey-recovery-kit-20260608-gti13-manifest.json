@@ -1,0 +1,94 @@
+{
+  "site": "securebyteguide",
+  "slug": "passkey-recovery-kit-household-plan-2026",
+  "endpoint": "http://192.168.50.29:8188",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "images": [
+    {
+      "file": "public/images/illustrations/sbg-passkey-recovery-kit-20260608-hero.png",
+      "seed": 880610000,
+      "prompt": "household passkey recovery planning desk with phone blank screen hardware key and notebook no text no logos",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-passkey-recovery-kit-20260608-hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-passkey-recovery-kit-20260608-01.png",
+      "seed": 880610001,
+      "prompt": "secure device storage scene with laptop closed phone blank screen and two hardware keys no labels",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-passkey-recovery-kit-20260608-01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-passkey-recovery-kit-20260608-02.png",
+      "seed": 880610002,
+      "prompt": "family account recovery discussion at kitchen table with blank cards no writing no visible screens",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-passkey-recovery-kit-20260608-02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-passkey-recovery-kit-20260608-03.png",
+      "seed": 880610003,
+      "prompt": "lost phone recovery drill with plain phone dark screen keys and checklist cards no text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-passkey-recovery-kit-20260608-03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-passkey-recovery-kit-20260608-04.png",
+      "seed": 880610004,
+      "prompt": "privacy safe document folder with lock hardware key and blank papers no readable words",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-passkey-recovery-kit-20260608-04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-passkey-recovery-kit-20260608-05.png",
+      "seed": 880610005,
+      "prompt": "official account recovery review desk with blank laptop screen and hardware key no UI no logos",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-passkey-recovery-kit-20260608-05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/sbg-passkey-recovery-kit-20260608-contact-sheet.jpg",
+  "visual_qa": "pending_contact_sheet_review"
+}
