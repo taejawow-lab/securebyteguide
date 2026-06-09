@@ -1,0 +1,146 @@
+{
+  "date": "2026-06-09",
+  "site": "securebyteguide",
+  "slug": "oauth-app-access-review-personal-accounts-2026",
+  "host": "gti13",
+  "endpoint_redacted": "direct ComfyUI endpoint verified by gate",
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable labels, handwriting, screen text, fake user interface, QR code, barcode, distorted hands, deformed anatomy, unsafe scene, exposed wiring, medication label text, financial statement text, login screen, forms, spreadsheets, calculator numbers, blurry, low resolution, generic stock art, placeholder, cartoon, plastic skin",
+    "steps": 26,
+    "cfg": 5.4,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "assets": [
+    {
+      "filename": "sbg-oauth-review-20260609-hero.png",
+      "path": "public/images/illustrations/sbg-oauth-review-20260609-hero.png",
+      "seed": 202606091320,
+      "prompt": "plain account security planning desk with closed laptop, hardware security key, blank cards, small lock object, phone face down, no screens no readable text no logos",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.2,
+      "steps": 28,
+      "prompt_id": "3a445205-9184-43d8-843f-4dba62ed7c2a",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_regen_securebyteguide_hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1464924,
+      "status": "ok"
+    },
+    {
+      "filename": "sbg-oauth-review-20260609-01.png",
+      "path": "public/images/illustrations/sbg-oauth-review-20260609-01.png",
+      "seed": 202606090321,
+      "prompt": "connected apps risk sorting tabletop with blank cards colored dots and closed laptop no writing no logos",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.4,
+      "steps": 26,
+      "prompt_id": "ebab731f-bef8-43be-840f-750acde89b02",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_securebyteguide_01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1848198,
+      "status": "ok"
+    },
+    {
+      "filename": "sbg-oauth-review-20260609-02.png",
+      "path": "public/images/illustrations/sbg-oauth-review-20260609-02.png",
+      "seed": 202606091322,
+      "prompt": "person holding hardware security key beside closed laptop and blank paper cards, no visible screen, no UI, no readable text, no logos",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.2,
+      "steps": 28,
+      "prompt_id": "f97a2579-cf2f-4d3b-a43e-6b12f291fecb",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_regen_securebyteguide_02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1400958,
+      "status": "ok"
+    },
+    {
+      "filename": "sbg-oauth-review-20260609-03.png",
+      "path": "public/images/illustrations/sbg-oauth-review-20260609-03.png",
+      "seed": 202606090323,
+      "prompt": "account recovery checklist scene with security key phone face down sealed envelope blank papers no readable text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.4,
+      "steps": 26,
+      "prompt_id": "cce51b71-67e3-433a-8d77-da753bb3f73f",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_securebyteguide_03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1853753,
+      "status": "ok"
+    },
+    {
+      "filename": "sbg-oauth-review-20260609-04.png",
+      "path": "public/images/illustrations/sbg-oauth-review-20260609-04.png",
+      "seed": 202606090324,
+      "prompt": "privacy review documentation desk with folders blank labels and shield object no credentials no words",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "host": "gti13",
+      "endpoint_redacted": "direct ComfyUI endpoint verified by gti13_gate",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "cfg": 5.4,
+      "steps": 26,
+      "prompt_id": "6b866338-6a6d-4245-8d27-a9ba45f90e68",
+      "comfy_output": {
+        "filename": "hermes_c_20260609_securebyteguide_04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1467332,
+      "status": "ok"
+    }
+  ],
+  "contact_sheet": "/home/taekm33/blog-ops/16-sites/securebyteguide/reports/batch-c-20260609-securebyteguide-contact-sheet-v2.jpg",
+  "visual_qa": "v2 contact sheet after regenerating QA-rejected screen/calculator/calendar-like images"
+}

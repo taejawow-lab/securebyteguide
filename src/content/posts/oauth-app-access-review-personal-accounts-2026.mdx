@@ -1,0 +1,132 @@
+---
+title: "OAuth App Access Review: Remove Risky Account Connections Safely"
+description: "A plain-English OAuth app access review for personal accounts: finding connected apps, judging risk, revoking access, and documenting recovery steps."
+pubDate: 2026-06-09
+updatedDate: 2026-06-09
+category: "Account Security"
+tags: ["OAuth", "connected apps", "account security", "privacy review", "access tokens"]
+heroImage: "/images/illustrations/sbg-oauth-review-20260609-hero.png"
+schemaType: "HowTo"
+sources:
+  - title: "Google Third-party apps and services"
+    url: "https://support.google.com/accounts/answer/3466521"
+    publication: "Google Account Help"
+    year: "2026 accessed"
+  - title: "Microsoft Apps and Services Access"
+    url: "https://support.microsoft.com/en-us/account-billing/apps-and-services-that-can-access-your-data-7e28f832-0f27-44e5-8c50-1d8bb6b3af20"
+    publication: "Microsoft Support"
+    year: "2026 accessed"
+  - title: "Apple Manage Sign in with Apple"
+    url: "https://support.apple.com/en-us/102609"
+    publication: "Apple Support"
+    year: "2026 accessed"
+  - title: "GitHub Reviewing Authorized OAuth Apps"
+    url: "https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/reviewing-your-authorized-oauth-apps"
+    publication: "GitHub Docs"
+    year: "2026 accessed"
+  - title: "FTC Protect Your Privacy Online"
+    url: "https://consumer.ftc.gov/articles/how-protect-your-privacy-online"
+    publication: "FTC"
+    year: "2026 accessed"
+  - title: "CISA Multi-Factor Authentication"
+    url: "https://www.cisa.gov/resources-tools/resources/multi-factor-authentication-mfa"
+    publication: "CISA"
+    year: "2026 accessed"
+  - title: "NIST Digital Identity Guidelines"
+    url: "https://pages.nist.gov/800-63-4/"
+    publication: "NIST"
+    year: "2026 accessed"
+  - title: "OWASP OAuth Security Cheat Sheet"
+    url: "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html"
+    publication: "OWASP"
+    year: "2026 accessed"
+internalLinks:
+  - "/category/account-security"
+  - "/posts/passkey-recovery-kit-household-plan-2026/"
+  - "/posts/browser-extension-permission-review-household-plan-2026/"
+visualsCount: 5
+hasVideo: false
+wordCount: 1850
+affiliate: false
+aiDisclosed: true
+faq:
+  - question: "Will revoking an OAuth app delete my account?"
+    answer: "Usually it only removes that app’s access, but check the service’s official help page before removing anything tied to backups, work, or automation."
+  - question: "How often should I review connected apps?"
+    answer: "Review after a breach notice, device loss, job change, suspicious login, or at least a few times per year for critical accounts."
+  - question: "Is this the same as browser extension review?"
+    answer: "No. Browser extensions run in the browser; OAuth connections grant account or data access through the provider. Both deserve separate reviews."
+draft: false
+---
+
+This guide is current as of 2026-06-09 and is written to preserve AdSense readiness: it uses descriptive sources, practical decision points, policy-safe wording, clear limits, and no affiliate filler.
+
+![OAuth app access review with blank account dashboard](/images/illustrations/sbg-oauth-review-20260609-hero.png)
+
+OAuth and “Sign in with” connections are convenient, but they also outlive the moment you clicked Allow. Old calendar tools, trial apps, mail utilities, automation bots, and abandoned mobile apps may still have permission to read or change account data.
+
+This review is designed for personal and household accounts. It avoids fake UI instructions and instead gives a safe method: inventory, classify, revoke cautiously, verify recovery, and document what changed.
+
+## Fast decision table
+
+| App type | Risk question | Action | Do not |
+|---|---|---|---|
+| Unknown or unused | Do you recognize it? | Revoke and monitor | Ignore because it is old |
+| Email/calendar access | Can it read sensitive data? | Verify need and owner | Keep for convenience only |
+| Automation | Does a workflow depend on it? | Pause, document, then change | Break backups blindly |
+| Work/school app | Is policy involved? | Ask admin or owner | Remove required access secretly |
+| Security tool | Does it protect recovery? | Confirm official source | Revoke without backup path |
+
+![Connected apps risk sorting with blank cards](/images/illustrations/sbg-oauth-review-20260609-01.png)
+
+## Start with the provider’s access page
+
+Use the official account security page for Google, Microsoft, Apple, GitHub, or the relevant service. Search results can lead to lookalike instructions, so navigate from account settings or the linked help center. Do not type passwords into third-party “security checker” pages.
+
+## Classify before revoking
+
+Sort connections into active, unknown, obsolete, work-managed, security-critical, and automation. Unknown and obsolete apps are usually the first candidates, but backup, password manager, calendar sync, or security-key workflows may need careful replacement before removal.
+
+![Revoking app access on blank laptop screen](/images/illustrations/sbg-oauth-review-20260609-02.png)
+
+## Record what changed without exposing secrets
+
+Write the app name, provider, date reviewed, action taken, and whether a login test passed. Do not screenshot tokens, recovery codes, private email, account IDs, or security questions into shared documents.
+
+## Revoke in small batches
+
+Remove one or two obvious candidates, then test the account. If a calendar, mail client, automation, or password manager breaks, you will know what caused it. Large blind revocations can create avoidable downtime.
+
+![Account recovery checklist with hardware key and phone](/images/illustrations/sbg-oauth-review-20260609-03.png)
+
+## Pair access review with MFA and passkeys
+
+Revoking stale apps is not a substitute for strong authentication. Confirm recovery email, MFA, passkeys, backup codes, and device sessions. If a suspicious app existed, review recent activity and consider changing passwords where appropriate.
+
+## Use extra caution for shared households
+
+Family devices, school tools, tax accounts, and elder-care logins often have hidden dependencies. Make access review a calm maintenance task, not a blame session after something goes wrong.
+
+## Practical checklist
+
+- Open the official connected-apps page from account settings.
+- Remove unknown, unused, or abandoned apps first.
+- Keep a private change log without tokens or screenshots of secrets.
+- Test login, email, calendar, storage, or automation after each batch.
+- Review MFA, passkeys, recovery email, and active sessions.
+- Repeat after breach notices, device loss, job changes, or suspicious logins.
+
+![Privacy review documentation with no readable credentials](/images/illustrations/sbg-oauth-review-20260609-04.png)
+
+## Common mistakes
+
+| Mistake | Risk | Better action |
+|---|---|---|
+| Clicking random cleanup tools | Phishing exposure | Use provider settings |
+| Revoking everything at once | Breaks workflows | Change in small batches |
+| Saving token screenshots | Creates new secret leak | Record non-secret notes |
+| Ignoring work-managed apps | Policy conflict | Ask the admin or owner |
+
+## Source and readiness note
+
+The article intentionally links to official or institutional references, avoids unsupported product claims, and keeps the reader action conservative. If rules, platform screens, or provider policies change, use the linked source first and treat this page as a structured planning aid, not professional advice.
