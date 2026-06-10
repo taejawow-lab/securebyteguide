@@ -24,20 +24,6 @@
       "comfy_output_filename": "sbg-recovery-email-20260610_00001_.png"
     },
     {
-      "filename": "sbg-recovery-email-20260610-01.png",
-      "render_url": "/images/illustrations/sbg-recovery-email-20260610-01.png",
-      "prompt": "closed laptop on desk beside hardware security key, sealed blank envelope, blank cards face down, phone face down dark, recovery email security audit metaphor, no user interface no screen content",
-      "seed": 202606101501,
-      "dimensions": [
-        1536,
-        864
-      ],
-      "prompt_id": "56a380cd-2dd7-4e7f-a1b8-c4a7226a85d3",
-      "bytes": 1564313,
-      "comfy_output_filename": "sbg-recovery-email-final-regen_00001_.png",
-      "qa_regenerated": true
-    },
-    {
       "filename": "sbg-recovery-email-20260610-02.png",
       "render_url": "/images/illustrations/sbg-recovery-email-20260610-02.png",
       "prompt": "mailbox privacy metaphor with locked drawer blank envelopes and security key no labels",
@@ -91,5 +77,5 @@
     }
   ],
   "negative_prompt": "text words letters numbers watermark logo brand name readable labels screen text fake user interface QR code barcode credentials official forms receipts medical labels financial statements distorted hands deformed anatomy unsafe scene exposed wiring blurry low resolution generic stock art placeholder cartoon",
-  "final_visual_qa_note": "Final contact sheet regenerated after replacing QA-rejected images; retained images are the published assets."
+  "final_visual_qa_note": "QA rejected the -01 image for visible UI; it was removed from MDX references, manifest, and git. Published article intentionally uses 5 accepted GTI13 raster images."
 }
