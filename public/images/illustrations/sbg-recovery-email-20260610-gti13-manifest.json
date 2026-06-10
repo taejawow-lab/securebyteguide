@@ -1,0 +1,93 @@
+{
+  "site": "securebyteguide",
+  "slug": "recovery-email-security-audit-personal-accounts-2026",
+  "host": "gti13",
+  "endpoint": "direct ComfyUI redacted in final",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "dimensions": [
+    1536,
+    864
+  ],
+  "date": "2026-06-10",
+  "assets": [
+    {
+      "filename": "sbg-recovery-email-20260610-hero.png",
+      "render_url": "/images/illustrations/sbg-recovery-email-20260610-hero.png",
+      "prompt": "secure recovery email audit desk with laptop blank screen hardware key and sealed envelope no text",
+      "seed": 202606100500,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "93ad3a32-cd70-4e5d-8160-b12794d6bb2f",
+      "bytes": 1722147,
+      "comfy_output_filename": "sbg-recovery-email-20260610_00001_.png"
+    },
+    {
+      "filename": "sbg-recovery-email-20260610-01.png",
+      "render_url": "/images/illustrations/sbg-recovery-email-20260610-01.png",
+      "prompt": "person checking account security on blank phone and laptop no readable UI no logos",
+      "seed": 202606100501,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "a7ff03c2-7174-4616-8ad6-3393727d5871",
+      "bytes": 1643906,
+      "comfy_output_filename": "sbg-recovery-email-20260610_00002_.png"
+    },
+    {
+      "filename": "sbg-recovery-email-20260610-02.png",
+      "render_url": "/images/illustrations/sbg-recovery-email-20260610-02.png",
+      "prompt": "mailbox privacy metaphor with locked drawer blank envelopes and security key no labels",
+      "seed": 202606100502,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "bb15ba6a-5aa8-4c9b-a634-64905d1e8948",
+      "bytes": 1550060,
+      "comfy_output_filename": "sbg-recovery-email-20260610_00003_.png"
+    },
+    {
+      "filename": "sbg-recovery-email-20260610-03.png",
+      "render_url": "/images/illustrations/sbg-recovery-email-20260610-03.png",
+      "prompt": "family account recovery planning with blank cards and closed laptop no writing",
+      "seed": 202606100503,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "afe16adb-f0b4-4ee4-b05e-b7d8f4eddbee",
+      "bytes": 1476286,
+      "comfy_output_filename": "sbg-recovery-email-20260610_00004_.png"
+    },
+    {
+      "filename": "sbg-recovery-email-20260610-04.png",
+      "render_url": "/images/illustrations/sbg-recovery-email-20260610-04.png",
+      "prompt": "suspicious forwarding rule review metaphor with blank flow cards no text no UI",
+      "seed": 202606100504,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "10974334-43e7-456b-a088-b5646c320d69",
+      "bytes": 1398976,
+      "comfy_output_filename": "sbg-recovery-email-20260610_00005_.png"
+    },
+    {
+      "filename": "sbg-recovery-email-20260610-05.png",
+      "render_url": "/images/illustrations/sbg-recovery-email-20260610-05.png",
+      "prompt": "backup code storage scene with sealed envelope safe and hardware key no readable words",
+      "seed": 202606100505,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "5eec006c-8502-44b7-a10d-7eda9453b3c2",
+      "bytes": 1912047,
+      "comfy_output_filename": "sbg-recovery-email-20260610_00006_.png"
+    }
+  ],
+  "negative_prompt": "text words letters numbers watermark logo brand name readable labels screen text fake user interface QR code barcode credentials official forms receipts medical labels financial statements distorted hands deformed anatomy unsafe scene exposed wiring blurry low resolution generic stock art placeholder cartoon"
+}
