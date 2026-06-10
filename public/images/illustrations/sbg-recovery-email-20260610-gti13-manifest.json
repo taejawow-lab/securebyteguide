@@ -26,15 +26,16 @@
     {
       "filename": "sbg-recovery-email-20260610-01.png",
       "render_url": "/images/illustrations/sbg-recovery-email-20260610-01.png",
-      "prompt": "person checking account security on blank phone and laptop no readable UI no logos",
-      "seed": 202606100501,
+      "prompt": "person reviewing account security with phone face down dark blank screen, closed laptop, hardware security key, blank papers, no UI, no readable text, no logos",
+      "seed": 202606101201,
       "dimensions": [
         1536,
         864
       ],
-      "prompt_id": "a7ff03c2-7174-4616-8ad6-3393727d5871",
-      "bytes": 1643906,
-      "comfy_output_filename": "sbg-recovery-email-20260610_00002_.png"
+      "prompt_id": "22ef9305-2155-49dd-9e88-4dc7ec784e5c",
+      "bytes": 1410776,
+      "comfy_output_filename": "sbg-recovery-email-20260610-regen_00001_.png",
+      "qa_regenerated": true
     },
     {
       "filename": "sbg-recovery-email-20260610-02.png",
@@ -89,5 +90,6 @@
       "comfy_output_filename": "sbg-recovery-email-20260610_00006_.png"
     }
   ],
-  "negative_prompt": "text words letters numbers watermark logo brand name readable labels screen text fake user interface QR code barcode credentials official forms receipts medical labels financial statements distorted hands deformed anatomy unsafe scene exposed wiring blurry low resolution generic stock art placeholder cartoon"
+  "negative_prompt": "text words letters numbers watermark logo brand name readable labels screen text fake user interface QR code barcode credentials official forms receipts medical labels financial statements distorted hands deformed anatomy unsafe scene exposed wiring blurry low resolution generic stock art placeholder cartoon",
+  "final_visual_qa_note": "Final contact sheet regenerated after replacing QA-rejected images; retained images are the published assets."
 }
