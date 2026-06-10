@@ -26,15 +26,15 @@
     {
       "filename": "sbg-recovery-email-20260610-01.png",
       "render_url": "/images/illustrations/sbg-recovery-email-20260610-01.png",
-      "prompt": "person reviewing account security with phone face down dark blank screen, closed laptop, hardware security key, blank papers, no UI, no readable text, no logos",
-      "seed": 202606101201,
+      "prompt": "closed laptop on desk beside hardware security key, sealed blank envelope, blank cards face down, phone face down dark, recovery email security audit metaphor, no user interface no screen content",
+      "seed": 202606101501,
       "dimensions": [
         1536,
         864
       ],
-      "prompt_id": "22ef9305-2155-49dd-9e88-4dc7ec784e5c",
-      "bytes": 1410776,
-      "comfy_output_filename": "sbg-recovery-email-20260610-regen_00001_.png",
+      "prompt_id": "56a380cd-2dd7-4e7f-a1b8-c4a7226a85d3",
+      "bytes": 1564313,
+      "comfy_output_filename": "sbg-recovery-email-final-regen_00001_.png",
       "qa_regenerated": true
     },
     {
