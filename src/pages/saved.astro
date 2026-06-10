@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Saved SecureByte guides" description="Guides saved on this device.">
+  <section class="container mx-auto px-6 md:px-10 py-16 md:py-24">
+    <div style="max-width:780px;margin-inline:auto">
+      <p style="font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent,var(--primary,var(--terra,var(--amber,#7a5b2e))))">Saved locally</p>
+      <h1 style="font-size:clamp(2.3rem,6vw,4rem);line-height:1;margin:.4em 0">Saved SecureByte guides</h1>
+      <p style="color:var(--muted,var(--ink-soft,var(--ink-2,#666)));font-size:1.1rem">Bookmarks are stored only in this browser. Use this page as a quick reading queue; no account or tracking is required.</p>
+    </div>
+    <div id="saved-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px"></div>
+    <div id="saved-empty" style="max-width:720px;margin:34px auto 0;padding:28px;border:1px solid var(--line,var(--border,#ddd));border-radius:20px;background:var(--card,var(--surface,#fff));text-align:center">
+      <h2 style="font-size:1.5rem;margin:0 0 10px">No saved guides yet.</h2>
+      <p style="color:var(--muted,var(--ink-soft,var(--ink-2,#666)))">Tap the bookmark/save button on a guide, then return here.</p>
+      <a href="/posts/" style="display:inline-flex;margin-top:16px;padding:11px 18px;border-radius:999px;background:var(--primary,var(--accent,var(--terra,var(--amber,#334))));color:var(--primary-foreground,#fff);text-decoration:none;font-weight:700">Browse guides</a>
+    </div>
+  </section>
+  <script is:inline>
+    (()=>{
+      const key='sbg-bookmarks', list=document.getElementById('saved-list'), empty=document.getElementById('saved-empty');
+      const esc=(s)=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      let items=[]; try{items=JSON.parse(localStorage.getItem(key)||'[]')}catch{}
+      empty.style.display=items.length?'none':'';
+      list.innerHTML=items.map(i=>`<article style="padding:22px;border:1px solid var(--line,var(--border,#ddd));border-radius:18px;background:var(--card,var(--surface,#fff));box-shadow:0 8px 24px rgba(0,0,0,.04)"><h2 style="font-size:1.15rem;line-height:1.25;margin:0 0 12px">${esc(i.title)}</h2><a href="${esc(i.url)}" style="font-weight:700;text-decoration:none;color:var(--primary,var(--accent,#334))">Open guide →</a></article>`).join('');
+    })();
+  </script>
+</BaseLayout>
