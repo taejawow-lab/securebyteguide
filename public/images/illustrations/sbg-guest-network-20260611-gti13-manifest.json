@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-06-11T04:14:39Z",
+  "host": "gti13",
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 28,
+    "cfg": 5.2,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, words, letters, numbers, watermark, logo, brand name, readable label, UI screenshot, fake app screen, QR code, barcode, credential, medical label, payment card, bank statement, tax form, receipt text, warning sign, distorted hands, bad anatomy, unsafe scene, exposed wiring, blurry, low resolution, generic stock art, placeholder, cartoon, plastic skin, child face closeup"
+  },
+  "assets": [
+    {
+      "site": "securebyteguide",
+      "slug": "home-wifi-guest-network-smart-device-privacy-plan-2026",
+      "filename": "sbg-guest-network-20260611-hero.png",
+      "path": "public/images/illustrations/sbg-guest-network-20260611-hero.png",
+      "prompt": "home wifi router on shelf with blank indicator lights family devices separated on table no logos no readable labels",
+      "seed": 202606110013,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "b85c1de1-4a62-4072-b7a0-08a159c36eae",
+      "comfy_output": {
+        "filename": "sbg-guest-network-20260611_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1172824,
+      "status": "ok"
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "home-wifi-guest-network-smart-device-privacy-plan-2026",
+      "filename": "sbg-guest-network-20260611-02.png",
+      "path": "public/images/illustrations/sbg-guest-network-20260611-02.png",
+      "prompt": "smart home devices grouped on side table with router in background blank labels no screens no logos",
+      "seed": 202606110015,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "0fdc0a14-046b-48c9-8f66-9d6a9324b7fb",
+      "comfy_output": {
+        "filename": "sbg-guest-network-20260611_00003_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1216996,
+      "status": "ok"
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "home-wifi-guest-network-smart-device-privacy-plan-2026",
+      "filename": "sbg-guest-network-20260611-03.png",
+      "path": "public/images/illustrations/sbg-guest-network-20260611-03.png",
+      "prompt": "guest phone and household laptop separated by visual divider on desk both screens dark blank",
+      "seed": 202606110016,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "279db9ef-95b3-41aa-9fc3-fdde5d05b9b5",
+      "comfy_output": {
+        "filename": "sbg-guest-network-20260611_00004_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1312758,
+      "status": "ok"
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "home-wifi-guest-network-smart-device-privacy-plan-2026",
+      "filename": "sbg-guest-network-20260611-04.png",
+      "path": "public/images/illustrations/sbg-guest-network-20260611-04.png",
+      "prompt": "family checklist planning at kitchen table with blank cards and router manual closed no text",
+      "seed": 202606110017,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "32a8de70-f256-4a67-915b-212289082b7e",
+      "comfy_output": {
+        "filename": "sbg-guest-network-20260611_00005_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1546052,
+      "status": "ok"
+    },
+    {
+      "site": "securebyteguide",
+      "slug": "home-wifi-guest-network-smart-device-privacy-plan-2026",
+      "filename": "sbg-guest-network-20260611-05.png",
+      "path": "public/images/illustrations/sbg-guest-network-20260611-05.png",
+      "prompt": "privacy rollback kit with router power cable notebook closed and phone face down no readable text",
+      "seed": 202606110018,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "ba948204-b192-48aa-92ee-573cb77da5ad",
+      "comfy_output": {
+        "filename": "sbg-guest-network-20260611_00006_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "bytes": 1711649,
+      "status": "ok"
+    }
+  ],
+  "qa_replacements": [
+    {
+      "site": "securebyteguide",
+      "filename": "sbg-guest-network-20260611-01.png",
+      "path": "public/images/illustrations/sbg-guest-network-20260611-01.png",
+      "prompt": "person near home router with laptop screen completely dark and blank, no visible interface, no code, no text, hands normal, privacy safe router setup scene",
+      "seed": 202606119003,
+      "prompt_id": "f8287a7f-231a-4634-9718-e14a2ec0a3ab",
+      "comfy_output": {
+        "filename": "sbg-guest-network-20260611-01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1237664,
+      "status": "ok",
+      "reason": "visual QA replacement for text/UI/labels/numbers"
+    },
+    {
+      "site": "securebyteguide",
+      "filename": "sbg-guest-network-20260611-02.png",
+      "path": "public/images/illustrations/sbg-guest-network-20260611-02.png",
+      "prompt": "unbranded home router and three simple smart home devices on shelf, all indicator lights as plain dots, no labels, no numbers, no brand marks, no screen text",
+      "seed": 202606119004,
+      "prompt_id": "3c6d964b-c6f8-4b67-bc65-bf2ac390704c",
+      "comfy_output": {
+        "filename": "sbg-guest-network-20260611-02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1186877,
+      "status": "ok",
+      "reason": "visual QA replacement for text/UI/labels/numbers"
+    }
+  ],
+  "final_contact_sheet": "/mnt/c/Users/k8plus/AppData/Local/hermes/scripts/batch_c_20260611_report/batch-c-20260611-contact-sheet-final.jpg",
+  "qa_excluded": [
+    {
+      "filename": "sbg-guest-network-20260611-01.png",
+      "reason": "Final visual QA rejected for screen/text/calculator-style artifact; not referenced or staged."
+    }
+  ]
+}
