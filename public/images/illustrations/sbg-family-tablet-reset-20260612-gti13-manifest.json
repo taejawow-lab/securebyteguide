@@ -1,0 +1,125 @@
+{
+  "site": "securebyteguide",
+  "slug": "shared-family-tablet-privacy-reset-child-account-plan-2026",
+  "generated_at": "2026-06-12T04:20:18Z",
+  "host": "gti13",
+  "endpoint": "direct ComfyUI endpoint redacted in user reports",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "width": 1536,
+  "height": 864,
+  "negative_prompt": "readable text, words, letters, numbers, logos, brand marks, watermark, signature, UI screenshot, app screen, login screen, QR code, barcode, fake labels, documents with text, receipts, forms, distorted hands, bad anatomy, extra fingers, child face closeup, unsafe scene, low detail, blurry, cartoon, generic stock art, placeholder",
+  "assets": [
+    {
+      "file": "public/images/illustrations/sbg-family-tablet-reset-20260612-hero.png",
+      "seed": 202606120200,
+      "prompt": "family tablet reset desk with tablet dark blank screen, charging cable, blank cards, no child faces no text",
+      "prompt_id": "19f355fa-c865-479f-a512-a1dc1121030a",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1297118
+    },
+    {
+      "file": "public/images/illustrations/sbg-family-tablet-reset-20260612-01.png",
+      "seed": 202606120201,
+      "prompt": "parent preparing old tablet handoff with closed notebook and dark screen, no app UI no names",
+      "prompt_id": "54ddb2ae-cd0a-48a5-8bbc-f272d8971b83",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1517378
+    },
+    {
+      "file": "public/images/illustrations/sbg-family-tablet-reset-20260612-02.png",
+      "seed": 202606120202,
+      "prompt": "device privacy cleanup with blank photo album cards and tablet face down, no readable text",
+      "prompt_id": "9bf2774d-81d7-416d-ac7a-6c47325d102e",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1626015
+    },
+    {
+      "file": "public/images/illustrations/sbg-family-tablet-reset-20260612-03.png",
+      "seed": 202606120203,
+      "prompt": "child account safety setup represented by plain colored blocks and dark tablet screen, no logos",
+      "prompt_id": "a812249e-89ca-429c-b873-8ae884a945a6",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1476563
+    },
+    {
+      "file": "public/images/illustrations/sbg-family-tablet-reset-20260612-04.png",
+      "seed": 202606120204,
+      "prompt": "payment and app access review with blank gift card shapes, no numbers no brands no forms",
+      "prompt_id": "52d51284-ec97-4198-8fc1-d50a2d04c95a",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1587517
+    },
+    {
+      "file": "public/images/illustrations/sbg-family-tablet-reset-20260612-05.png",
+      "seed": 202606120205,
+      "prompt": "finished hand-me-down tablet in clean case with blank welcome card no writing no UI",
+      "prompt_id": "62430d15-cd05-4ebf-a40b-78d32070f934",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 26,
+      "cfg": 5.4,
+      "bytes": 1610383
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/sbg-family-tablet-reset-20260612-contact-sheet-final.jpg",
+  "visual_qa": "final contact sheet regenerated after QA replacements; parent run visually inspected final sheet",
+  "qa_replacements": [
+    {
+      "site": "securebyteguide",
+      "file": "public/images/illustrations/sbg-family-tablet-reset-20260612-04.png",
+      "seed": 202606129005,
+      "prompt": "family tablet app access review with tablet face down, plain colored blocks, blank envelopes, no payment card no numbers no text no logo",
+      "prompt_id": "8a670f8f-ca0d-4be4-940a-aa5e38b6927d",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "reason": "visual QA replacement"
+    }
+  ]
+}
