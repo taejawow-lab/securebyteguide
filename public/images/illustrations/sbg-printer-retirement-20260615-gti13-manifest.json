@@ -1,0 +1,144 @@
+{
+  "date": "2026-06-15",
+  "site": "securebyteguide",
+  "slug": "home-printer-security-retirement-reset-plan-2026",
+  "endpoint_host": "gti13-direct-comfyui",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "images": [
+    {
+      "file": "public/images/illustrations/sbg-printer-retirement-20260615-hero.png",
+      "render_url": "/images/illustrations/sbg-printer-retirement-20260615-hero.png",
+      "seed": 90617991,
+      "prompt_id": "f7be8c85-56eb-447a-9da5-d6de01a6fbff",
+      "prompt": "top down view of a plain unbranded white home printer with lid closed and blank paper nearby, front face hidden, no logos, no labels, no display, no buttons visible, no readable text",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "sbg-printer-retirement-20260615-hero_00003_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "qa_regenerated": "2026-06-15 final logo-free hero replacement"
+    },
+    {
+      "file": "public/images/illustrations/sbg-printer-retirement-20260615-01.png",
+      "render_url": "/images/illustrations/sbg-printer-retirement-20260615-01.png",
+      "seed": 90617001,
+      "prompt_id": "3a1ca7b2-75a8-44a1-80c6-6ac30a476e0c",
+      "prompt": "person removing blank paper tray from home printer, clean desk, no readable documents, no logos",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "sbg-printer-retirement-20260615-01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-printer-retirement-20260615-02.png",
+      "render_url": "/images/illustrations/sbg-printer-retirement-20260615-02.png",
+      "seed": 90617002,
+      "prompt_id": "ede41d20-2797-4005-9273-fe523b525e16",
+      "prompt": "privacy-safe reset checklist metaphor with closed printer, face-down phone, blank cards, hardware key, no text",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "sbg-printer-retirement-20260615-02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-printer-retirement-20260615-03.png",
+      "render_url": "/images/illustrations/sbg-printer-retirement-20260615-03.png",
+      "seed": 90617003,
+      "prompt_id": "296dbfa4-df4a-451f-958d-7c5618f3d030",
+      "prompt": "printer accessories and cables sorted beside plain recycling box, blank label, no barcode no writing",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "sbg-printer-retirement-20260615-03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-printer-retirement-20260615-04.png",
+      "render_url": "/images/illustrations/sbg-printer-retirement-20260615-04.png",
+      "seed": 90617004,
+      "prompt_id": "aec096d0-d3ab-4173-8b96-7abaf9c3f6b1",
+      "prompt": "home router and printer separated in tidy office, blank dark screens, no UI, no labels",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "sbg-printer-retirement-20260615-04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-printer-retirement-20260615-05.png",
+      "render_url": "/images/illustrations/sbg-printer-retirement-20260615-05.png",
+      "seed": 90617005,
+      "prompt_id": "fa754da1-ead2-4981-bf6f-341cea451fb9",
+      "prompt": "final donation preparation with printer, wiped blank paper area, sealed cable pouch, plain box, no readable marks",
+      "negative": "readable text, letters, words, numbers, logos, labels, watermarks, signature, QR code, barcode, fake interface, fake form, calculator, receipt, currency, coins, brand marks, unsafe behavior, distorted objects, bad anatomy, deformed hands, scary, low resolution, blurry, stock photo cliche",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "steps": 30,
+      "cfg": 5.0,
+      "remote_output": {
+        "filename": "sbg-printer-retirement-20260615-05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/sbg-printer-retirement-20260615-contact-sheet.jpg",
+  "visual_qa": "final logo-free hero regenerated; contact sheet updated"
+}
