@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-06-16T04:14:46Z",
+  "host": "gti13",
+  "endpoint": "direct ComfyUI on LAN (redacted in final)",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "dimensions": [
+    1536,
+    864
+  ],
+  "steps": 26,
+  "cfg": 5.3,
+  "sampler": "dpmpp_2m",
+  "scheduler": "karras",
+  "negative_prompt": "readable text, letters, words, numbers, logo, watermark, brand marks, QR code, barcode, fake UI, app screen, login screen, payment screen, receipt text, labels, handwriting, calendar grid, distorted hands, deformed animals, unsafe handling, low resolution, blurry, cartoon, placeholder, stock art",
+  "slug": "home-router-dns-filtering-family-security-plan-2026",
+  "assets": [
+    {
+      "filename": "sbg-router-dns-20260616-hero.png",
+      "render_url": "/images/illustrations/sbg-router-dns-20260616-hero.png",
+      "prompt": "home router security planning scene with plain router, ethernet cables, blank note cards, no screens, no text, no logos",
+      "seed": 202606160600,
+      "status": "ok",
+      "prompt_id": "c79c5cee-8127-490c-bf65-54ddaf9ac430",
+      "file": "public/images/illustrations/sbg-router-dns-20260616-hero.png",
+      "bytes": 1188307,
+      "comfy_output": {
+        "filename": "sbg-router-dns-20260616_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "sbg-router-dns-20260616-01.png",
+      "render_url": "/images/illustrations/sbg-router-dns-20260616-01.png",
+      "prompt": "family network cabinet with router and labeled-looking but blank colored tags no readable words or numbers",
+      "seed": 202606160601,
+      "status": "ok",
+      "prompt_id": "4f77b218-5f15-4798-847e-d7480be33f23",
+      "file": "public/images/illustrations/sbg-router-dns-20260616-01.png",
+      "bytes": 1582039,
+      "comfy_output": {
+        "filename": "sbg-router-dns-20260616_00002_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "sbg-router-dns-20260616-02.png",
+      "render_url": "/images/illustrations/sbg-router-dns-20260616-02.png",
+      "prompt": "parent checking child device network safety with tablet dark blank screen and router in background, no UI",
+      "seed": 202606160602,
+      "status": "ok",
+      "prompt_id": "9e8f0fdd-8e5e-40fb-a0c1-a973cef23ef9",
+      "file": "public/images/illustrations/sbg-router-dns-20260616-02.png",
+      "bytes": 1309328,
+      "comfy_output": {
+        "filename": "sbg-router-dns-20260616_00003_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "sbg-router-dns-20260616-03.png",
+      "render_url": "/images/illustrations/sbg-router-dns-20260616-03.png",
+      "prompt": "DNS filtering setup metaphor with clean branching cables and blank blocks, no text, no screens",
+      "seed": 202606160603,
+      "status": "ok",
+      "prompt_id": "d687dffa-94f3-4f54-ade1-72be074f2310",
+      "file": "public/images/illustrations/sbg-router-dns-20260616-03.png",
+      "bytes": 1187029,
+      "comfy_output": {
+        "filename": "sbg-router-dns-20260616_00004_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "sbg-router-dns-20260616-04.png",
+      "render_url": "/images/illustrations/sbg-router-dns-20260616-04.png",
+      "prompt": "router change rollback kit with sealed envelope, blank paper, ethernet cable, no passwords, no text",
+      "seed": 202606160604,
+      "status": "ok",
+      "prompt_id": "3ff830bc-4204-420a-9d07-08bb6e110ce0",
+      "file": "public/images/illustrations/sbg-router-dns-20260616-04.png",
+      "bytes": 1550432,
+      "comfy_output": {
+        "filename": "sbg-router-dns-20260616_00005_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "filename": "sbg-router-dns-20260616-05.png",
+      "render_url": "/images/illustrations/sbg-router-dns-20260616-05.png",
+      "prompt": "household internet safety meeting table with router, face down phones, blank checklist cards no writing",
+      "seed": 202606160605,
+      "status": "ok",
+      "prompt_id": "08211c0b-3e6c-44b7-a049-7cb21d106794",
+      "file": "public/images/illustrations/sbg-router-dns-20260616-05.png",
+      "bytes": 1370152,
+      "comfy_output": {
+        "filename": "sbg-router-dns-20260616_00006_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "final_visual_qa": "PASS after contact-sheet inspection; regenerated/replaced any earlier text/form/photo-label concerns before article integration.",
+  "published_asset_count": 6
+}
