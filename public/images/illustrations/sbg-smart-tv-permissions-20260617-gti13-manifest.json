@@ -1,0 +1,215 @@
+{
+  "batch": "C 20260617 cron",
+  "date": "2026-06-17",
+  "host": "gti13",
+  "endpoint": "redacted-direct-gti13",
+  "gate": {
+    "available": true,
+    "reason": "sentinel_unreachable_but_direct_comfyui_ok",
+    "sentinel_url": "http://192.168.50.30:9199/status",
+    "comfy_url": "http://192.168.50.29:8188",
+    "services": {
+      "comfyui_8188": true,
+      "sentinel_9199": false
+    },
+    "manual_pause": false,
+    "direct_fallback": true,
+    "comfyui_version": "0.20.1",
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756696576,
+        "vram_free": 17098519522,
+        "torch_vram_total": 6979321856,
+        "torch_vram_free": 31896546
+      }
+    ],
+    "queue": {
+      "queue_running": [],
+      "queue_pending": []
+    }
+  },
+  "workflow": {
+    "steps": 24,
+    "cfg": 5.1,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, words, letters, numbers, logo, watermark, brand name, readable labels, screen text, UI screenshot, distorted interface, fake labels, fake forms, documents with text, calculator, currency, coins, credit cards, QR code, login form, payment screen, dashboard, calendar grid, handwriting, bad hands, bad anatomy, extra fingers, low quality, blurry, cartoon, placeholder, generic stock art, unsafe pet restraint, dog face distress closeup, medical chart, medicine label, router admin UI, smart TV UI, app screen, credentials, public Wi-Fi login page, legal document, tax form, IRS form, exposed wires, unsafe cables"
+  },
+  "site": "securebyteguide",
+  "data": {
+    "slug": "smart-tv-app-permissions-home-network-privacy-checklist-2026",
+    "title": "Smart TV App Permissions and Home Network Privacy Checklist 2026",
+    "post": "src/content/posts/smart-tv-app-permissions-home-network-privacy-checklist-2026.mdx",
+    "assets": [
+      {
+        "file": "public/images/illustrations/sbg-smart-tv-permissions-20260617-hero.png",
+        "filename": "sbg-smart-tv-permissions-20260617-hero.png",
+        "prompt": "realistic living room with smart TV turned off on dark blank screen, router on shelf, remote face down, no logos, no UI, no text",
+        "seed": 202606170313,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "3c95a9ee-e09e-4cb4-b8f1-51b260b1ac83",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_securebyteguide_hero_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1424642,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/sbg-smart-tv-permissions-20260617-01.png",
+        "filename": "sbg-smart-tv-permissions-20260617-01.png",
+        "prompt": "realistic home network still life with router, smart TV dark screen, remote face down, no labels no lights text",
+        "seed": 202606170314,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "d31bfe19-180c-4a69-88bc-cae63b02492f",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_securebyteguide_01_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1366754,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/sbg-smart-tv-permissions-20260617-02.png",
+        "filename": "sbg-smart-tv-permissions-20260617-02.png",
+        "prompt": "realistic person organizing streaming remotes in tray with blank notecard, no app logos no text",
+        "seed": 202606170315,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "8cfa856f-067a-4491-9ec1-be786dcd09d0",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_securebyteguide_02_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1504623,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/sbg-smart-tv-permissions-20260617-03.png",
+        "filename": "sbg-smart-tv-permissions-20260617-03.png",
+        "prompt": "realistic router and TV separated by guest network concept using colored plain blocks, no UI no labels",
+        "seed": 202606170316,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "756de8c8-8c55-4c5b-b102-0cd5071c16b7",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_securebyteguide_03_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1359340,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/sbg-smart-tv-permissions-20260617-04.png",
+        "filename": "sbg-smart-tv-permissions-20260617-04.png",
+        "prompt": "realistic family room privacy reset scene with closed laptop and dark TV screen, no faces no readable content",
+        "seed": 202606170317,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "157b4f4d-7f4a-4614-be7a-05c2f8e990ab",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_securebyteguide_04_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1543406,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      },
+      {
+        "file": "public/images/illustrations/sbg-smart-tv-permissions-20260617-05.png",
+        "filename": "sbg-smart-tv-permissions-20260617-05.png",
+        "prompt": "realistic device update routine still life with power strip safely placed, blank screen, no exposed wires no labels",
+        "seed": 202606170318,
+        "dimensions": [
+          1536,
+          864
+        ],
+        "prompt_id": "576917d2-1873-485a-8948-929dae7fccac",
+        "comfy_output": {
+          "filename": "hermes_batch_c_20260617_securebyteguide_05_00001_.png",
+          "subfolder": "",
+          "type": "output"
+        },
+        "status": "ok",
+        "width": 1536,
+        "height": 864,
+        "bytes": 1112291,
+        "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+        "steps": 24,
+        "cfg": 5.1,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras"
+      }
+    ],
+    "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260617-securebyteguide-contact-sheet.jpg",
+    "contact_sheet_windows": "/mnt/c/Users/k8plus/AppData/Local/hermes/scripts/batch_c_20260617_reports/batch-c-20260617-securebyteguide-contact-sheet.jpg",
+    "sources": [
+      "https://consumer.ftc.gov/articles/how-protect-your-privacy-apps",
+      "https://www.cisa.gov/secure-our-world",
+      "https://www.cisa.gov/news-events/news/securing-wireless-networks",
+      "https://www.nist.gov/itl/applied-cybersecurity/nist-cybersecurity-iot-program",
+      "https://www.fcc.gov/communications-business-opportunities/cybersecurity-small-business",
+      "https://www.consumerreports.org/electronics-computers/privacy/smart-tv-privacy-settings-a5937293163/",
+      "https://myaccount.google.com/privacycheckup",
+      "https://consumer.ftc.gov/articles/how-secure-your-home-wi-fi-network"
+    ],
+    "visual_qa_summary": "Contact sheet generated; requires visual QA before commit.",
+    "contact_sheet_final": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260617-securebyteguide-contact-sheet-final.jpg",
+    "contact_sheet_final_windows": "/mnt/c/Users/k8plus/AppData/Local/hermes/scripts/batch_c_20260617_reports/batch-c-20260617-securebyteguide-contact-sheet-final.jpg"
+  },
+  "visual_qa_summary": "Initial QA rejected one pet outdoor/mud recovery image, one remote-work fake security form, and four finance/tax images with calculator/calendar/coins/tax-form risks. All were regenerated through GTI13 and final contact sheets were written."
+}
