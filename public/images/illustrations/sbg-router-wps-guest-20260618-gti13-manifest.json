@@ -1,0 +1,145 @@
+{
+  "site": "securebyteguide",
+  "slug": "router-wps-disable-guest-network-checklist-2026",
+  "title": "Router WPS Disable and Guest Network Checklist for 2026",
+  "date": "2026-06-18",
+  "host": "gti13",
+  "endpoint": "redacted-direct-gti13",
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "images": [
+    {
+      "file": "public/images/illustrations/sbg-router-wps-guest-20260618-hero.png",
+      "render_url": "/images/illustrations/sbg-router-wps-guest-20260618-hero.png",
+      "prompt": "realistic home router security desk with router turned away, blank notebook, no labels no numbers no UI",
+      "seed": 202606180200,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "1f74435a-a14b-4fb1-ad16-1df79944d48a",
+      "comfy_output": {
+        "filename": "batch_c_20260618_securebyteguide_hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/sbg-router-wps-guest-20260618-01.png",
+      "render_url": "/images/illustrations/sbg-router-wps-guest-20260618-01.png",
+      "prompt": "realistic person checking router placement with laptop closed and phone dark screen, no admin interface no text",
+      "seed": 202606180201,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "8087c5d8-6ae6-4a44-9adc-e0623007130a",
+      "comfy_output": {
+        "filename": "batch_c_20260618_securebyteguide_01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/sbg-router-wps-guest-20260618-02.png",
+      "render_url": "/images/illustrations/sbg-router-wps-guest-20260618-02.png",
+      "prompt": "realistic guest network planning still life with plain cards and closed router panel, no passwords no labels",
+      "seed": 202606180202,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "0c35bb91-f871-4858-bb68-35bf4d2de6e8",
+      "comfy_output": {
+        "filename": "batch_c_20260618_securebyteguide_02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/sbg-router-wps-guest-20260618-03.png",
+      "render_url": "/images/illustrations/sbg-router-wps-guest-20260618-03.png",
+      "prompt": "realistic smart home device separation scene with generic devices and blank tags, no brand marks no screens",
+      "seed": 202606180203,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "a2dd791e-eff5-4042-8ca9-2a938f4e1c8c",
+      "comfy_output": {
+        "filename": "batch_c_20260618_securebyteguide_03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/sbg-router-wps-guest-20260618-04.png",
+      "render_url": "/images/illustrations/sbg-router-wps-guest-20260618-04.png",
+      "prompt": "realistic household Wi-Fi review table with closed folders and hardware key, no QR code no readable text",
+      "seed": 202606180204,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "73e54a87-311b-44f4-9092-e1190c4c7aa7",
+      "comfy_output": {
+        "filename": "batch_c_20260618_securebyteguide_04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    },
+    {
+      "file": "public/images/illustrations/sbg-router-wps-guest-20260618-05.png",
+      "render_url": "/images/illustrations/sbg-router-wps-guest-20260618-05.png",
+      "prompt": "realistic router maintenance kit with ethernet cable and blank checklist cards, no numbers no UI",
+      "seed": 202606180205,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "4d3ba8e4-3b11-4ffc-879d-88685e23dd13",
+      "comfy_output": {
+        "filename": "batch_c_20260618_securebyteguide_05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "steps": 26,
+      "cfg": 5.0,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras",
+      "host": "gti13"
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/sbg-router-wps-guest-20260618-contact-sheet.jpg",
+  "visual_qa": "contact_sheet_created_pending_human_or_vision_review"
+}
