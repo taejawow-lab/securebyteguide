@@ -1,0 +1,98 @@
+{
+  "date": "2026-06-19",
+  "site": "securebyteguide",
+  "slug": "home-security-camera-privacy-reset-checklist-2026",
+  "host": "gti13-direct",
+  "endpoint_redacted": true,
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 26,
+    "cfg": 5.3,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras"
+  },
+  "assets": [
+    {
+      "file": "public/images/illustrations/sbg-camera-privacy-20260619-hero.png",
+      "seed": 202606190200,
+      "prompt": "home security camera mounted indoors turned away from private area, router and blank phone on table, no app UI",
+      "prompt_id": "da13849f-e931-4eaf-8df4-00aed0f8fc63",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-camera-privacy-20260619-hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-camera-privacy-20260619-01.png",
+      "seed": 202606191007,
+      "prompt": "home security camera privacy planning desk with small indoor camera, closed generic laptop, blank cards, no DSLR camera, no logos, no readable text",
+      "prompt_id": "c8f4ffa6-ad0c-469d-a111-06b195a63ed4",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "raw_output": {
+        "filename": "sbg-camera-privacy-20260619-01-regen_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "regenerated": true
+    },
+    {
+      "file": "public/images/illustrations/sbg-camera-privacy-20260619-02.png",
+      "seed": 202606190202,
+      "prompt": "router shelf with separated smart home devices and blank labels, no brand marks, no screens",
+      "prompt_id": "eed70b07-bb6d-4d6c-9f38-6177e9f1711e",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-camera-privacy-20260619-02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-camera-privacy-20260619-03.png",
+      "seed": 202606190203,
+      "prompt": "person removing camera access on blank dark phone screen, camera facing wall, no UI",
+      "prompt_id": "8b96894f-e93c-4972-b3db-8fbdd1d0a3d8",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "remote": {
+        "filename": "sbg-camera-privacy-20260619-03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-camera-privacy-20260619-04.png",
+      "seed": 202606191008,
+      "prompt": "moving box with intact home security camera, reset planning tools, blank folder, no exposed wires, no labels, no logos, no text",
+      "prompt_id": "0f97f4ea-67b5-42b3-8e55-0f3123247837",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "raw_output": {
+        "filename": "sbg-camera-privacy-20260619-04-regen_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "regenerated": true
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/sbg-camera-privacy-20260619-contact-sheet.jpg",
+  "visual_qa": "PASS: final contact sheet reviewed after targeted regenerations; retained 5 topic-accurate 1536x864 GTI13 raster images with no readable text/UI/risky object artifacts.",
+  "regeneration_note": "Replaced QA-risk images with prompts excluding labels, UI, logos, calculators, tape measures, and exposed wiring."
+}
