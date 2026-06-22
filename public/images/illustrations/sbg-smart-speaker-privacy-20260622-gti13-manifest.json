@@ -1,0 +1,113 @@
+{
+  "site": "securebyteguide",
+  "slug": "smart-speaker-voice-recording-privacy-audit-household-plan-2026",
+  "generated_at": "2026-06-22T04:19:04Z",
+  "host": "gti13",
+  "direct_comfyui": true,
+  "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "workflow": {
+    "width": 1536,
+    "height": 864,
+    "steps": 26,
+    "cfg": 5.4,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, words, letters, numbers, watermark, logo, brand mark, label, readable screen, app UI, login UI, document text, receipt, form, calendar grid, calculator digits, keyboard closeup, QR code, barcode, child face closeup, distorted anatomy, deformed hands, unsafe scene, medical procedure, stock photo cliché, low resolution, blurry"
+  },
+  "assets": [
+    {
+      "file": "public/images/illustrations/sbg-smart-speaker-privacy-20260622-hero.png",
+      "seed": 202606222000,
+      "prompt": "smart speaker on side table with visible mute button implied, neutral living room, no logos, no text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "fc1bb464-baeb-4f09-a07d-73968b61d199",
+      "comfy_output": {
+        "filename": "sbg-smart-speaker-privacy-20260622-hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-smart-speaker-privacy-20260622-01.png",
+      "seed": 202606222001,
+      "prompt": "household privacy audit still life with smart speaker, blank cards, closed laptop, no readable writing",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "62fe6763-98cf-4805-831f-86cc34c02659",
+      "comfy_output": {
+        "filename": "sbg-smart-speaker-privacy-20260622-01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-smart-speaker-privacy-20260622-02.png",
+      "seed": 202606222002,
+      "prompt": "child-safe family room with smart speaker placed away from toys, no child face closeup, no text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "7516e5df-9b12-45b3-b578-31f52df9c2cc",
+      "comfy_output": {
+        "filename": "sbg-smart-speaker-privacy-20260622-02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-smart-speaker-privacy-20260622-03.png",
+      "seed": 202606222003,
+      "prompt": "plain payment-control planning scene with phone dark screen and smart speaker, no app UI, no cards",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "31953315-6909-41f8-ba1e-b67e9611a859",
+      "comfy_output": {
+        "filename": "sbg-smart-speaker-privacy-20260622-03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-smart-speaker-privacy-20260622-04.png",
+      "seed": 202606222004,
+      "prompt": "device reset and recycling scene with smart speaker, blank box, no labels, no text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "ae096348-bbf7-4695-8deb-d12934e945be",
+      "comfy_output": {
+        "filename": "sbg-smart-speaker-privacy-20260622-04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    },
+    {
+      "file": "public/images/illustrations/sbg-smart-speaker-privacy-20260622-05.png",
+      "seed": 202606222005,
+      "prompt": "secure account review desk with closed laptop, smart speaker, lockbox, blank phone screen",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "prompt_id": "07b30c40-b425-4ada-beac-2d946e2673ec",
+      "comfy_output": {
+        "filename": "sbg-smart-speaker-privacy-20260622-05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      }
+    }
+  ],
+  "contact_sheet": "public/images/illustrations/sbg-smart-speaker-privacy-20260622-contact-sheet-final.jpg",
+  "visual_qa": "passed",
+  "visual_qa_notes": "No rejected images in contact-sheet QA.",
+  "contact_sheet_final": "public/images/illustrations/sbg-smart-speaker-privacy-20260622-contact-sheet-final.jpg"
+}
