@@ -1,0 +1,186 @@
+{
+  "generated_at": "2026-06-23T04:15:44Z",
+  "date": "2026-06-23",
+  "batch": "C",
+  "endpoint": "redacted-gti13-direct",
+  "host": "gti13-direct",
+  "gate_reason": "sentinel_unreachable_but_direct_comfyui_ok",
+  "workflow": {
+    "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+    "width": 1536,
+    "height": 864,
+    "steps": 24,
+    "cfg": 5.6,
+    "sampler": "dpmpp_2m",
+    "scheduler": "karras",
+    "negative_prompt": "text, letters, words, numbers, logo, watermark, signature, brand marks, readable labels, UI screenshot, app screen, QR code, barcode, distorted hands, bad anatomy, extra fingers, unsafe handling, medical procedure, fake warning label, calendar grid, handwriting, low quality, blurry, cartoon, placeholder, generic stock image, receipt, form, currency, calculator numbers, passport, license plate"
+  },
+  "queue_before": {
+    "queue_running": [],
+    "queue_pending": []
+  },
+  "system_stats_seen": true,
+  "site": "securebyteguide",
+  "slug": "home-bluetooth-tracker-privacy-audit-plan-2026",
+  "title": "Home Bluetooth Tracker Privacy Audit Plan for 2026",
+  "article": "src/content/posts/home-bluetooth-tracker-privacy-audit-plan-2026.mdx",
+  "source_validation": [
+    {
+      "url": "https://consumer.ftc.gov/articles/stalkerware-what-know",
+      "ok": true,
+      "status": 200,
+      "final": "https://consumer.ftc.gov/articles/stalkerware-what-know",
+      "error": "<HTTPError 403: 'Forbidden'>"
+    },
+    {
+      "url": "https://consumer.ftc.gov/articles/how-protect-your-privacy-online",
+      "ok": true,
+      "status": 200,
+      "final": "https://consumer.ftc.gov/articles/how-websites-apps-collect-use-your-information",
+      "error": "<HTTPError 403: 'Forbidden'>"
+    },
+    {
+      "url": "https://support.apple.com/en-us/119874",
+      "ok": true,
+      "status": 200,
+      "final": "https://support.apple.com/en-us/119874",
+      "error": null
+    },
+    {
+      "url": "https://support.google.com/android/answer/13658562",
+      "ok": true,
+      "status": 200,
+      "final": "https://support.google.com/android/answer/13658562",
+      "error": null
+    },
+    {
+      "url": "https://www.cisa.gov/secure-our-world",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.cisa.gov/secure-our-world",
+      "error": "<HTTPError 403: 'Forbidden'>"
+    },
+    {
+      "url": "https://www.techsafety.org/resources-survivors",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.techsafety.org/resources-survivors",
+      "error": null
+    },
+    {
+      "url": "https://www.fcc.gov/smartphone-security",
+      "ok": false,
+      "status": null,
+      "final": null,
+      "error": "TimeoutError('The read operation timed out')"
+    },
+    {
+      "url": "https://www.identitytheft.gov/",
+      "ok": true,
+      "status": 200,
+      "final": "https://www.identitytheft.gov/",
+      "error": null
+    }
+  ],
+  "assets": [
+    {
+      "file": "public/images/illustrations/sbg-bluetooth-tracker-20260623-hero.png",
+      "filename": "sbg-bluetooth-tracker-20260623-hero.png",
+      "suffix": "hero",
+      "seed": 202606230313,
+      "prompt": "privacy safe bluetooth tracker audit scene with keys and small blank tag on table, phone face down dark, no logos no text",
+      "prompt_id": "c18f8c39-2b64-4716-aff2-e5a81efc53c9",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_securebyteguide_hero_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1391065
+    },
+    {
+      "file": "public/images/illustrations/sbg-bluetooth-tracker-20260623-01.png",
+      "filename": "sbg-bluetooth-tracker-20260623-01.png",
+      "suffix": "01",
+      "seed": 202606230314,
+      "prompt": "person checking bag contents on clean table with plain tracker-like object, no brand marks no text",
+      "prompt_id": "6cca40ad-420c-405f-8bb6-6b6eb734fadc",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_securebyteguide_01_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1666985
+    },
+    {
+      "file": "public/images/illustrations/sbg-bluetooth-tracker-20260623-02.png",
+      "filename": "sbg-bluetooth-tracker-20260623-02.png",
+      "suffix": "02",
+      "seed": 202606230315,
+      "prompt": "family travel packing scene with luggage tag blank and phone dark screen, no readable labels",
+      "prompt_id": "f6e1202a-b793-4beb-9dac-5b6b4a7acef5",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_securebyteguide_02_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1482601
+    },
+    {
+      "file": "public/images/illustrations/sbg-bluetooth-tracker-20260623-03.png",
+      "filename": "sbg-bluetooth-tracker-20260623-03.png",
+      "suffix": "03",
+      "seed": 202606230316,
+      "prompt": "privacy safety planning desk with sealed envelope, hardware key, blank phone, no writing",
+      "prompt_id": "aec15ff4-196a-443d-af4b-79def1e62ac6",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_securebyteguide_03_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1464916
+    },
+    {
+      "file": "public/images/illustrations/sbg-bluetooth-tracker-20260623-04.png",
+      "filename": "sbg-bluetooth-tracker-20260623-04.png",
+      "suffix": "04",
+      "seed": 202606230317,
+      "prompt": "home entry bowl with keys and neutral tracker tag, no logos no numbers no text",
+      "prompt_id": "482810f1-ad02-404e-acc4-cc2815587362",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_securebyteguide_04_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1615998
+    },
+    {
+      "file": "public/images/illustrations/sbg-bluetooth-tracker-20260623-05.png",
+      "filename": "sbg-bluetooth-tracker-20260623-05.png",
+      "suffix": "05",
+      "seed": 202606230318,
+      "prompt": "supportive conversation scene at kitchen table with phones face down and blank cards, no readable text",
+      "prompt_id": "77f09900-bce1-4f00-8360-2e6c0c12ceb3",
+      "raw_output": {
+        "filename": "hermes_batchc_20260623_securebyteguide_05_00001_.png",
+        "subfolder": "",
+        "type": "output"
+      },
+      "width": 1536,
+      "height": 864,
+      "bytes": 1617484
+    }
+  ],
+  "contact_sheet": "/home/taekm33/blog-ops/16-sites/reports/batch-c-20260623-securebyteguide-contact-sheet.jpg",
+  "contact_sheet_windows": "/mnt/c/Users/k8plus/AppData/Local/hermes/scripts/batch_c_20260623_securebyteguide_contact_sheet.jpg",
+  "visual_qa": "pending external visual inspection before commit"
+}
