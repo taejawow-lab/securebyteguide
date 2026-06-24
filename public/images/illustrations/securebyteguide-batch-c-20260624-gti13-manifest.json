@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-06-24T04:26:56Z",
+  "gate": {
+    "host": "gti13",
+    "time": 1782274546,
+    "available": true,
+    "reason": "ok",
+    "manual_pause": false,
+    "gaming_detected": false,
+    "game_processes": [],
+    "gpu": {
+      "available": true,
+      "name": "NVIDIA GeForce RTX 4090",
+      "vram_total_mb": 24564,
+      "vram_free_mb": 15378,
+      "utilization_percent": 0
+    },
+    "services": {
+      "comfyui_8188": true,
+      "ollama_11434": true
+    }
+  },
+  "endpoint_host": "gti13",
+  "workflow_checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+  "assets": [
+    {
+      "site": "securebyteguide",
+      "file": "public/images/illustrations/sbg-passkey-recovery-20260624-1.png",
+      "render_url": "/images/illustrations/sbg-passkey-recovery-20260624-1.png",
+      "seed": 202606249201,
+      "prompt_id": "d357ca34-5a80-4133-9e41-277045932eac",
+      "prompt": "security still life with hardware security key, closed laptop, face down phone, lockbox, sealed envelope, blue lighting, no screens, no people, no text",
+      "negative": "text, letters, words, watermark, logo, signature, readable screen, UI screenshot, app interface, fake labels, forms, receipts, currency, QR code, brand mark, distorted anatomy, extra limbs, bad hands, low quality, blurry, oversaturated, cartoon",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "bytes": 1332067,
+      "status": "regenerated_after_visual_qa"
+    },
+    {
+      "site": "securebyteguide",
+      "file": "public/images/illustrations/sbg-passkey-recovery-20260624-2.png",
+      "render_url": "/images/illustrations/sbg-passkey-recovery-20260624-2.png",
+      "seed": 202606240201,
+      "prompt_id": "26765e3b-131a-47d7-bced-9878c04501c4",
+      "prompt": "email recovery concept with sealed envelope, blank cards, hardware key, dark phone screen, no text",
+      "negative": "text, letters, words, watermark, logo, signature, readable screen, UI screenshot, app interface, fake labels, forms, receipts, currency, QR code, brand mark, distorted anatomy, extra limbs, bad hands, low quality, blurry, oversaturated, cartoon",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "bytes": 1174926
+    },
+    {
+      "site": "securebyteguide",
+      "file": "public/images/illustrations/sbg-passkey-recovery-20260624-3.png",
+      "seed": 202606249233,
+      "prompt_id": "3390e240-6b01-4895-80b2-628b8c666726",
+      "prompt": "cybersecurity still life only, hardware security keys on dark desk, closed laptop, lockbox, sealed envelope, blank cards, blue light, no people, no human, no face, no body, no screen, no text, no logos",
+      "extra_negative": "person, human, face, body, head, hands, sleeping, portrait",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "status": "regenerated_after_final_visual_qa"
+    },
+    {
+      "site": "securebyteguide",
+      "file": "public/images/illustrations/sbg-passkey-recovery-20260624-4.png",
+      "seed": 202606249244,
+      "prompt_id": "af87eb0b-7a09-4e4a-820a-8a94bc3692cc",
+      "prompt": "passkey recovery incident response still life only, closed laptop, dark phone face down, hardware security key, sealed envelope, lockbox, blue light, no people, no human, no face, no body, no hands, no screens, no text, no logos",
+      "extra_negative": "person, human, face, body, head, hands, sleeping, portrait, screen, UI, text",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "status": "regenerated_after_final2_visual_qa"
+    },
+    {
+      "site": "securebyteguide",
+      "file": "public/images/illustrations/sbg-passkey-recovery-20260624-5.png",
+      "render_url": "/images/illustrations/sbg-passkey-recovery-20260624-5.png",
+      "seed": 202606240204,
+      "prompt_id": "ba997fad-4f7c-43ab-bc2f-6cf55fc109dc",
+      "prompt": "minimal cybersecurity workspace with passkey token, safe, blank sticky notes, blue lighting, no writing",
+      "negative": "text, letters, words, watermark, logo, signature, readable screen, UI screenshot, app interface, fake labels, forms, receipts, currency, QR code, brand mark, distorted anatomy, extra limbs, bad hands, low quality, blurry, oversaturated, cartoon",
+      "checkpoint": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "endpoint_host": "gti13",
+      "bytes": 1357822
+    }
+  ],
+  "visual_qa": "Final contact sheet visually inspected; targeted regenerations removed screen/face/calendar/calculator risks; accepted for publication."
+}
