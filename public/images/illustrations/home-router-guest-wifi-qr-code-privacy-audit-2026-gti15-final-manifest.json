@@ -1,0 +1,48 @@
+{
+  "site": "securebyteguide",
+  "slug": "home-router-guest-wifi-qr-code-privacy-audit-2026",
+  "gate": "passed",
+  "date": "2026-06-26",
+  "assets": [
+    {
+      "url": "/images/illustrations/sec-home-router-guest-wifi-qr-code-privacy-audit-2026-gti15-1.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626\\securebyteguide\\70495831\\20260626_131803_realvis_2670641959.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    },
+    {
+      "url": "/images/illustrations/sec-home-router-guest-wifi-qr-code-privacy-audit-2026-gti15-2.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626_regen\\securebyteguide\\59615567\\20260626_132637_realvis_3858103638.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    },
+    {
+      "url": "/images/illustrations/sec-home-router-guest-wifi-qr-code-privacy-audit-2026-gti15-3.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626_regen\\securebyteguide\\59615567\\20260626_132653_juggernaut_3858103639.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    },
+    {
+      "url": "/images/illustrations/sec-home-router-guest-wifi-qr-code-privacy-audit-2026-gti15-4.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626_secure_final\\35428874\\20260626_133153_krea_4026931730.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    },
+    {
+      "url": "/images/illustrations/sec-home-router-guest-wifi-qr-code-privacy-audit-2026-gti15-5.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\gti15_batch_c_20260626_secure_final\\35428874\\20260626_133230_realvis_4026931731.png",
+      "dimensions": "1536x864",
+      "host": "gti15",
+      "endpoint": "redacted",
+      "qa": "accepted_visual_contact_sheet"
+    }
+  ]
+}
