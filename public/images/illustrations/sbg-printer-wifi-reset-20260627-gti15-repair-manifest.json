@@ -1,0 +1,23 @@
+{
+  "site": "securebyteguide",
+  "slug": "home-printer-wifi-privacy-reset-before-selling-2026",
+  "backend": "GTI15 ComfyUI",
+  "endpoint": "redacted",
+  "repair": "replaced two printer images with brand/logo/UI-like risks",
+  "accepted": [
+    {
+      "file": "sbg-printer-wifi-reset-20260627-repair-01.png",
+      "engine": "realvis",
+      "seed": 129081082,
+      "dimensions": "1536x864"
+    },
+    {
+      "file": "sbg-printer-wifi-reset-20260627-repair-02.png",
+      "engine": "juggernaut",
+      "seed": 129081083,
+      "dimensions": "1536x864"
+    }
+  ],
+  "qa": "visual QA passed: no readable text/logos/QR/credentials; blank/dark screens only",
+  "createdAt": "2026-06-27T15:00:35.699799+00:00"
+}
