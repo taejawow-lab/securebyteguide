@@ -1,0 +1,31 @@
+{
+  "date": "2026-06-27",
+  "site": "securebyteguide",
+  "slug": "home-printer-wifi-privacy-reset-before-selling-2026",
+  "endpoint": "GTI15 direct ComfyUI endpoint (redacted)",
+  "dimensions": "1536x864",
+  "source": "C:/Users/k8plus/gti15_setup/generate_natural_blog_candidates.py",
+  "accepted_images": [
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/securebyteguide_05/20260627_131801_krea_3510015902.png",
+      "to": "public/images/illustrations/sbg-printer-wifi-reset-20260627-hero.png"
+    },
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/securebyteguide_05/20260627_131838_realvis_3510015903.png",
+      "to": "public/images/illustrations/sbg-printer-wifi-reset-20260627-01.png"
+    },
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/securebyteguide_05/20260627_131855_juggernaut_3510015904.png",
+      "to": "public/images/illustrations/sbg-printer-wifi-reset-20260627-02.png"
+    },
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/securebyteguide_06/20260627_131913_krea_1212059919.png",
+      "to": "public/images/illustrations/sbg-printer-wifi-reset-20260627-03.png"
+    },
+    {
+      "from": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260627_gti15/securebyteguide_06/20260627_131947_realvis_1212059920.png",
+      "to": "public/images/illustrations/sbg-printer-wifi-reset-20260627-04.png"
+    }
+  ],
+  "visual_qa": "accepted after contact sheet inspection; rejected originals not referenced"
+}
