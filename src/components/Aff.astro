@@ -1,8 +1,8 @@
 ---
-// Affiliate-aware link component v3.
-// v2: auto-injects Amazon ascsubtag for click attribution.
-// v3: exposes data-aff-* attributes for future client-side analytics
-//     (GTM, Plausible outbound, Umami, custom CF Worker collector, etc.)
+// Affiliate-aware link component v4.
+// v4: pauses Amazon outbound links unless PUBLIC_AMAZON_ASSOCIATES_ACTIVE=true.
+// This prevents closed/unapproved Associates store IDs from publishing Amazon
+// Special Links and allows re-enabling only after a fresh compliant approval.
 //
 // Usage:
 //   <Aff href="https://amazon.com/dp/B07XXXXX" region="us">Buy</Aff>
@@ -20,6 +20,7 @@ export interface Props {
 const { href, region = 'us', subtag, rel = 'sponsored noopener nofollow', class: cls = '', target = '_blank' } = Astro.props;
 
 const defaultTag = import.meta.env.PUBLIC_AMAZON_TAG as string | undefined;
+const associatesActive = (import.meta.env.PUBLIC_AMAZON_ASSOCIATES_ACTIVE as string | undefined) === 'true';
 
 const tagEnvMap: Record<string, string> = {
   us: 'PUBLIC_AMAZON_TAG_US',
@@ -56,39 +57,64 @@ function sanitizeSubtag(s: string): string {
   return s.replace(/[^a-zA-Z0-9._-]/g, '').slice(0, 80);
 }
 
+function isAmazonUrl(url: string): boolean {
+  return /(^|\.)amazon\.|amzn\.to|amzn\.asia/i.test(url);
+}
+
 const base = pageBase();
 const composedSubtag = subtag ? `${base.combined}-${subtag}` : base.combined;
 const finalSubtag = sanitizeSubtag(composedSubtag);
+const amazonUrl = isAmazonUrl(href);
 
 function buildAffUrl(url: string, reg: string, asc: string): string {
-  if (!url.includes('amazon.') && !url.includes('amzn.to')) return url;
+  if (!isAmazonUrl(url)) return url;
+  if (!associatesActive) return '';
   try {
     const u = new URL(url);
     const tagEnv = tagEnvMap[reg];
     const tag = (tagEnv ? (import.meta.env[tagEnv] as string | undefined) : undefined) || defaultTag;
-    if (tag) u.searchParams.set('tag', tag);
+    if (!tag) return '';
+    u.searchParams.set('tag', tag);
     if (asc) u.searchParams.set('ascsubtag', asc);
     return u.toString();
   } catch {
-    return url;
+    return '';
   }
 }
 
 const finalHref = buildAffUrl(href, region, finalSubtag);
 const productSubtag = subtag || '';
+const disabled = amazonUrl && !finalHref;
+const disabledClass = `${cls} opacity-60 cursor-not-allowed pointer-events-none`;
 ---
 
-<a
-  href={finalHref}
-  rel={rel}
-  target={target}
-  class={cls}
-  data-aff="1"
-  data-aff-site={base.site}
-  data-aff-page={base.page}
-  data-aff-product={productSubtag}
-  data-aff-region={region}
-  data-aff-subtag={finalSubtag}
->
-  <slot />
-</a>
+{disabled ? (
+  <span
+    class={disabledClass}
+    role="text"
+    aria-label="Amazon retailer link paused during Associates compliance review"
+    data-aff="paused"
+    data-aff-site={base.site}
+    data-aff-page={base.page}
+    data-aff-product={productSubtag}
+    data-aff-region={region}
+    data-aff-subtag={finalSubtag}
+  >
+    <slot />
+  </span>
+) : (
+  <a
+    href={finalHref}
+    rel={rel}
+    target={target}
+    class={cls}
+    data-aff="1"
+    data-aff-site={base.site}
+    data-aff-page={base.page}
+    data-aff-product={productSubtag}
+    data-aff-region={region}
+    data-aff-subtag={finalSubtag}
+  >
+    <slot />
+  </a>
+)}

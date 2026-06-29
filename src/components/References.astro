@@ -7,6 +7,13 @@ export interface Props {
 const { sources } = Astro.props;
 const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
 const heading = lang === 'ko' ? '참고 자료' : 'References';
+const associatesActive = (import.meta.env.PUBLIC_AMAZON_ASSOCIATES_ACTIVE as string | undefined) === 'true';
+function isAmazonUrl(url: string): boolean {
+  return /(^|\.)amazon\.|amzn\.to|amzn\.asia/i.test(url || '');
+}
+function sourceUrlAllowed(url: string): boolean {
+  return Boolean(url) && (!isAmazonUrl(url) || associatesActive);
+}
 ---
 
 <aside class="mt-12 pt-8 border-t border-border">
@@ -21,14 +28,18 @@ const heading = lang === 'ko' ? '참고 자료' : 'References';
         {source.author && <span>{source.author}</span>}
         {source.year && <span> ({source.year})</span>}
         {source.author || source.year ? '. ' : ''}
-        <a
-          href={source.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-primary hover:underline"
-        >
-          {source.title}
-        </a>
+        {sourceUrlAllowed(source.url) ? (
+          <a
+            href={source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary hover:underline"
+          >
+            {source.title}
+          </a>
+        ) : (
+          <span class="text-foreground">{source.title}</span>
+        )}
         {source.publication && <span>. <em>{source.publication}</em></span>}
       </li>
     ))}
