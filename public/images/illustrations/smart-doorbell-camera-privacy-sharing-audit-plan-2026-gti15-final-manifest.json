@@ -1,0 +1,48 @@
+{
+  "site": "securebyteguide",
+  "slug": "smart-doorbell-camera-privacy-sharing-audit-plan-2026",
+  "date": "2026-06-29",
+  "endpoint_host": "GTI15 direct ComfyUI endpoint (redacted in report)",
+  "accepted": [
+    {
+      "slot": 1,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629/securebyteguide/run1/20260629_131737_juggernaut_3975713079.png",
+      "filename": "sbg-scfrt-doorbell-camera-privacy-sharing-audit-plan-2026-01.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_131737_juggernaut_3975713079.png",
+      "status": "accepted_visual_QA"
+    },
+    {
+      "slot": 2,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629/securebyteguide/run2/20260629_131825_realvis_760629372.png",
+      "filename": "sbg-scfrt-doorbell-camera-privacy-sharing-audit-plan-2026-02.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_131825_realvis_760629372.png",
+      "status": "accepted_visual_QA"
+    },
+    {
+      "slot": 3,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629/securebyteguide/run2/20260629_131840_juggernaut_760629373.png",
+      "filename": "sbg-scfrt-doorbell-camera-privacy-sharing-audit-plan-2026-03.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_131840_juggernaut_760629373.png",
+      "status": "accepted_visual_QA"
+    },
+    {
+      "slot": 4,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629_repair/securebyteguide/run1/20260629_132218_realvis_2769178260.png",
+      "filename": "sbg-scfrt-doorbell-camera-privacy-sharing-audit-plan-2026-04.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_132218_realvis_2769178260.png",
+      "status": "accepted_visual_QA"
+    },
+    {
+      "slot": 5,
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_gti15_20260629_repair/securebyteguide/run2/20260629_132249_krea_1210199008.png",
+      "filename": "sbg-scfrt-doorbell-camera-privacy-sharing-audit-plan-2026-05.png",
+      "dimensions": "1536x864",
+      "engine_from_filename": "20260629_132249_krea_1210199008.png",
+      "status": "accepted_visual_QA"
+    }
+  ]
+}
