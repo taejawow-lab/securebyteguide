@@ -1,0 +1,44 @@
+{
+  "site": "securebyteguide",
+  "slug": "home-nas-ransomware-backup-isolation-checklist-2026",
+  "date": "2026-07-01",
+  "endpoint_host": "GTI15 ComfyUI (internal endpoint redacted in report)",
+  "accepted": [
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/securebyteguide/prompt1/20260701_131727_krea_1639877374.png",
+      "published": "/home/taekm33/blog-ops/16-sites/securebyteguide/public/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-01.png",
+      "url": "/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-01.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/securebyteguide/prompt1/20260701_131804_realvis_1639877375.png",
+      "published": "/home/taekm33/blog-ops/16-sites/securebyteguide/public/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-02.png",
+      "url": "/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-02.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/securebyteguide/prompt2/20260701_131916_realvis_1396186959.png",
+      "published": "/home/taekm33/blog-ops/16-sites/securebyteguide/public/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-03.png",
+      "url": "/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-03.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/securebyteguide/prompt2/20260701_131933_juggernaut_1396186960.png",
+      "published": "/home/taekm33/blog-ops/16-sites/securebyteguide/public/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-04.png",
+      "url": "/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-04.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    },
+    {
+      "source": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260701_gti15/securebyteguide/repair1/20260701_132641_juggernaut_205524868.png",
+      "published": "/home/taekm33/blog-ops/16-sites/securebyteguide/public/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-05.png",
+      "url": "/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-05.png",
+      "qa": "accepted",
+      "dimensions": "1536x864"
+    }
+  ],
+  "visual_qa": "passed after rejecting unsafe/text/UI/currency/medicine/document candidates as applicable"
+}

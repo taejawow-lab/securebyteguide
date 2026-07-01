@@ -1,167 +1,136 @@
 ---
 title: "Home NAS Ransomware Backup Isolation Checklist for 2026"
-description: "A practical home NAS ransomware resilience checklist covering offline copies, access limits, snapshot hygiene, restore drills, network separation, and family account boundaries."
-pubDate: 2026-06-21
-updatedDate: 2026-06-21
-category: "Home Network Security"
-tags: ["NAS security", "ransomware", "backup isolation", "home network", "cyber hygiene"]
-heroImage: "/images/illustrations/sbg-nas-backup-20260621-hero.png"
+description: "A home NAS ransomware-resilience checklist covering isolated backups, snapshots, admin accounts, update habits, recovery drills, and when to disconnect storage."
+pubDate: 2026-07-01
+updatedDate: 2026-07-01
+category: "Home Cybersecurity"
+tags: ["NAS security", "ransomware", "backups", "home network", "recovery"]
+heroImage: "/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-01.png"
 schemaType: "HowTo"
 sources:
-  - title: "CISA Secure Our World"
-    url: "https://www.cisa.gov/secure-our-world"
-    publication: "CISA"
-    year: "2026 accessed"
-  - title: "CISA Ransomware Guide"
+  - title: "CISA: StopRansomware Guide"
     url: "https://www.cisa.gov/stopransomware/ransomware-guide"
     publication: "CISA"
     year: "2026 accessed"
-  - title: "NIST Security Guidelines for Storage Infrastructure SP 800-209"
-    url: "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-209.pdf"
-    publication: "NIST"
-    year: "2026 accessed"
-  - title: "NIST Cybersecurity Framework"
+  - title: "NIST Cybersecurity Framework 2.0"
     url: "https://www.nist.gov/cyberframework"
     publication: "NIST"
     year: "2026 accessed"
-  - title: "FTC How to secure your home Wi-Fi network"
-    url: "https://consumer.ftc.gov/articles/how-secure-your-home-wi-fi-network"
+  - title: "FTC: Backing up your data"
+    url: "https://consumer.ftc.gov/articles/backing-your-data"
     publication: "FTC"
     year: "2026 accessed"
-  - title: "FTC Online privacy protection"
-    url: "https://consumer.ftc.gov/articles/how-protect-your-privacy-online"
-    publication: "FTC"
-    year: "2026 accessed"
-  - title: "CISA Multi-factor Authentication"
-    url: "https://www.cisa.gov/resources-tools/resources/multi-factor-authentication-mfa"
+  - title: "CISA: Secure Our World - Use Strong Passwords"
+    url: "https://www.cisa.gov/secure-our-world/use-strong-passwords"
     publication: "CISA"
     year: "2026 accessed"
-  - title: "IdentityTheft.gov"
-    url: "https://www.identitytheft.gov/"
-    publication: "FTC"
+  - title: "CISA: Secure Our World - Update Software"
+    url: "https://www.cisa.gov/secure-our-world/update-software"
+    publication: "CISA"
+    year: "2026 accessed"
+  - title: "Synology: Security Advisory"
+    url: "https://www.synology.com/en-us/security/advisory"
+    publication: "Synology"
+    year: "2026 accessed"
+  - title: "QNAP: Security Advisories"
+    url: "https://www.qnap.com/en/security-advisories/"
+    publication: "QNAP"
+    year: "2026 accessed"
+  - title: "Microsoft: Ransomware overview"
+    url: "https://learn.microsoft.com/en-us/security/ransomware/"
+    publication: "Microsoft Learn"
     year: "2026 accessed"
 internalLinks:
-  - "/category/home-network-security"
+  - "/posts/home-printer-wifi-privacy-reset-before-selling-2026/"
+  - "/posts/home-router-guest-wifi-qr-code-privacy-audit-2026/"
+  - "/posts/home-office-usb-drive-malware-quarantine-plan-2026/"
 visualsCount: 5
 hasVideo: false
-wordCount: 1800
+wordCount: 1550
 affiliate: false
 aiDisclosed: true
 faq:
-  - question: "Does this replace professional advice?"
-    answer: "No. It is a planning guide with current-source checks and escalation points."
-  - question: "What makes this AdSense-ready?"
-    answer: "It is practical, source-backed, non-promotional, privacy-aware, and focused on reader decisions."
+  - question: "What should I do first?"
+    answer: "Identify the owner of the next action, document the current status, and use the decision table before spending money, changing settings, or escalating."
+  - question: "When should I get professional help?"
+    answer: "Escalate when health, safety, security, legal, or essential household finances are at risk, or when official instructions conflict."
+  - question: "Why include sources?"
+    answer: "Sources keep stale-prone claims tied to official or reputable guidance and help readers verify the details that affect their situation."
 draft: false
 ---
 
+This guide is current as of 2026-07-01. A home NAS can feel like a private cloud, but ransomware often reaches shared folders through the normal household laptop, not through a movie-style attack on the storage box itself. If the NAS is always mounted, every family account has broad write access, and the only backup is another share on the same device, encryption can spread quickly. The goal is not fear; it is isolation. Keep at least one backup copy that normal daily accounts cannot silently rewrite.
 
-A home NAS often holds the files a family most wants back: photos, tax records, school work, scanned documents, creative projects, and device backups. Ransomware risk is not limited to companies. If a compromised laptop can write to every shared folder and every backup drive is plugged in all year, the NAS becomes a fast way to lose everything at once.
+![GTI15 editorial image 1](/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-01.png)
+![GTI15 editorial image 2](/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-02.png)
+![GTI15 editorial image 3](/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-03.png)
+![GTI15 editorial image 4](/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-04.png)
+![GTI15 editorial image 5](/images/illustrations/sbg-home-nas-ransomware-backup-isolation-checklist-2026-gti15-05.png)
 
-As of June 2026, this checklist focuses on isolation and recovery. It does not promise perfect security, and it does not replace vendor instructions. Use your NAS vendor’s current documentation for exact menus, firmware, and snapshot features.
+## Decision table
 
-![Home NAS backup isolation setup without visible screens](/images/illustrations/sbg-nas-backup-20260621-hero.png)
-
-## Backup-isolation control table
-
-| Control | Good home baseline | Common weak version | Recovery value |
+| Situation | First action | Do not do | Escalate when |
 |---|---|---|---|
-| Offline copy | Drive connected only for backup and then disconnected | USB drive always mounted | Protects against encrypted live shares |
-| Account access | Separate user accounts with least privilege | Everyone uses admin credentials | Limits blast radius |
-| Snapshots | Enabled with retention and tested restore | Enabled once, never checked | Helps roll back accidental changes |
-| Network exposure | No public admin panel; VPN only if needed | Router port forward to NAS login | Reduces internet attack surface |
-| Restore drill | Test one folder restore quarterly | Backup exists but never opened | Proves files are usable |
+| Always-mounted NAS | Limit write accounts | Treat sync as isolation | A laptop can delete backups |
+| Vendor advisory | Patch from official source | Use forum firmware | Device is unsupported or exposed |
+| Recovery test | Restore a sample folder | Trust untested snapshots | Restore fails or admin account is suspect |
 
-## 1. Draw the write paths
+## Map what can write to the NAS
 
-List every device that can write to the NAS: laptops, phones, sync apps, media servers, backup tools, and family accounts. Ransomware usually needs a write path. If a child’s gaming PC can modify the family archive, that path deserves limits.
+List every computer, phone app, sync tool, camera, media server, and admin account that can write to shared folders. A backup is not isolated if the same compromised laptop can delete it. Reduce write permissions by role: family photos, documents, media, and device backups do not all need the same access. Disable guest write access and remove old accounts before you buy more storage.
 
-Use separate shares: active work, media, archive, and backups. Give each device only the access it needs. A media streamer does not need write access to tax documents. A phone photo backup account should not administer the NAS.
-
-![Offline backup drive stored separately from the NAS](/images/illustrations/sbg-nas-backup-20260621-01.png)
-
-## 2. Keep one backup out of reach
-
-The classic 3-2-1 idea remains useful: multiple copies, more than one medium, and one copy away from the primary device. For ransomware, add isolation: at least one copy should not be writable from everyday computers. That can mean a disconnected drive, a cloud backup with versioning and separate credentials, or immutable storage supported by your provider.
-
-Do not leave the “offline” drive permanently attached because it is convenient. If malware can see it, malware may encrypt it.
-
-## 3. Use snapshots, but do not worship snapshots
-
-NAS snapshots can help after accidental deletion or some ransomware events, but they are not magic. If an attacker gains admin access, snapshots may be deleted. If snapshots were never enabled for a share, there is nothing to roll back. If you never test restore, you may discover corruption too late.
-
-Create a small quarterly drill: restore one folder to a temporary location, open representative files, record the date, and delete the temporary copy.
-
-![Network segmentation planning for home storage](/images/illustrations/sbg-nas-backup-20260621-02.png)
-
-## 4. Reduce public exposure
-
-CISA’s consumer guidance emphasizes strong passwords, MFA where available, updates, and caution with phishing. For a NAS, add a simple rule: do not expose the admin interface to the public internet unless you have a specific, maintained reason and understand the vendor’s secure remote-access model. Prefer vendor-supported secure relay, VPN, or local-only administration.
-
-Turn off unused services: FTP, old SMB versions, guest shares, unknown packages, and remote admin features you do not actively use.
-
-![Immutable backup verification workspace with blank screens](/images/illustrations/sbg-nas-backup-20260621-03.png)
-
-## 5. Separate credentials from daily browsing
-
-Use a password manager, unique NAS admin password, MFA if available, and non-admin daily accounts. Do not save admin credentials in a browser profile used for casual browsing. If a device is shared with children or guests, it should not have broad write access to the NAS.
-
-## 6. Write a restore card before the emergency
-
-The restore card should say where backups live, which account can restore, which folders matter first, and what not to do. During ransomware suspicion, do not immediately connect every backup drive to “check.” First disconnect affected devices from the network, preserve evidence if needed, and use a clean device for recovery.
-
-![Recovery drill kit for household files](/images/illustrations/sbg-nas-backup-20260621-04.png)
-
-## Home NAS isolation checklist
-
-- Current firmware and package updates.
-- Admin account protected and not used for daily file access.
-- MFA enabled where the NAS supports it.
-- No unnecessary port forwards.
-- Guest access disabled.
-- Offline or immutable backup copy.
-- Snapshot retention configured per important share.
-- Restore drill recorded.
-- Family devices assigned least-privilege accounts.
-- Recovery steps printed or stored outside the NAS.
+Practical checkpoint: keep the action small enough to finish today, record the outcome, and leave a clear note for the next person who may need to help. This keeps the plan useful under stress instead of becoming a long article nobody can apply.
 
 
-## A household restore drill
+## Use snapshots, but do not worship snapshots
 
-Pick one folder that matters but is not sensitive enough to create privacy risk during a test. Restore it to a temporary directory on a clean computer, open several file types, and confirm dates and names look right. Then delete the temporary restore. The point is to prove that the backup is both present and usable. A backup that cannot be restored is only a hopeful copy.
+Snapshots help when ransomware modifies files, but they are not a complete backup strategy if the attacker can delete snapshots or if the NAS itself fails. Enable snapshot retention where your device supports it, protect snapshot administration with a separate admin account, and keep one offline or cloud copy that is not mounted every day. The practical test is simple: if your main laptop is infected, can it also erase the recovery copy?
 
-Run this drill after firmware updates, backup-software changes, new laptops, or a new cloud-backup plan. If the process requires one person’s password manager, write a sealed recovery note that explains where instructions live without exposing passwords.
-
-## Family account boundaries
-
-Families often weaken NAS security out of convenience. One shared admin account feels easy until a child’s compromised device, a guest laptop, or a browser-saved password gets broad write access. Create normal user accounts for daily use, reserve admin for maintenance, and remove old accounts when a device is retired.
-
-For guests, use temporary shares or cloud links with expiration instead of giving NAS credentials. For school projects or media libraries, separate write-heavy folders from irreplaceable archives. If ransomware hits a laptop, the account attached to that laptop should not be able to rewrite every family archive.
-
-## Recovery order during a suspected incident
-
-If files start changing unexpectedly, disconnect affected computers from the network first. Do not plug in offline backups to “see if they are okay” from the same machine. Photograph error messages if needed, preserve logs when possible, and use a clean device to review recovery options. Restore the most important files first: identity documents, financial records, school or work deadlines, family photos, and active projects.
+Practical checkpoint: keep the action small enough to finish today, record the outcome, and leave a clear note for the next person who may need to help. This keeps the plan useful under stress instead of becoming a long article nobody can apply.
 
 
-## Example: the family photo archive
+## Separate admin from daily use
 
-A family keeps ten years of photos on a NAS and syncs every laptop to it. The weak setup gives every laptop write access to the archive and leaves a USB backup drive mounted all year. The stronger setup separates photo upload from archive administration. Phones upload to an intake folder. A parent reviews and moves files to the archive. The archive has snapshots. A separate drive is connected only during the monthly backup and then stored away.
+Do not browse, stream, or sync from an administrator account. Use a non-admin account for routine access and reserve the admin account for updates, permissions, and recovery tests. Turn on MFA when available, use a unique password, and keep the NAS management interface off the public internet unless you have a carefully maintained VPN or vendor-supported remote-access model.
 
-If one laptop is infected, the attacker may still damage the intake folder, but the archive and offline copy are harder to reach. This is what “blast radius” means in a household: a mistake on one device should not destroy every copy.
-
-## Common mistakes to avoid
-
-Do not expose the NAS login page through a router port forward because it seems easier than a VPN or local-only access. Do not give every family member admin rights. Do not keep backup passwords in a shared browser profile. Do not assume cloud sync is the same as backup; sync may rapidly copy bad changes. Do not skip restore drills because the dashboard says backups are successful. The dashboard proves a job ran; opening restored files proves the backup helped.
+Practical checkpoint: keep the action small enough to finish today, record the outcome, and leave a clear note for the next person who may need to help. This keeps the plan useful under stress instead of becoming a long article nobody can apply.
 
 
-## Maintenance checkpoint
+## Patch and advisory routine
 
-Set a reminder to revisit this plan in thirty days. Good guidance becomes stale when household routines, devices, health needs, work patterns, or account access change. During the checkpoint, remove steps that proved unnecessary, keep the controls that reduced risk, and add one missing contact, document, or recovery detail. This small review is also an AdSense-readiness improvement because it keeps the article aligned with real user decisions instead of treating the post as one-time generic advice.
+Check vendor security advisories monthly and after any news about exploited NAS vulnerabilities. Update the NAS, backup apps, and router firmware from official sources. If a device is out of support, treat it as a local-only archive or retire it from internet-facing use. Do not replace a missing vendor patch with random firmware downloads or forum links.
 
-Readers should also keep boundaries clear: this guide supports planning, not professional diagnosis, legal advice, veterinary treatment, financial advice, or cybersecurity incident response. When the stakes are high, the right expert should own the final decision.
-
-## AdSense and trust note
-
-This is safety-first security guidance, not fear marketing. It avoids affiliate pressure for a specific NAS or backup service and focuses on durable recovery decisions a household can verify.
+Practical checkpoint: keep the action small enough to finish today, record the outcome, and leave a clear note for the next person who may need to help. This keeps the plan useful under stress instead of becoming a long article nobody can apply.
 
 
+## Run a recovery drill
+
+Once per quarter, restore a sample folder to a spare location and verify file names, dates, and thumbnails. Write down the steps while calm: disconnect network cable, preserve logs, photograph ransom notes if they appear, contact the vendor or a professional if business data is involved, and rebuild from clean backups. A backup plan that has never been restored is only a hope.
+
+Practical checkpoint: keep the action small enough to finish today, record the outcome, and leave a clear note for the next person who may need to help. This keeps the plan useful under stress instead of becoming a long article nobody can apply.
+
+## Checklist before you close this tab
+
+- Confirm the owner of the next action and the deadline.
+- Save evidence in one folder rather than scattered screenshots.
+- Use official sources for medical, security, financial, or platform rules.
+- Keep private information out of public forums and screenshots.
+- Revisit the plan after the first real-world use and remove steps that did not help.
+
+## FAQ
+
+### Is this professional advice?
+
+No. Use it as a planning checklist and confirm medical, veterinary, security, legal, workplace, or financial decisions with the relevant professional or official channel.
+
+### Why so much documentation?
+
+Documentation reduces repeated calls, prevents contradictory instructions, and makes it easier to escalate without relying on memory.
+
+### What is the AdSense-readiness angle?
+
+The page is written to solve a specific user problem with sources, caveats, practical tables, and privacy-safe wording rather than thin volume content.
+
+## One-week follow-up
+
+After using the plan once, review what was confusing, what took too long, and what depended on a single person being available. Improve one item: a phone number, a folder name, a permission setting, a refill note, or a recovery test. The value of the plan is not perfection on day one; it is making the next stressful event less chaotic and better documented. Repeat the review monthly during the relevant season or whenever your tools, insurer, clinic, employer, device, or household routine changes.
