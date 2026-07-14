@@ -72,7 +72,7 @@ function buildAffUrl(url: string, reg: string, asc: string): string {
   try {
     const u = new URL(url);
     // Legacy content used uppercase US and Global; normalize both to the US Associates marketplace.
-    const normalizedRegion = reg.toLowerCase() === global ? us : reg.toLowerCase();
+    const normalizedRegion = reg.toLowerCase() === "global" ? "us" : reg.toLowerCase();
     const tagEnv = tagEnvMap[normalizedRegion];
     const tag = (tagEnv ? (import.meta.env[tagEnv] as string | undefined) : undefined) || defaultTag;
     if (!tag) return '';
