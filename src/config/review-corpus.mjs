@@ -1,0 +1,28 @@
+export const REVIEW_POSTS = [
+  "2fa-methods-compared-data",
+  "browser-extension-permission-audit-2026",
+  "dark-web-monitoring-services",
+  "enterprise-mfa-solutions-tested",
+  "family-account-recovery-passkey-binder-without-leaking-secrets-2026",
+  "family-security-setup-checklist",
+  "home-printer-wifi-privacy-reset-before-selling-2026",
+  "home-router-dns-filtering-family-security-plan-2026",
+  "home-router-security-settings",
+  "iot-device-security-checklist",
+  "mfa-rollout-small-business-no-lockouts",
+  "mobile-security-android-ios",
+  "oauth-consent-phishing-app-access-audit",
+  "old-smartphone-authenticator-migration-before-trade-in-2026",
+  "passkey-passwordless-migration-guide",
+  "passkey-recovery-email-security-checklist-2026",
+  "password-manager-business-team-plans",
+  "phishing-detection-2024-trends",
+  "ransomware-backup-drill-small-business",
+  "router-security-audit-checklist-2026",
+  "shared-family-tablet-privacy-reset-child-account-plan-2026",
+  "vpn-leak-tests-prevention",
+  "vpn-multi-hop-paranoia-options",
+  "vpn-performance-privacy-reality"
+];
+export const REVIEW_POST_SET = new Set(REVIEW_POSTS);
+export const REVIEW_MIN_EQUIVALENT_WORDS = 850;

@@ -58,7 +58,7 @@ faq:
     answer: "No effectively. Netflix and other streaming services blacklist residential IPs that show VPN-like usage patterns. Your home IP through which the VPN routes traffic will likely show your normal regional content, which defeats the bypass purpose. For region-shift use cases, commercial VPNs with rotating IP pools work better. Self-hosted VPNs serve home-resource access and privacy, not streaming geo-shifts."
   - question: "What is the difference between Tailscale and traditional WireGuard?"
     answer: "Tailscale uses WireGuard but adds automatic NAT traversal, key management, ACL policies, and a coordination server that handles peer discovery. Traditional WireGuard requires you to configure each peer manually with public keys and IPs. Tailscale makes the setup nearly zero-config; traditional WireGuard gives you full control. Both produce equivalent encrypted tunnels — Tailscale just makes the management easier at the cost of trusting their coordination server."
-draft: false
+draft: true
 ---
 
 import ProductBox from '../../components/ProductBox.astro';

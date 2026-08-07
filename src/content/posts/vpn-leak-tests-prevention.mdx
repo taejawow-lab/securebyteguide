@@ -60,7 +60,6 @@ faq:
     answer: "Yes when properly implemented. A kill switch blocks all internet traffic if the VPN connection drops, preventing the brief window of unprotected traffic during reconnection. The implementation varies — software kill switches in the VPN client can fail during system suspend/resume; firewall-rule-based kill switches (configured at OS level) are more reliable. Quality VPN clients include built-in kill switches that work well for most users."
 draft: false
 ---
-
 import ProductBox from '../../components/ProductBox.astro';
 import Aff from '../../components/Aff.astro';
 
@@ -164,4 +163,4 @@ Run these checks after any VPN client update or system update. Connect VPN. Visi
 
 DNS leaks, WebRTC leaks, IPv6 leaks, kill switch failures, and split tunneling errors each break VPN protection in different ways. Quality VPN clients address most by default; verification confirms they work. The 15-minute leak test routine after VPN setup is the difference between thinking you have privacy and knowing you have privacy.
 
-For more VPN topics see our [VPN protocols comparison](/posts/vpn-protocols-wireguard-vs-openvpn), [multi-hop VPN options](/posts/vpn-multi-hop-paranoia-options), and [VPN privacy category](/category/vpn-privacy).
+For more VPN topics see our VPN protocols comparison, [multi-hop VPN options](/posts/vpn-multi-hop-paranoia-options), and [VPN privacy category](/category/vpn-privacy).
