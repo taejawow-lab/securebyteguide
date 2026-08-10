@@ -40,7 +40,6 @@ sources:
     publication: "CISA"
     year: "2024"
 internalLinks:
-  - "/posts/vpn-protocols-wireguard-vs-openvpn"
   - "/posts/vpn-performance-privacy-reality"
   - "/category/vpn-privacy"
 visualsCount: 5
@@ -60,7 +59,6 @@ faq:
     answer: "Tailscale uses WireGuard but adds automatic NAT traversal, key management, ACL policies, and a coordination server that handles peer discovery. Traditional WireGuard requires you to configure each peer manually with public keys and IPs. Tailscale makes the setup nearly zero-config; traditional WireGuard gives you full control. Both produce equivalent encrypted tunnels — Tailscale just makes the management easier at the cost of trusting their coordination server."
 draft: true
 ---
-
 import ProductBox from '../../components/ProductBox.astro';
 import Aff from '../../components/Aff.astro';
 
@@ -151,5 +149,3 @@ Plan 1-2 hours for first-time self-hosted VPN setup. Phase 1 (15-30 min): Raspbe
 ## Bottom Line
 
 Tailscale for most home users wanting zero-config secure access. PiVPN for users wanting fully self-hosted privacy with reasonable automation. Manual WireGuard for power users and learners. All three work well with a 50 dollar Raspberry Pi and your home internet connection.
-
-For more VPN topics see our [VPN protocols comparison](/posts/vpn-protocols-wireguard-vs-openvpn), [VPN performance reality](/posts/vpn-performance-privacy-reality), and [VPN privacy category](/category/vpn-privacy).
