@@ -1,0 +1,95 @@
+{
+  "site": "securebyteguide",
+  "slug_prefix": "sbg-data-broker-20260816",
+  "generated_at": "2026-08-16",
+  "assets": [
+    {
+      "prompt_id": "eff934b5-3c29-48da-a1a3-0491d1dc64da",
+      "seed": 916260200,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "privacy protection still life with plain locked metal box and several disconnected network cables on a completely empty surface",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "sbg-data-broker-20260816-hero.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    },
+    {
+      "prompt_id": "cfae2caa-a284-4065-93fe-5b5537fce17f",
+      "seed": 916260201,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "abstract data exposure network made only from plain wooden discs connected by thin cords, with a large plain padlock in foreground",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "sbg-data-broker-20260816-01.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    },
+    {
+      "prompt_id": "8fa3d44c-d0c4-44e5-9a6d-2d9d750deebb",
+      "seed": 916260202,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "risk prioritization represented by four shallow plain wooden trays containing different quantities of smooth blank stones and small plain shield shapes",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "sbg-data-broker-20260816-02.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    },
+    {
+      "prompt_id": "52585749-bc7b-45c3-aa92-7e5670ac5439",
+      "seed": 916260203,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "removal workflow represented by several completely blank sealed kraft envelopes moving from an open tray into a locked plain metal box",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "sbg-data-broker-20260816-03.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    },
+    {
+      "prompt_id": "2816d2bb-bcfe-481e-97b3-9856af3eb820",
+      "seed": 916260204,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "layered privacy protection scene with three plain metal shield shapes surrounding a closed locked storage box and unplugged network cable",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "sbg-data-broker-20260816-04.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    },
+    {
+      "prompt_id": "60f3087b-52c5-43f6-ad5b-e042490d3fa6",
+      "seed": 916260205,
+      "engine": "krea",
+      "model": "flux1-krea-dev_fp8_scaled.safetensors",
+      "prompt": "recurrence monitoring represented by three plain circular wooden markers arranged around a closed lockbox, each marker completely blank",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "file": "sbg-data-broker-20260816-05.png",
+      "status": "ACCEPTED_VISUAL_QA",
+      "regenerated": true
+    }
+  ],
+  "contact_sheet": "sbg-data-broker-20260816-contact-sheet-published.jpg",
+  "visual_qa": "PASS: strict final contact-sheet inspection; only accepted published assets retained.",
+  "publish_policy": "Only listed assets may be transferred after final contact-sheet visual QA.",
+  "published_asset_count": 6
+}

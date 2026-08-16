@@ -22,7 +22,8 @@ export const REVIEW_POSTS = [
   "shared-family-tablet-privacy-reset-child-account-plan-2026",
   "vpn-leak-tests-prevention",
   "vpn-multi-hop-paranoia-options",
-  "vpn-performance-privacy-reality"
+  "vpn-performance-privacy-reality",
+  "data-broker-opt-out-people-search-removal-plan"
 ];
 export const REVIEW_POST_SET = new Set(REVIEW_POSTS);
 export const REVIEW_MIN_EQUIVALENT_WORDS = 850;
