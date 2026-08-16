@@ -19,6 +19,7 @@ export interface Props {
   headings?: Array<{ depth: number; slug: string; text: string }>;
   faq?: Array<{ question: string; answer: string }>;
   internalLinks?: string[];
+  takeaways?: string[];
 }
 
 const {
@@ -36,6 +37,11 @@ const {
   headings = [],
   faq = [],
   internalLinks = [],
+  takeaways = [
+    'Use source-backed steps before changing security settings.',
+    'Prioritize MFA, updates, backups, segmentation, and phishing-resistant habits.',
+    'Save only the guides you need; no account is required.',
+  ],
 } = Astro.props;
 
 const articleSchema = {
@@ -113,7 +119,7 @@ const validInternalLinks = internalLinks.filter((link) => link && link !== '/' &
     <script is:inline>(()=>{const bar=document.getElementById('reading-progress');const set=()=>{const max=document.documentElement.scrollHeight-innerHeight;if(bar&&max>0)bar.style.width=Math.min(100,Math.max(0,scrollY/max*100))+'%'};addEventListener('scroll',set,{passive:true});set();document.addEventListener('click',e=>{if(e.target.closest('[data-copy-link]'))navigator.clipboard?.writeText(location.href)})})();</script>
     <div class="wrap article-shell">
       {headings.length>0 && <aside class="toc-card"><p class="kicker !text-[10px] mb-3">On this page</p><TOC headings={headings}/><a href="/tools/" class="btn btn-ghost">Check my security</a></aside>}
-      <div class="prose-article min-w-0"><div class="takeaways"><strong class="flex items-center gap-2 text-[var(--ink)]">◎ Key takeaways</strong><ul><li>Use source-backed steps before changing security settings.</li><li>Prioritize MFA, updates, backups, segmentation, and phishing-resistant habits.</li><li>Save only the guides you need; no account is required.</li></ul></div><slot />{sources.length>0 && <References sources={sources}/>}</div>
+      <div class="prose-article min-w-0"><div class="takeaways"><strong class="flex items-center gap-2 text-[var(--ink)]">◎ Key takeaways</strong><ul>{takeaways.map((item) => <li>{item}</li>)}</ul></div><slot />{sources.length>0 && <References sources={sources}/>}</div>
       <aside class="side-actions hidden lg:block"><div class="sticky top-28 flex flex-col gap-3"><button data-bookmark data-title={title} data-url={Astro.url.pathname} class="icon-btn">☆</button><button data-copy-link class="icon-btn">↗</button></div></aside>
     </div>
     {validInternalLinks.length>0 && <section class="wrap mt-14"><div class="card p-6"><h2 class="mb-5 text-2xl">{t.related}</h2><ul class="grid gap-3 sm:grid-cols-2">{validInternalLinks.map((link)=><li><a href={link} class="btn btn-ghost w-full justify-between"><span class="truncate">{link}</span><span>→</span></a></li>)}</ul></div></section>}

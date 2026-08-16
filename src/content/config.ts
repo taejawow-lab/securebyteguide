@@ -46,6 +46,9 @@ const posts = defineCollection({
       )
       .optional(),
 
+    // Optional article-specific takeaways
+    takeaways: z.array(z.string()).min(1).max(5).optional(),
+
     // Internal links (v5.4 #10)
     internalLinks: z.array(z.string()).optional(),
 
