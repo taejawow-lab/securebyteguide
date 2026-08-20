@@ -24,7 +24,8 @@ export const REVIEW_POSTS = [
   "vpn-multi-hop-paranoia-options",
   "vpn-performance-privacy-reality",
   "data-broker-opt-out-people-search-removal-plan",
-  "digital-estate-account-access-plan-without-sharing-passwords"
+  "digital-estate-account-access-plan-without-sharing-passwords",
+  "compromised-email-hidden-forwarding-recovery-plan"
 ];
 export const REVIEW_POST_SET = new Set(REVIEW_POSTS);
 export const REVIEW_MIN_EQUIVALENT_WORDS = 850;

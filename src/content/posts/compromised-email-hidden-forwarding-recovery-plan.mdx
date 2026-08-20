@@ -1,0 +1,185 @@
+---
+title: "Compromised Email Recovery: Hidden Forwarding, Delegates, Sessions, and OAuth Access"
+description: "A provider-aware recovery plan for a compromised mailbox that checks passwords, sessions, recovery data, forwarding, filters, delegates, and connected apps."
+pubDate: 2026-08-20
+updatedDate: 2026-08-20
+category: "Account Security"
+tags: ["email compromise", "account recovery", "mail forwarding", "OAuth access", "session security"]
+heroImage: "/images/illustrations/sbg-email-recovery-20260820-hero.png"
+schemaType: "HowTo"
+sources:
+  - title: "Secure a hacked or compromised Google Account"
+    url: "https://support.google.com/accounts/answer/6294825?hl=en"
+    publication: "Google Account Help"
+    year: "2026 accessed"
+  - title: "Automatically forward Gmail messages to another account"
+    url: "https://support.google.com/mail/answer/10957?hl=en"
+    publication: "Gmail Help"
+    year: "2026 accessed"
+  - title: "Create rules to filter your emails"
+    url: "https://support.google.com/mail/answer/6579?hl=en"
+    publication: "Gmail Help"
+    year: "2026 accessed"
+  - title: "Manage connections between your Google Account and third parties"
+    url: "https://support.google.com/accounts/answer/13533235?hl=en"
+    publication: "Google Account Help"
+    year: "2026 accessed"
+  - title: "How to recover a hacked or compromised Microsoft account"
+    url: "https://support.microsoft.com/en-us/account-billing/how-to-recover-a-hacked-or-compromised-microsoft-account-24ca907d-bcdf-a44b-4656-47f0cd89c245"
+    publication: "Microsoft Support"
+    year: "2026 accessed"
+  - title: "Responding to a compromised email account"
+    url: "https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account"
+    publication: "Microsoft Learn"
+    year: "2026 accessed"
+  - title: "Email and communication"
+    url: "https://consumer.ftc.gov/identity-theft-and-online-security/online-privacy-and-security/email-and-communication"
+    publication: "Federal Trade Commission"
+    year: "2026 accessed"
+  - title: "Digital Identity Guidelines: Authentication and Authenticator Management"
+    url: "https://pages.nist.gov/800-63-4/sp800-63b.html"
+    publication: "National Institute of Standards and Technology"
+    year: "2025"
+  - title: "Business Email Compromise"
+    url: "https://www.ic3.gov/CrimeInfo/BusinessEmailCompromise"
+    publication: "FBI Internet Crime Complaint Center"
+    year: "2026 accessed"
+internalLinks:
+  - "/posts/passkey-recovery-email-security-checklist-2026/"
+  - "/posts/oauth-consent-phishing-app-access-audit/"
+  - "/posts/2fa-methods-compared-data/"
+  - "/posts/family-account-recovery-passkey-binder-without-leaking-secrets-2026/"
+visualsCount: 5
+hasVideo: false
+wordCount: 1534
+affiliate: false
+aiDisclosed: true
+faq:
+  - question: "Is changing the email password enough after compromise?"
+    answer: "Usually not. Review active sessions, recovery methods, forwarding, filters, delegates, app passwords, and connected applications, then secure accounts that relied on the mailbox for password resets."
+  - question: "Should I delete suspicious rules before saving evidence?"
+    answer: "If the account belongs to an employer or an incident may require investigation, follow the authorized response process first. A screenshot or export through an approved channel may be needed before removal."
+  - question: "Does an empty sent folder prove the attacker sent nothing?"
+    answer: "No. Messages can be deleted, sent through connected apps, or hidden by rules. Check provider security activity and involve the provider or organizational administrator when scope is uncertain."
+draft: false
+---
+
+Changing a password is a necessary response to many email compromises, but it is not a complete recovery. An intruder may have added forwarding, filters, delegates, recovery methods, app passwords, or a third-party connection that survives a simple password change. They may also have used the mailbox to reset banking, shopping, social, work, cloud, or domain accounts.
+
+![Locked-mailbox security still life](/images/illustrations/sbg-email-recovery-20260820-hero.png)
+
+Use this plan from a **known-clean device** and a trusted network. If the mailbox is controlled by an employer, school, or other organization, stop and use its incident channel; administrators may need to preserve logs, revoke sessions centrally, and check other users. If there is stalking, coercive control, or immediate personal danger, account changes can alert another person. Prioritize physical safety and qualified local support rather than following a generic checklist in secret.
+
+## First decide whether you still control the account
+
+Signs of compromise include unfamiliar sign-ins, password-reset messages you did not request, changed recovery details, mail marked read unexpectedly, messages or invoices sent in your name, missing mail, new forwarding, and contacts reporting scams. One symptom may have an innocent explanation, but multiple signs justify a full review.
+
+Google's [compromised-account recovery guidance](https://support.google.com/accounts/answer/6294825?hl=en) and Microsoft's [hacked-account recovery guide](https://support.microsoft.com/en-us/account-billing/how-to-recover-a-hacked-or-compromised-microsoft-account-24ca907d-bcdf-a44b-4656-47f0cd89c245) are the starting points for consumer accounts. Use the provider's official recovery URL typed directly or reached from a saved bookmark. Do not follow a “support” number or recovery link from an unsolicited message.
+
+If locked out, gather only what the provider legitimately requests. Never pay a stranger for a recovery code, give remote desktop access to an unknown helper, or send identity documents through social media. Provider recovery can take time; repeated contradictory attempts from many devices can complicate the process.
+
+## Recover in an order that closes persistence
+
+A disciplined order reduces the chance of changing one setting while leaving another door open:
+
+1. Secure the recovery phone and recovery email first if they may also be compromised.
+2. Change the mailbox password to a unique value from a clean device.
+3. Review and sign out unfamiliar sessions or devices.
+4. Confirm recovery details and remove unauthorized changes.
+5. Review MFA methods, passkeys, security keys, and app passwords.
+6. Inspect forwarding, filters, rules, delegates, and mailbox permissions.
+7. Review third-party apps and OAuth connections.
+8. Check sent, deleted, archived, spam, and scheduled mail.
+9. Secure accounts that use this mailbox for resets.
+10. Monitor for recurrence and warn affected contacts through a verified channel.
+
+![Closed laptop and blank recovery cards](/images/illustrations/sbg-email-recovery-20260820-01.png)
+
+The [passkey and recovery-email checklist](/posts/passkey-recovery-email-security-checklist-2026/) explains why the recovery mailbox deserves the same protection as the primary login. NIST's current [authentication and authenticator-management guidance](https://pages.nist.gov/800-63-4/sp800-63b.html) provides standards context, but consumer providers differ in their supported controls and recovery flows.
+
+## Sessions and devices: revoke what should no longer work
+
+A password change may invalidate many sessions, but do not assume every token or client disappears immediately. Review recent security activity, signed-in devices, browser sessions, mobile mail clients, desktop applications, and application-specific passwords. Remove anything you cannot identify, then document the time.
+
+For a work account, the administrator may need to revoke refresh tokens or sessions centrally. Microsoft's organizational guidance on [responding to a compromised email account](https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account) covers a broader response than a user can perform alone. Do not attempt administrator commands copied from a blog if you are not the authorized tenant administrator.
+
+A device name alone is weak evidence. Phones can be renamed, locations can reflect an ISP exit point, and familiar browsers can be used by someone else. Combine time, device type, activity, and your own travel history. Preserve uncertainty instead of accusing a family member or coworker from a rough location label.
+
+## Forwarding is a quiet persistence channel
+
+Automatic forwarding can send copies of future mail to another address even after a password change. Gmail documents the normal [forwarding control](https://support.google.com/mail/answer/10957?hl=en). Other providers may place forwarding under mail settings, rules, connected accounts, or administrator policies.
+
+Review:
+
+- account-level forwarding destinations;
+- POP or IMAP access you did not enable;
+- inbox rules that redirect, forward, delete, archive, or mark messages read;
+- aliases and “send as” identities;
+- delegates who can read or send mail;
+- shared mailbox permissions;
+- blocked senders that hide provider security notices.
+
+![Plain tokens grouped to represent account permissions](/images/illustrations/sbg-email-recovery-20260820-02.png)
+
+Do not merely switch off the visible forwarding toggle. A malicious filter can forward only invoices, password resets, or messages containing a specific name. Gmail's guide to [mail filters](https://support.google.com/mail/answer/6579?hl=en) illustrates legitimate rule capability; the same capability can be abused. In Outlook or organizational systems, both inbox rules and administrator-level forwarding may need review.
+
+## Check hidden-message behavior with a controlled test
+
+After removing unauthorized settings, send several harmless test messages from a separate account. Use distinct, non-sensitive subjects such as “recovery test A” and “recovery test B.” Confirm that they arrive, remain unread until you open them, do not move automatically, and do not appear at any unauthorized destination you control.
+
+| Test | Expected result | Escalation signal |
+|---|---|---|
+| New ordinary message | stays in inbox | disappears, auto-archives, or becomes read |
+| Password-reset-style subject with no real link | follows normal rule path | moves differently from ordinary mail |
+| Reply from recovered account | appears in sent mail | missing copy or unfamiliar signature |
+| Provider security notice | remains visible | blocked, deleted, or redirected |
+
+Do not send real passwords, financial data, or a live reset token as a test. This is a mailbox-behavior check, not proof that the attacker has been identified or that every server-side log is clean.
+
+## OAuth and connected applications can outlive memory
+
+“Sign in with Google,” “Sign in with Microsoft,” mail add-ons, CRM tools, calendar assistants, scanners, and mobile apps may receive scoped access without knowing the password. Google provides a page for [managing third-party account connections](https://support.google.com/accounts/answer/13533235?hl=en). Review each connection's publisher, access scope, last use, and continuing need.
+
+![Closed laptop, disconnected cable, and sealed envelope](/images/illustrations/sbg-email-recovery-20260820-03.png)
+
+Remove unknown or unnecessary apps, but remember that revoking access can interrupt legitimate work automation. An employer should inventory the integration before removal when evidence or business continuity matters. The site's [OAuth consent-phishing audit](/posts/oauth-consent-phishing-app-access-audit/) provides a deeper permission-review method. Do not reauthorize an app merely because it presents a polished consent screen.
+
+App passwords deserve a separate check. They may permit older mail clients to connect without the main password or normal MFA prompt. Delete unrecognized entries and recreate only documented, necessary ones after the account is stable.
+
+## Measure exposure by capability, not fear
+
+Build an evidence table rather than guessing that “everything is stolen”:
+
+| Capability observed | Minimum supported concern | Additional evidence needed |
+|---|---|---|
+| Unfamiliar login | account access occurred | session activity, provider logs, message actions |
+| Forwarding rule | matching future mail may leave mailbox | creation time, destination, affected messages |
+| OAuth mail-read scope | connected app could read permitted data | app identity, timestamps, provider audit data |
+| Sent scam messages | contacts may be targeted | recipients, message contents, payment changes |
+| Password reset completed | another account may be controlled | target service security history |
+
+A useful priority score is qualitative: **reach × sensitivity × active misuse × recovery dependency**. A primary mailbox with active invoice fraud and many reset relationships outranks an old newsletter inbox with one blocked login. Do not convert this into a fake universal numeric risk rating.
+
+## Protect downstream accounts
+
+Search for legitimate provider alerts, password-reset confirmations, new-device messages, payment changes, domain registrar notices, cloud-share invitations, and account-recovery changes. Start with the accounts that can move money, publish content, access client data, or reset other identities. Visit each service directly, rotate credentials where warranted, review sessions, and check security settings.
+
+The [2FA comparison guide](/posts/2fa-methods-compared-data/) can help choose stronger authentication. Where supported and practical, phishing-resistant passkeys or security keys reduce some credential-phishing risk, but recovery procedures still matter. Store recovery material through the [family account-recovery binder method](/posts/family-account-recovery-passkey-binder-without-leaking-secrets-2026/) without writing passwords into an exposed notebook.
+
+If money or invoice instructions changed, contact the financial institution or business through a previously verified number immediately. The FBI's [business email compromise resource](https://www.ic3.gov/CrimeInfo/BusinessEmailCompromise) explains the fraud pattern and reporting context. Do not reply to the suspicious thread to verify payment instructions; the mailbox itself may be controlled.
+
+## Notify contacts without creating a second scam
+
+Warn recipients through a verified channel if messages were sent in your name or if payment instructions may have changed. State what is known, what recipients should not do, and how they can verify you. Do not attach a “cleaning tool” or demand that everyone click a new security link.
+
+The FTC's [email and communication guidance](https://consumer.ftc.gov/identity-theft-and-online-security/online-privacy-and-security/email-and-communication) supports cautious handling of suspicious messages. A concise notice might say: “My email account was accessed without authorization between the times currently under review. Do not rely on payment, password, or file-sharing instructions from that thread. Verify with me using the phone number you already had.”
+
+## Preserve a recovery record and monitor
+
+Record the first sign, recovery start, password change, session revocations, rules removed, apps revoked, downstream accounts checked, contacts notified, and support case numbers. Keep secrets out of the record. For an organizational account, use the approved incident system.
+
+![Blank folder, security key, and lockbox after recovery](/images/illustrations/sbg-email-recovery-20260820-05.png)
+
+Monitor provider alerts, sent mail, forwarding, recovery details, and critical downstream accounts for several weeks. A quiet inbox is encouraging but not proof of complete eradication. If changes recur, the endpoint, recovery account, phone number, or administrator environment may still be compromised.
+
+The recovery is complete enough to resume normal use only when access is stable, unauthorized persistence is removed, important downstream accounts are reviewed, affected people are warned appropriately, and the clean-device assumption is credible. Password change is one step; restored trust is the whole process.

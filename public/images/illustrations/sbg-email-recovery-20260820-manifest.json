@@ -1,0 +1,64 @@
+{
+  "site": "securebyteguide",
+  "date": "2026-08-20",
+  "assets": [
+    {
+      "filename": "sbg-email-recovery-20260820-hero.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820\\securebyteguide\\01\\20260820_142134_krea_3537150146.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "3aa75da7-7060-4990-9723-ac2fc636ea87",
+      "seed": 3537150146,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    },
+    {
+      "filename": "sbg-email-recovery-20260820-01.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820_replacements3\\securebyteguide\\02\\20260820_143441_krea_998941346.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "48a7f39a-df6a-4dc7-bf42-8a3c111a8238",
+      "seed": 998941346,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    },
+    {
+      "filename": "sbg-email-recovery-20260820-02.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820_replacements\\securebyteguide\\03\\20260820_142911_krea_3591372797.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "46472672-18c5-4d7a-ace0-9fa82036e7a7",
+      "seed": 3591372797,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    },
+    {
+      "filename": "sbg-email-recovery-20260820-03.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820\\securebyteguide\\04\\20260820_142211_krea_4214644278.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "cb1f068e-1fef-462b-bd29-0c401bab8999",
+      "seed": 4214644278,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    },
+    {
+      "filename": "sbg-email-recovery-20260820-05.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batchc_20260820\\securebyteguide\\06\\20260820_142235_krea_3590180029.png",
+      "engine": "krea",
+      "model": null,
+      "prompt_id": "91b78a4d-14cd-40c0-8771-f7c867142b3d",
+      "seed": 3590180029,
+      "width": 1536,
+      "height": 864,
+      "qa": "accepted_visual_qa"
+    }
+  ],
+  "rejected_excluded": [
+    "sbg-email-recovery-20260820-04.png"
+  ]
+}
