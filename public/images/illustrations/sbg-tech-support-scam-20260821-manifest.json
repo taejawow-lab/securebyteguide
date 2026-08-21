@@ -1,0 +1,191 @@
+{
+  "site": "securebyteguide",
+  "created_at": "2026-08-21",
+  "backend": "GTI15 ComfyUI",
+  "endpoint": "REDACTED",
+  "model_family": "Krea",
+  "assets": [
+    {
+      "filename": "sbg-tech-support-scam-20260821-hero.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\regen_hero\\20260821_140434_krea_2026089200.png",
+      "prompt": "realistic cybersecurity editorial still life of a fully closed laptop with network cable clearly unplugged and resting beside it, plain hardware security key and sealed blank envelope, remote access scam containment, no keys inserted, no screens, no text, no labels, no logos, no QR codes, no forms, no money",
+      "seed": 2026089200,
+      "dimensions": "1536x864",
+      "engine": "krea",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic cybersecurity editorial still life of a closed laptop with network cable unplugged, plain hardware security key and sealed envelope, remote access scam containment concept, no readable text, no logos, no screens, no QR codes, no forms, no money",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "9873cbd2-5049-4500-970e-6079b920da2f",
+            "remote": {
+              "filename": "gti15_natural_krea_00591_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run0\\20260821_134734_krea_2026082300.png",
+            "bytes": 1533773,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082300,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run0\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_note": "regenerated after strict contact-sheet rejection",
+      "qa_status": "PASS"
+    },
+    {
+      "filename": "sbg-tech-support-scam-20260821-01.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\regen_01\\20260821_140447_krea_2026089201.png",
+      "prompt": "realistic cybersecurity verification still life with a dark face-down unbranded phone, fully closed laptop, unplugged network cable and plain magnifying glass, no people, no hands, no screens visible, no text, no labels, no logos, no UI, no credentials, no documents",
+      "seed": 2026089201,
+      "dimensions": "1536x864",
+      "engine": "krea",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic editorial photo of an adult from behind making a verification call on a dark blank phone while a closed laptop sits disconnected, face hidden, no text, no logos, no fake UI, no credentials, no documents",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "0ba426b4-c52c-409e-898c-025dff4261af",
+            "remote": {
+              "filename": "gti15_natural_krea_00592_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run1\\20260821_134747_krea_2026082301.png",
+            "bytes": 1523412,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082301,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run1\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_note": "regenerated after strict contact-sheet rejection",
+      "qa_status": "PASS"
+    },
+    {
+      "filename": "sbg-tech-support-scam-20260821-02.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\regen3_02\\20260821_141031_realvis_2026095200.png",
+      "prompt": "minimal realistic overhead cybersecurity evidence still life with three completely blank white cards and one clearly disconnected plain cable on a neutral desk, no clock, no timer, no drive, no notebook, no laptop, no phone, no numbers, no text, no lines, no labels, no logos",
+      "seed": 2026095200,
+      "dimensions": "1536x864",
+      "engine": "realvis",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic overhead cybersecurity evidence scene with blank index cards, disconnected cable, plain external drive not connected, and a clock face turned away, no writing, no numbers, no labels, no logos, no screens, no QR codes",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "22d09c12-c8da-4362-be7f-6f1567f32b38",
+            "remote": {
+              "filename": "gti15_natural_krea_00593_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run2\\20260821_134759_krea_2026082302.png",
+            "bytes": 1741728,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082302,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run2\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_note": "second strict regeneration",
+      "qa_status": "PASS"
+    },
+    {
+      "filename": "sbg-tech-support-scam-20260821-03.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run3\\20260821_134812_krea_2026082303.png",
+      "prompt": "realistic home router and closed laptop on separate shelf with a simple physical shield-shaped object, recovery and network safety metaphor, no blinking text, no ports closeup, no labels, no logos, no UI, no QR codes",
+      "seed": 2026082303,
+      "dimensions": "1536x864",
+      "engine": "krea",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic home router and closed laptop on separate shelf with a simple physical shield-shaped object, recovery and network safety metaphor, no blinking text, no ports closeup, no labels, no logos, no UI, no QR codes",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "78fef42a-a46a-44d9-9f9d-994d697ecb76",
+            "remote": {
+              "filename": "gti15_natural_krea_00594_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run3\\20260821_134812_krea_2026082303.png",
+            "bytes": 1334084,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082303,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run3\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_status": "PASS"
+    },
+    {
+      "filename": "sbg-tech-support-scam-20260821-04.png",
+      "source": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\regen3_04\\20260821_141037_realvis_2026095201.png",
+      "prompt": "minimal realistic cybersecurity recovery still life with a fully closed plain laptop, a small plain lockbox and one hardware security key on neutral blue-gray desk, no paper, no labels, no printed device, no text, no logos, no screens, no money, no cards, no keys in locks",
+      "seed": 2026095201,
+      "dimensions": "1536x864",
+      "engine": "realvis",
+      "accepted": true,
+      "provenance": {
+        "endpoint": "http://192.168.50.31:8188",
+        "prompt": "realistic clean recovery workspace with closed laptop, sealed plain folder, hardware key and lockbox, neutral blue-gray lighting, no text, no labels, no logos, no screens, no money, no cards, no forms",
+        "positive_suffix": " realistic, natural perspective, physically plausible objects, coherent scene, professional editorial stock photo style, clean composition, soft natural light, no artificial AI look, no oversaturated colors, no surreal elements, no fantasy objects, text-free, logo-free, no watermark, no people, no hands, no faces, no readable labels, closed laptop or blank/off screens only, no visible UI, no document-like surfaces",
+        "negative": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+        "results": [
+          {
+            "prompt_id": "b0388a48-033f-4e4d-a117-b75aba924556",
+            "remote": {
+              "filename": "gti15_natural_krea_00595_.png",
+              "subfolder": "",
+              "type": "output"
+            },
+            "local": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run4\\20260821_134825_krea_2026082304.png",
+            "bytes": 1378313,
+            "seconds": 12,
+            "engine": "krea",
+            "seed": 2026082304,
+            "status": "NEEDS_VISUAL_QA",
+            "qa_required": "Reject if any fake text/UI/logos/hands/faces/distorted or nonsensical objects are visible."
+          }
+        ],
+        "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\run4\\contact_sheet.jpg",
+        "publish_policy": "DO_NOT_PUBLISH until explicit visual QA pass. Generate replacements until all selected images look plausible to a normal reader."
+      },
+      "qa_note": "second strict regeneration",
+      "qa_status": "PASS"
+    }
+  ],
+  "contact_sheet": "C:\\Users\\k8plus\\AppData\\Local\\hermes\\tmp\\batch_c_20260821\\securebyteguide\\sbg-tech-support-scam-20260821-contact-sheet-accepted-final.jpg",
+  "qa_status": "PASS",
+  "qa_summary": "Five published raster assets visually inspected after targeted regenerations; no rejected assets remain in the published set."
+}

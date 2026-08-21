@@ -1,0 +1,187 @@
+---
+title: "Remote Access Tech Support Scam Response: Disconnect, Preserve Evidence, and Recover Accounts"
+description: "A practical response plan after a fake support agent remotely controlled a computer, viewed accounts, installed software, or requested payment."
+pubDate: 2026-08-21
+updatedDate: 2026-08-21
+category: "Scam Response"
+tags: ["tech support scam", "remote access", "incident response", "account recovery", "payment fraud"]
+heroImage: "/images/illustrations/sbg-tech-support-scam-20260821-hero.png"
+schemaType: "HowTo"
+sources:
+  - title: "How To Spot, Avoid, and Report Tech Support Scams"
+    url: "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+    publication: "Federal Trade Commission"
+    year: "2026 accessed"
+  - title: "What To Do if You Were Scammed"
+    url: "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed"
+    publication: "Federal Trade Commission"
+    year: "2026 accessed"
+  - title: "Report Cyber-Enabled Fraud"
+    url: "https://www.ic3.gov/"
+    publication: "FBI Internet Crime Complaint Center"
+    year: "2026 accessed"
+  - title: "Recognize and Report Phishing"
+    url: "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing"
+    publication: "Cybersecurity and Infrastructure Security Agency"
+    year: "2026 accessed"
+  - title: "Incident Response Recommendations and Considerations for Cybersecurity Risk Management"
+    url: "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+    publication: "National Institute of Standards and Technology"
+    year: "2025"
+  - title: "Protect yourself from tech support scams"
+    url: "https://support.microsoft.com/en-us/windows/protect-yourself-from-tech-support-scams-2ebf91bd-f94c-2a8a-e541-f5c800d18435"
+    publication: "Microsoft Support"
+    year: "2026 accessed"
+  - title: "How to recover a hacked or compromised Microsoft account"
+    url: "https://support.microsoft.com/en-us/account-billing/how-to-recover-a-hacked-or-compromised-microsoft-account-24ca907d-bcdf-a44b-4656-47f0cd89c245"
+    publication: "Microsoft Support"
+    year: "2026 accessed"
+  - title: "If you think your Apple Account has been compromised"
+    url: "https://support.apple.com/102560"
+    publication: "Apple Support"
+    year: "2026 accessed"
+  - title: "Recognize and avoid social engineering schemes including phishing messages, phony support calls, and other scams"
+    url: "https://support.apple.com/102568"
+    publication: "Apple Support"
+    year: "2026 accessed"
+  - title: "IdentityTheft.gov"
+    url: "https://www.identitytheft.gov/"
+    publication: "Federal Trade Commission"
+    year: "2026 accessed"
+internalLinks:
+  - "/posts/compromised-email-hidden-forwarding-recovery-plan/"
+  - "/posts/2fa-methods-compared-data/"
+  - "/posts/router-security-audit-checklist-2026/"
+  - "/posts/2fa-methods-compared-data/"
+visualsCount: 5
+hasVideo: false
+wordCount: 1978
+affiliate: false
+aiDisclosed: true
+faq:
+  - question: "Should I turn off the computer after a remote-access scam?"
+    answer: "First end the scammer's access by disconnecting Wi-Fi or unplugging Ethernet. A business should call its incident team before shutting down because memory and logs may matter. A home user facing continued harmful activity can power off after recording the visible state if disconnection is not reliable."
+  - question: "Is uninstalling the remote-support app enough?"
+    answer: "No. The operator may have added another tool, account, browser extension, scheduled task, or stolen credentials. Review the device and accounts from a known-clean device, revoke sessions, scan or rebuild as appropriate, and monitor for recurrence."
+  - question: "Can a bank always reverse a tech-support-scam payment?"
+    answer: "No. Recovery depends on the payment method, timing, facts, and provider rules. Contact the bank, card issuer, wire service, or payment app immediately through an independently verified channel, ask for its fraud process, and keep the case number without paying a recovery service."
+draft: false
+---
+
+A fake support session can become several incidents at once: remote control of a device, theft of account credentials, exposure of private files, installation of persistent software, and payment fraud. The response should therefore do more than delete one app or change one password. It should stop live access, preserve useful evidence, recover the most powerful accounts from a clean device, assess the computer, and contact payment providers quickly.
+
+![Disconnected laptop beside an evidence folder and phone](/images/illustrations/sbg-tech-support-scam-20260821-hero.png)
+
+This plan is for defensive recovery after an unsolicited caller, pop-up, message, or search result led to remote access. It is not a forensic examination, legal opinion, or guarantee that funds or data can be recovered. If the affected device belongs to an employer, school, clinic, government agency, or client, stop improvising and use that organization's incident channel. Its responders may need volatile evidence, centrally managed logs, and legally required notifications.
+
+## First five minutes: break the connection, not the evidence
+
+If the scammer still controls the pointer, has a command window open, or is asking you to sign in, **stop communicating and disconnect the affected device from networks**. Turn off Wi-Fi, unplug Ethernet, and disconnect any tethered phone. Do not use the remotely controlled device to look up help, call a number displayed by the scammer, or sign in to email or banking.
+
+If network disconnection cannot be trusted and destructive activity continues, a home user can power off the computer. In a managed organization, call the authorized incident team from another device before shutdown when feasible. NIST's current [incident-response recommendations](https://csrc.nist.gov/pubs/sp/800/61/r3/final) treat response as part of broader cybersecurity risk management; the right preservation choice depends on the system, evidence needs, and continuing harm.
+
+Before closing windows, and only if doing so does not prolong access, use a separate phone to photograph the screen. Record the time, displayed phone number, website, remote-support product, session code, claimed company, caller instructions, and any visible transfer or invoice. Do not type passwords to “prove” what happened. Do not confront the operator or attempt to trace them.
+
+The FTC explains that real companies do not unexpectedly call to announce a computer problem and that browser pop-ups should not be trusted as support channels in its [tech support scam guidance](https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams). Microsoft similarly says its error and warning messages do not include phone numbers in its official [tech-support-scam advice](https://support.microsoft.com/en-us/windows/protect-yourself-from-tech-support-scams-2ebf91bd-f94c-2a8a-e541-f5c800d18435).
+
+## Preserve a compact evidence package
+
+Evidence is useful only when it is understandable and does not create another security problem. From a separate, trusted device, create a chronology with approximate times. Include how contact began, what the operator claimed, which links were opened, what software was installed, which accounts were visible or entered, whether files were opened, and what payments were attempted or completed.
+
+Preserve copies of:
+
+- the original email or text, including sender information and links;
+- photos or screenshots of pop-ups, chat, remote-session identifiers, and commands;
+- browser history entries and downloaded filenames, without reopening suspicious files;
+- receipts, invoices, gift-card numbers, wallet addresses, transfer confirmations, and bank case numbers;
+- caller numbers, voicemail, chat handles, and independently verified provider contact details;
+- security alerts, password-reset notices, new-device messages, and unfamiliar login times.
+
+![Evidence cards arranged beside a disconnected network cable](/images/illustrations/sbg-tech-support-scam-20260821-01.png)
+
+Keep originals where practical and work from copies. Do not email passwords, one-time codes, full card numbers, or identity documents to yourself as evidence. An organization should use its approved case system and retention process. A private individual considering litigation, an insurance claim, or a police report may need jurisdiction-specific advice before wiping the device.
+
+## Decide what the scammer could actually do
+
+Do not assume either “nothing happened” or “everything was stolen.” Build scope from observed capabilities. This table is a decision aid, not a probability score.
+
+| Observation | Minimum supported concern | Immediate priority |
+|---|---|---|
+| Remote-control session connected | operator could see and control the active desktop | isolate device and record session details |
+| Password or one-time code was typed | that account or session may be compromised | recover account from a clean device |
+| Browser password vault was opened | multiple saved accounts may be exposed | prioritize email, finance, and recovery accounts |
+| Command, script, or unknown installer ran | persistence or malware is plausible | preserve evidence and assess or rebuild the endpoint |
+| Banking was opened or money moved | financial fraud may be active | call the provider's verified fraud number now |
+| Router settings were opened | network configuration may have changed | audit router from a clean device after account triage |
+
+A practical triage expression is **access power × data sensitivity × persistence evidence × active financial harm**. It is qualitative. A session where an operator watched a harmless desktop briefly is different from one where they installed tools, opened email and banking, and directed a wire. Lack of visible mouse movement does not prove lack of access, while a frightening pop-up alone does not prove malware.
+
+## Recover accounts from a known-clean device
+
+Use a phone, tablet, or computer that the scammer did not control and that is reasonably current. Start with accounts that can reset other accounts or move money: primary email, mobile carrier, password manager, bank, card, payment apps, cloud storage, and major platform identity. Type official addresses yourself or use a known bookmark.
+
+For each high-priority account:
+
+1. Change the password to a unique value.
+2. Review recent sign-ins, active sessions, trusted devices, recovery email, recovery phone, and authentication methods.
+3. Sign out unfamiliar sessions and revoke unknown app access.
+4. Remove unauthorized forwarding, delegates, app passwords, passkeys, or security keys.
+5. Save provider alerts and case numbers without storing new secrets in the incident notes.
+
+If email was open during the session, use the site's detailed [compromised-email recovery plan](/posts/compromised-email-hidden-forwarding-recovery-plan/) because hidden forwarding and connected apps can survive a password change. If the password manager was unlocked or its export function was used, assume the operator may have seen more than the account currently on screen. The [2FA methods guide](/posts/2fa-methods-compared-data/) can help restore access without exposing recovery material itself.
+
+Microsoft account users should follow Microsoft's official [compromised-account recovery process](https://support.microsoft.com/en-us/account-billing/how-to-recover-a-hacked-or-compromised-microsoft-account-24ca907d-bcdf-a44b-4656-47f0cd89c245), not a phone number supplied in the scam session. Apple users should review Apple's steps for a [potentially compromised Apple Account](https://support.apple.com/102560), including account details and devices they do not recognize. Apple's [social-engineering guidance](https://support.apple.com/102568) also warns against sharing passwords, security codes, or other account-security details.
+
+![Clean phone and security key separated from the affected computer](/images/illustrations/sbg-tech-support-scam-20260821-02.png)
+
+Choose stronger authentication where the service supports it, but do not remove the only working recovery method before replacements are confirmed. The [2FA methods comparison](/posts/2fa-methods-compared-data/) explains tradeoffs among authenticator apps, security keys, passkeys, and SMS. Recovery should reduce attacker access without locking the legitimate owner out.
+
+## Assess the computer without pretending a scan proves everything
+
+Keep the affected computer offline until account triage and the preservation decision are made. Write down the remote-support application's name and any other installed items, browser extensions, new local users, startup entries, or security settings changed during the session. Do not reconnect merely to let an unknown “cleanup” company inspect it.
+
+For a low-complexity home incident where no commands or secondary installers ran, a reasonable path may include uninstalling unauthorized remote software, removing unknown extensions and users, applying operating-system and application updates, and running the platform's reputable built-in or established security scan. Perform sensitive password changes elsewhere first. A clean scan is useful evidence, not proof that no credential was copied or persistence exists.
+
+Escalate to professional assessment or a system rebuild when the operator obtained administrator privileges, disabled security tools, ran scripts or terminal commands, installed unknown packages, accessed regulated or client data, or when suspicious behavior returns. A rebuild means reinstalling from trusted media or the manufacturer's supported recovery mechanism, then restoring only necessary personal data from a backup believed to predate the incident. Do not restore questionable executables, scripts, or a complete system image that may reproduce the problem.
+
+A business should not use a generic consumer checklist as authority to wipe a managed endpoint. Its security team may isolate the host, collect memory or disk evidence, revoke identity tokens centrally, search for related activity, and meet contractual or legal reporting duties.
+
+## Check the home network only when the facts justify it
+
+Remote desktop access to one computer does not automatically mean the router was compromised. Review the router if its administration page was opened, its password was entered or saved in the browser, DNS settings changed, a new management app appeared, or problems affect multiple devices.
+
+From a clean device, use the router vendor's local address or official app. Change an exposed administrator password, review remote administration, DNS, firmware, connected devices, port forwards, and unknown administrator accounts. The [router security audit checklist](/posts/router-security-audit-checklist-2026/) provides a structured review. Save current settings before a factory reset, because a reset can erase evidence and interrupt phone, alarm, or ISP configuration. If the router is ISP-managed, contact the ISP through a number on its official bill or website.
+
+## Contact the payment provider before debating blame
+
+Speed matters when money moved. Use the number printed on the card, in the provider's official app, on a statement, or on its independently typed website. Explain that a remote-access tech-support scam was involved, identify the amount and time, ask whether the payment can be stopped or disputed, and request a case number. Do not rely on a number in the scammer's invoice, email, pop-up, or search advertisement.
+
+| Payment method | First contact | Useful request | Important limitation |
+|---|---|---|---|
+| Credit or debit card | card issuer's fraud department | block card if needed and dispute the charge | rights and timelines differ by transaction and jurisdiction |
+| Bank transfer or wire | sending bank immediately | attempt recall or fraud hold | completed transfers may be difficult to recover |
+| Payment app | app provider and linked bank/card | report fraud and secure the account | purchase protections vary |
+| Gift card | issuing company | report the card number and ask about remaining value | spent value is often hard to recover |
+| Cryptocurrency | exchange used and law enforcement | flag destination and preserve transaction ID | blockchain transfers generally cannot be reversed by chargeback |
+
+The FTC's [post-scam action guide](https://consumer.ftc.gov/articles/what-do-if-you-were-scammed) organizes next steps by payment method and warns that the faster a victim acts, the better. No legitimate helper can promise recovery. Ignore anyone who asks for an advance fee, another transfer, remote access, or a “safe account” deposit to retrieve the first payment.
+
+## Report through channels appropriate to your location
+
+In the United States, report the scam to the FTC and use [IdentityTheft.gov](https://www.identitytheft.gov/) when personal information was misused or identity-theft recovery steps are needed. Cyber-enabled financial fraud can also be reported to the FBI's [Internet Crime Complaint Center](https://www.ic3.gov/). A report does not guarantee investigation or reimbursement, but prompt, accurate transaction and contact details can support pattern analysis and provider action.
+
+Outside the United States, use the national cybercrime or consumer-protection authority for your country and ask the financial provider which police or fraud report it requires. Do not submit sensitive evidence to unofficial “reporting” sites. If an unsolicited message started the incident, CISA's guidance on how to [recognize and report phishing](https://www.cisa.gov/secure-our-world/recognize-and-report-phishing) reinforces using a known reporting channel rather than replying to the sender.
+
+![Payment receipt, official phone, and sealed report folder](/images/illustrations/sbg-tech-support-scam-20260821-03.png)
+
+If the device contained work, health, tax, legal, client, or children's data, exposure may require specialized advice even when no file theft is visible. Contact the responsible organization or a qualified local professional. Do not make public accusations based only on caller ID, IP geolocation, an account name, or the scammer's claimed identity; those indicators can be spoofed or stolen.
+
+## Monitor with explicit stop conditions
+
+For the next several weeks, watch high-priority account alerts, payment activity, email forwarding, recovery details, new devices, and the reappearance of remote-access tools. Tell close contacts to verify unusual payment or password requests through a known channel if the scammer viewed your address book or messages. Keep the incident log updated with actions and dates.
+
+![Recovered devices separated into trusted and review groups](/images/illustrations/sbg-tech-support-scam-20260821-04.png)
+
+Resume sensitive use of the computer only when unauthorized access is ended, account recovery is complete, the endpoint has been assessed to a level appropriate for the observed activity, and any network changes have been reviewed. Stop self-recovery and escalate if settings revert, unfamiliar sessions return, money continues moving, security tools remain disabled, or the device handled organizational or regulated data.
+
+The goal is not to prove perfect safety from a checklist. It is to reduce continuing harm, preserve what responders and providers need, restore trustworthy access in a defensible order, and avoid the recovery scam that often follows the first one.
