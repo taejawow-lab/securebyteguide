@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-08-26",
+  "backend": "GTI15 ComfyUI",
+  "endpoint": "redacted",
+  "article_slug": "browser-notification-scam-permission-persistence-cleanup",
+  "accepted_count": 5,
+  "assets": [
+    {
+      "filename": "sbg-browser-notification-20260826-hero.png",
+      "engine": "krea",
+      "seed": 4204244977,
+      "prompt_id": "56019076-f4a0-4dda-bfdf-46e356881f1d",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1228788,
+      "prompt": "Natural cybersecurity editorial still life for browser notification scam cleanup: closed laptop with completely dark blank screen, face-down phone, disconnected cable, hardware security key, sealed blank envelope and simple wooden lock token, no people, no hands, no readable text, no letters or numbers, no logos, no browser UI, no warning screen, no QR code, horizontal 16 by 9",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    },
+    {
+      "filename": "sbg-browser-notification-20260826-01.png",
+      "engine": "juggernaut",
+      "seed": 4204244979,
+      "prompt_id": "05b5f171-5a2e-4a33-9cdb-616d228c8ccc",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1506829,
+      "prompt": "Natural cybersecurity editorial still life for browser notification scam cleanup: closed laptop with completely dark blank screen, face-down phone, disconnected cable, hardware security key, sealed blank envelope and simple wooden lock token, no people, no hands, no readable text, no letters or numbers, no logos, no browser UI, no warning screen, no QR code, horizontal 16 by 9",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    },
+    {
+      "filename": "sbg-browser-notification-20260826-02.png",
+      "engine": "krea",
+      "seed": 1573680285,
+      "prompt_id": "a1503210-1135-4238-a3fc-45453b0f3b12",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1902609,
+      "prompt": "Editorial cybersecurity recovery scene: powered-off laptop, closed router panel, blank sticky notes on corkboard, plain storage box and unplugged mouse, no people, no faces, no hands, no text, no letters, no numbers, no logos, no app or browser interface, no QR pattern, no readable labels, realistic subdued light, horizontal composition",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    },
+    {
+      "filename": "sbg-browser-notification-20260826-03.png",
+      "engine": "juggernaut",
+      "seed": 1573680287,
+      "prompt_id": "05857d4c-4d56-44d3-b730-7207e2d76906",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1403528,
+      "prompt": "Editorial cybersecurity recovery scene: powered-off laptop, closed router panel, blank sticky notes on corkboard, plain storage box and unplugged mouse, no people, no faces, no hands, no text, no letters, no numbers, no logos, no app or browser interface, no QR pattern, no readable labels, realistic subdued light, horizontal composition",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    },
+    {
+      "filename": "sbg-browser-notification-20260826-04.png",
+      "engine": "realvis",
+      "seed": 3535053186,
+      "prompt_id": "623c9cfa-d47a-4b3c-8344-34a4b4e14f8e",
+      "model": null,
+      "dimensions": [
+        1536,
+        864
+      ],
+      "bytes": 1697175,
+      "prompt": "Minimal cybersecurity editorial still life: closed plain wooden lockbox, two unbranded hardware security keys, coiled network cable and small wooden shield token on empty dark table, no computer, no phone, no paper, no QR pattern, no people, no hands, no text, no numbers, no labels, no logos, realistic subdued daylight, horizontal",
+      "negative_prompt": "people, person, face, hands, fingers, body, readable text, letters, numbers, logo, watermark, signature, fake user interface, app dock, icons, browser window, code screen, open laptop screen, monitor screen, document, forms, receipts, certificates, currency, medicine labels, policy paper, passport, distorted objects, warped laptop, impossible geometry, extra objects, clutter, blurry, low resolution, oversaturated, cartoon, anime, 3d render, illustration artifacts",
+      "visual_qa": "accepted",
+      "accepted": true
+    }
+  ],
+  "qa": "Final selected assets visually inspected; rejected candidates excluded."
+}
