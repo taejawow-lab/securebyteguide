@@ -1,0 +1,76 @@
+{
+  "site": "securebyteguide",
+  "slug": "session-cookie-theft-infostealer-account-recovery-plan",
+  "generated_at": "2026-08-29T17:00:00+09:00",
+  "generator": "GTI15 ComfyUI",
+  "generator_endpoint": "http://192.168.50.31:8188",
+  "visual_qa": "PASS after iterative contact-sheet review; rejected candidates excluded",
+  "contact_sheet": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_selected/securebyteguide-selected-contact-sheet.jpg",
+  "assets": [
+    {
+      "engine": "krea",
+      "seed": 2026082952,
+      "prompt_id": "d54b39d6-6904-4de3-bcc7-572ccfa3a927",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_final2/securebyteguide/01/20260829_170446_krea_2026082952.png",
+      "prompt": "realistic macro editorial photograph of a disconnected plain network cable beside a fully closed unbranded laptop, dark matte desk, dramatic safe lighting. only plain unlabeled objects, absolutely no text, no letters, no numbers, no symbols, no QR patterns, no barcode, no label, no logo, no brand, no watermark, no screen, no user interface, no document, no paper, no form, no bottle, no medicine, no calculator, no currency, no card, no keyboard, no smartphone, no people, no hands, no faces, no distorted geometry",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "sbg-session-theft-20260829-hero.png",
+      "bytes": 1375334
+    },
+    {
+      "engine": "krea",
+      "seed": 2026082953,
+      "prompt_id": "90933c73-6dac-4bd2-aac9-4bf210f7a0ed",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_final2/securebyteguide/02/20260829_170459_krea_2026082953.png",
+      "prompt": "realistic studio photograph of five black geometric cubes with one isolated behind a clear barrier and a brass padlock, dark blue background. only plain unlabeled objects, absolutely no text, no letters, no numbers, no symbols, no QR patterns, no barcode, no label, no logo, no brand, no watermark, no screen, no user interface, no document, no paper, no form, no bottle, no medicine, no calculator, no currency, no card, no keyboard, no smartphone, no people, no hands, no faces, no distorted geometry",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "sbg-session-theft-20260829-01.png",
+      "bytes": 1270741
+    },
+    {
+      "engine": "krea",
+      "seed": 2026082955,
+      "prompt_id": "083069d7-264d-495f-ba6a-165d8a38e69a",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_final2/securebyteguide/04/20260829_170526_krea_2026082955.png",
+      "prompt": "realistic abstract studio photograph of layered circular glass rings around a small locked metal box, dark navy backdrop, precise clean geometry. only plain unlabeled objects, absolutely no text, no letters, no numbers, no symbols, no QR patterns, no barcode, no label, no logo, no brand, no watermark, no screen, no user interface, no document, no paper, no form, no bottle, no medicine, no calculator, no currency, no card, no keyboard, no smartphone, no people, no hands, no faces, no distorted geometry",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "sbg-session-theft-20260829-02.png",
+      "bytes": 1294153
+    },
+    {
+      "engine": "krea",
+      "seed": 2026083012,
+      "prompt_id": "6877b102-482d-45c6-9be6-702735814655",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_regen/securebyteguide/01/20260829_165320_krea_2026083012.png",
+      "prompt": "abstract editorial photograph of smooth glass tokens passing through layered dark blue arches with one pathway isolated, no symbols. no text, no letters, no numbers, no words, no labels, no logo, no watermark, no QR code, no screen, no UI, no phone, no computer, no paper, no document, no form, no calculator, no money, no cards, no hands, no faces, no people, no medicine bottle",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "sbg-session-theft-20260829-03.png",
+      "bytes": 1366862
+    },
+    {
+      "engine": "krea",
+      "seed": 2026083014,
+      "prompt_id": "afddc770-6964-4c16-af9e-74a4d435ca60",
+      "source_path": "/mnt/c/Users/k8plus/AppData/Local/hermes/tmp/batch_c_20260829_gti15_regen/securebyteguide/03/20260829_165347_krea_2026083014.png",
+      "prompt": "abstract metallic circular vault with a simple central padlock silhouette and several outer rings separated, clean studio lighting no symbols. no text, no letters, no numbers, no words, no labels, no logo, no watermark, no QR code, no screen, no UI, no phone, no computer, no paper, no document, no form, no calculator, no money, no cards, no hands, no faces, no people, no medicine bottle",
+      "checkpoint": "flux1-krea-dev_fp8_scaled.safetensors",
+      "dimensions": "1536x864",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA",
+      "filename": "sbg-session-theft-20260829-04.png",
+      "bytes": 1591180
+    }
+  ]
+}
