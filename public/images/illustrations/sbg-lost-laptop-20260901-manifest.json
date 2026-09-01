@@ -1,0 +1,99 @@
+{
+  "site": "securebyteguide",
+  "slug": "lost-stolen-laptop-account-data-response-plan",
+  "generated_at": "2026-09-01T17:30:00+09:00",
+  "generator": "GTI15 ComfyUI 0.26.0 RTX4090",
+  "power_state_changed": false,
+  "visual_qa": "PASS after individual review; rejected candidates excluded",
+  "contact_sheet": "reports/sbg-lost-laptop-20260901-contact-sheet.jpg",
+  "assets": [
+    {
+      "slot": "hero",
+      "filename": "sbg-lost-laptop-20260901-hero.png",
+      "source_filename": "ComfyUI_00275_.png",
+      "prompt_id": "f51f8578-2361-4ec6-9aac-4fcc1899dfcf",
+      "seed": 2026090111,
+      "model": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": "1536x864",
+      "bytes": 1582683,
+      "sha256": "ce36f95714e1f2902e6ca69013a91823a6b7d776d61490df42ebb94e60284adc",
+      "prompt_summary": "Closed unbranded laptop in a protective travel sleeve with a plain tracking token; no people, text, UI, logos, or brands.",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA"
+    },
+    {
+      "slot": "01",
+      "filename": "sbg-lost-laptop-20260901-01.png",
+      "source_filename": "ComfyUI_00261_.png",
+      "prompt_id": "5187b508-d983-4834-a948-916508feca79",
+      "seed": 2026090102,
+      "model": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": "1536x864",
+      "bytes": 1097674,
+      "sha256": "934bffea2e14807717b96a21b4d6f0cf8ac987bc563299f6a4becf39a829f133",
+      "prompt_summary": "Unbranded laptop secured behind a glass barrier with a plain padlock; no people, text, UI, logos, or brands.",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA"
+    },
+    {
+      "slot": "02",
+      "filename": "sbg-lost-laptop-20260901-02.png",
+      "source_filename": "ComfyUI_00265_.png",
+      "prompt_id": "69003bb3-e1d3-40b7-a104-581bce6af4b4",
+      "seed": 2026090104,
+      "model": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": "1536x864",
+      "bytes": 1393373,
+      "sha256": "9d7e6eff392c507dd75119d16bf916e5a6f55f5b317b70a1be8996e930a644af",
+      "prompt_summary": "Plain storage device inside a transparent protective enclosure; no people, text, UI, logos, or brands.",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA"
+    },
+    {
+      "slot": "03",
+      "filename": "sbg-lost-laptop-20260901-03.png",
+      "source_filename": "ComfyUI_00266_.png",
+      "prompt_id": "fd502fd8-c5c0-4216-833d-f452e70ef833",
+      "seed": 2026090105,
+      "model": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": "1536x864",
+      "bytes": 1216107,
+      "sha256": "71d92da536778245d8a8c22b12e67966b32ae009b3cff92074c9f4624548355e",
+      "prompt_summary": "Unbranded laptop with an hourglass and lock for the wait-versus-wipe decision; no people, readable text, logos, or brands.",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA"
+    },
+    {
+      "slot": "04",
+      "filename": "sbg-lost-laptop-20260901-04.png",
+      "source_filename": "ComfyUI_00267_.png",
+      "prompt_id": "5204569c-bc7a-448a-81d3-a327b41ba6b1",
+      "seed": 2026090106,
+      "model": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors",
+      "dimensions": "1536x864",
+      "bytes": 1664994,
+      "sha256": "ce756396baf9d5cfd99ba1ac9dd76c4465626aac87e3ee99887ed4248f1cb90a",
+      "prompt_summary": "Backup media stored in separated protective compartments; no people, text, UI, logos, or brands.",
+      "accepted": true,
+      "qa_status": "PASSED_VISUAL_QA"
+    }
+  ],
+  "rejected": [
+    {
+      "source_filename": "ComfyUI_00259_.png",
+      "reason": "surreal water setting and unexpected open-device geometry"
+    },
+    {
+      "source_filename": "ComfyUI_00263_.png",
+      "reason": "keyboard/key details and concept mismatch"
+    },
+    {
+      "source_filename": "ComfyUI_00276_.png",
+      "reason": "abstract token row did not communicate the article topic"
+    },
+    {
+      "source_filename": "ComfyUI_00279_.png",
+      "reason": "malformed lidless laptop geometry"
+    }
+  ]
+}

@@ -28,7 +28,8 @@ export const REVIEW_POSTS = [
   "compromised-email-hidden-forwarding-recovery-plan",
   "remote-access-tech-support-scam-response-plan",
   "browser-notification-scam-permission-persistence-cleanup",
-  "session-cookie-theft-infostealer-account-recovery-plan"
+  "session-cookie-theft-infostealer-account-recovery-plan",
+  "lost-stolen-laptop-account-data-response-plan"
 ];
 export const REVIEW_POST_SET = new Set(REVIEW_POSTS);
 export const REVIEW_MIN_EQUIVALENT_WORDS = 850;
