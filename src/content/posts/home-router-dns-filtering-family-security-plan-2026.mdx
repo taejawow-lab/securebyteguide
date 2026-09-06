@@ -41,9 +41,9 @@ sources:
     publication: "OWASP"
     year: "2026 accessed"
 internalLinks:
-  - "/posts/home-wifi-guest-network-iot-separation-plan-2026/"
-  - "/posts/home-router-firmware-security-reset-plan-2026/"
-  - "/posts/home-printer-security-retirement-reset-plan-2026/"
+  - "/posts/home-router-dns-filtering-family-security-plan-2026/"
+  - "/posts/router-security-audit-checklist-2026/"
+  - "/posts/home-printer-wifi-privacy-reset-before-selling-2026/"
 visualsCount: 6
 hasVideo: false
 wordCount: 1850
@@ -165,3 +165,14 @@ The handoff also supports trust. Keep private data out of shared notes, avoid sc
 
 
 A final monthly reminder is enough: confirm the owner still exists, the evidence folder is findable, and the next action still matches current official guidance. Remove stale notes that could mislead someone later.
+## Measure failures before weakening the policy
+
+When a site or app breaks, record the device, time, domain shown in the DNS log, and the action that failed. Retry once on the same network, then compare with the service's official status page. This separates a filtering decision from an unrelated outage. Do not permanently allow a broad parent domain because one embedded image, sign-in redirect, or telemetry host failed.
+
+Create the narrowest exception that restores the needed function, assign an owner, and set a review date. School portals and work identity providers may use several documented domains, while an unfamiliar spelling variation may be a lookalike. If the required domain cannot be confirmed through official documentation or a trusted administrator, leave it blocked and use a verified support channel.
+
+## Keep an exit path for router or resolver failure
+
+Write down how to return the router to the ISP or vendor default resolver, where the local configuration backup is stored, and who can access the admin interface. This is availability planning, not a recommendation to bypass controls casually. During an emergency, change one layer at a time so you can tell whether the router, encrypted-DNS profile, endpoint security product, or upstream resolver caused the problem.
+
+After any fallback, restore the intended policy deliberately and review the event log. A temporary workaround that remains forever is an undocumented security change. A short incident note should identify the affected service, the exact exception or rollback, and whether a safer permanent rule was found.

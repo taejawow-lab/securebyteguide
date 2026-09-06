@@ -57,7 +57,7 @@ faq:
     answer: "Regular MFA requires the same authentication factors regardless of context. Adaptive authentication varies authentication requirements based on risk signals: known-device + known-location + work-hours might require only password, while new-device + new-country + 3am might require password + hardware key + manager approval. This reduces friction for routine access while strengthening protection against suspicious access patterns."
   - question: "What is the minimum MFA implementation for compliance?"
     answer: "SOC 2 Type 2, HIPAA, PCI-DSS, and most compliance frameworks require MFA for administrative access to sensitive systems. Auditors typically accept TOTP authenticator apps as adequate; some require FIDO2 hardware keys for highest-risk roles. Document your MFA policies and enforcement, log all authentication attempts, and review the logs quarterly. The minimum varies by framework but the principles are consistent."
-draft: false
+draft: true
 ---
 import ProductBox from '../../components/ProductBox.astro';
 import Aff from '../../components/Aff.astro';

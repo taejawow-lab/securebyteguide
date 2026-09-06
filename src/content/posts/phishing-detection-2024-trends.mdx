@@ -76,7 +76,7 @@ faq:
     answer: "Three layers, in priority order: (1) Phishing-resistant 2FA — FIDO2/WebAuthn hardware keys or device passkeys. They verify the domain cryptographically and don't authenticate against fake sites, so AiTM/EvilProxy doesn't work. (2) Domain pattern recognition — hover before click, check the actual sender domain (not display name), watch for lookalike characters (rn vs m, 0 vs O, paypal-secure.com vs paypal.com). (3) Out-of-band verification for any money/credentials request — call the alleged sender on a known number. Email itself can never confirm an email was legitimate."
   - question: "What about Business Email Compromise (BEC)?"
     answer: "BEC is the highest-loss phishing category. Mechanism: attacker compromises a real email account (often via earlier credential phishing), then sends invoice or wire-transfer requests from inside the trusted account. FBI IC3's 2023 report attributed $2.95B in losses to BEC. Detection signals: any change to wire instructions or banking details mid-thread should be verified by phone using a known number. Vendor invoices that arrive with new account numbers, urgency, and 'do not call my office' language are classic BEC tells. Companies should require dual approval for any wire-instruction change."
-draft: false
+draft: true
 ---
 import ProductBox from '../../components/ProductBox.astro';
 import Aff from '../../components/Aff.astro';

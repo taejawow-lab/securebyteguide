@@ -48,8 +48,7 @@ sources:
     url: "https://attack.mitre.org/techniques/T1176/"
     publication: "MITRE ATT&CK"
     year: "2026 accessed"
-internalLinks:
-  - "/posts/oauth-consent-phishing-app-access-audit"
+internalLinks: []
 visualsCount: 5
 hasVideo: false
 wordCount: 1850
@@ -65,8 +64,6 @@ faq:
 draft: false
 ---
 Updated June 3, 2026. Browser extensions sit in the same place you read email, approve payments, copy passwords, join work dashboards, and follow links from messages. That makes them useful, but it also makes stale or over-permissioned add-ons a quiet security risk. A good extension audit is not panic-uninstalling everything. It is a repeatable process: identify what is installed, understand what each extension can reach, narrow access, remove dead weight, and document the few add-ons that deserve trust.
-
-![Browser extension permission audit desk](/images/illustrations/sbg-browser-extension-permission-audit-2026-hero.png)
 
 ## Quick triage: keep, restrict, remove
 
@@ -85,8 +82,6 @@ Use this first pass before diving into individual settings.
 Start with the browser profiles people actually use: personal Chrome, work Chrome, Edge on Windows, Firefox, and any secondary browser used for banking or testing. Do not assume that profile sync means each device has the same extension set. Laptop, home desktop, and shared family computer profiles often drift.
 
 Record the extension name, publisher, install source, what it does, and whether it is signed in to a separate service. Also note whether the browser is managed by an employer or school. Managed policies can force-install or block add-ons, and you should not remove required work controls without IT approval.
-
-![Inventory browser extensions before changing permissions](/images/illustrations/sbg-browser-extension-permission-audit-2026-01.png)
 
 ## Step 2: read the permission in plain English
 
@@ -109,8 +104,6 @@ Good candidates for restriction include coupon tools, design utilities, social-m
 ## Step 4: remove stale and unclear extensions
 
 Removal is the right answer when an extension is unused, duplicated, abandoned, or hard to explain. If the add-on changed your search engine, homepage, new tab page, ads, or download behavior, remove it and then review browser settings separately. Google documents cleanup paths for unwanted ads, pop-ups, and malware-like browser behavior; use the browser's own cleanup and reset tools rather than downloading random "fixer" utilities.
-
-![Remove stale or unclear browser add-ons](/images/illustrations/sbg-browser-extension-permission-audit-2026-02.png)
 
 After uninstalling, restart the browser and confirm the extension did not leave a companion app, profile policy, or login connection behind. On shared devices, repeat this for each profile. If the same add-on reappears, check browser sync, enterprise management, device management, or other software that may be reinstalling it.
 
@@ -137,8 +130,6 @@ If you recently removed a suspicious extension, review your password manager eme
 
 Small businesses should not rely on every employee making perfect extension choices. Chrome Enterprise and similar management controls can allowlist required extensions, block risky categories, pin settings, and prevent users from installing unknown add-ons. Even a lightweight policy is better than a shared instruction that says "be careful."
 
-![Small team extension governance without exposing UI](/images/illustrations/sbg-browser-extension-permission-audit-2026-03.png)
-
 A practical starter policy:
 
 1. Allowlist the password manager, security agent, accessibility tools, and workflow extensions that are genuinely required.
@@ -158,8 +149,6 @@ Pair this audit with our [OAuth consent phishing app access audit](/posts/oauth-
 ## Step 9: patch, update, and verify from trusted paths
 
 Keep the browser itself updated and install extensions only from official browser stores or a documented enterprise source. Avoid sideloaded extension files unless you manage the code and understand the update path. If an extension is critical to work, subscribe to the publisher's security notices or at least document where release notes live.
-
-![Extension update and response planning](/images/illustrations/sbg-browser-extension-permission-audit-2026-04.png)
 
 Verification should be boring:
 
@@ -201,3 +190,16 @@ No. Password managers, accessibility tools, developer tools, and security produc
 Remove or disable the extension, test in a clean profile, change important passwords from a clean device, revoke active account sessions, review connected OAuth apps, and enable or reset MFA. If work accounts are involved, notify IT or the account owner quickly.
 
 ## Reader trust and scope note
+
+## Visual walk-through
+
+
+![browser extension permission audit 2026](/images/illustrations/sbg-browser-extension-permission-audit-2026-hero.png)
+
+![browser extension permission audit 2026](/images/illustrations/sbg-browser-extension-permission-audit-2026-01.png)
+
+![browser extension permission audit 2026](/images/illustrations/sbg-browser-extension-permission-audit-2026-02.png)
+
+![browser extension permission audit 2026](/images/illustrations/sbg-browser-extension-permission-audit-2026-04.png)
+
+![Magnifying glass and browser-extension tokens for a permissions audit](/images/illustrations/review-2026/browser-extension-permission-audit-2026-review-1.png)

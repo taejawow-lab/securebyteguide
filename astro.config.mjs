@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { REVIEW_NOINDEX_CATEGORY_PATH_SET } from './src/config/review-corpus.mjs';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
@@ -15,7 +16,10 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         const { pathname } = new URL(page);
-        return !pathname.startsWith('/tags/') && pathname !== '/search/' && !pathname.startsWith('/posts/page/');
+        return !pathname.startsWith('/tags/') &&
+          pathname !== '/search/' &&
+          !pathname.startsWith('/posts/page/') &&
+          !REVIEW_NOINDEX_CATEGORY_PATH_SET.has(pathname);
       },
     }),
     mdx(),

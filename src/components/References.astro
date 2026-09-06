@@ -1,12 +1,10 @@
 ---
-// v5.3 #8 - References 섹션 자동
 export interface Props {
   sources: Array<{ title: string; url: string; author?: string; year?: string; publication?: string }>;
 }
 
 const { sources } = Astro.props;
-const lang = import.meta.env.PUBLIC_SITE_LANG || 'en';
-const heading = lang === 'ko' ? '참고 자료' : 'References';
+const heading = 'References';
 const associatesActive = (import.meta.env.PUBLIC_AMAZON_ASSOCIATES_ACTIVE as string | undefined) === 'true';
 function isAmazonUrl(url: string): boolean {
   return /(^|\.)amazon\.|amzn\.to|amzn\.asia/i.test(url || '');

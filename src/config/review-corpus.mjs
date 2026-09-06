@@ -1,35 +1,28 @@
 export const REVIEW_POSTS = [
-  "2fa-methods-compared-data",
   "browser-extension-permission-audit-2026",
-  "dark-web-monitoring-services",
-  "enterprise-mfa-solutions-tested",
-  "family-account-recovery-passkey-binder-without-leaking-secrets-2026",
-  "family-security-setup-checklist",
+  "home-nas-ransomware-backup-isolation-checklist-2026",
   "home-printer-wifi-privacy-reset-before-selling-2026",
   "home-router-dns-filtering-family-security-plan-2026",
-  "home-router-security-settings",
-  "iot-device-security-checklist",
-  "mfa-rollout-small-business-no-lockouts",
-  "mobile-security-android-ios",
   "oauth-consent-phishing-app-access-audit",
   "old-smartphone-authenticator-migration-before-trade-in-2026",
-  "passkey-passwordless-migration-guide",
-  "passkey-recovery-email-security-checklist-2026",
-  "password-manager-business-team-plans",
-  "phishing-detection-2024-trends",
-  "ransomware-backup-drill-small-business",
+  "lost-stolen-laptop-account-data-response-plan",
   "router-security-audit-checklist-2026",
-  "shared-family-tablet-privacy-reset-child-account-plan-2026",
-  "vpn-leak-tests-prevention",
-  "vpn-multi-hop-paranoia-options",
-  "vpn-performance-privacy-reality",
-  "data-broker-opt-out-people-search-removal-plan",
-  "digital-estate-account-access-plan-without-sharing-passwords",
-  "compromised-email-hidden-forwarding-recovery-plan",
-  "remote-access-tech-support-scam-response-plan",
-  "browser-notification-scam-permission-persistence-cleanup",
-  "session-cookie-theft-infostealer-account-recovery-plan",
-  "lost-stolen-laptop-account-data-response-plan"
 ];
+
 export const REVIEW_POST_SET = new Set(REVIEW_POSTS);
-export const REVIEW_MIN_EQUIVALENT_WORDS = 850;
+export const REVIEW_MIN_EQUIVALENT_WORDS = 1500;
+export const REVIEW_MIN_SOURCES = 8;
+export const REVIEW_MIN_IMAGES = 5;
+
+// These category archives remain noindex because the final corpus gives them
+// fewer than three articles. The sitemap filter uses the same explicit set.
+export const REVIEW_NOINDEX_CATEGORY_PATHS = [
+  "/category/account-security/",
+  "/category/browser-security/",
+  "/category/home-cybersecurity/",
+  "/category/home-network-security/",
+  "/category/identity-security/",
+  "/category/network-security/",
+  "/category/personal-security/",
+];
+export const REVIEW_NOINDEX_CATEGORY_PATH_SET = new Set(REVIEW_NOINDEX_CATEGORY_PATHS);
